@@ -26,3 +26,9 @@ data: images
 	cd c64; \
 	mkdir -p DDD1 DDD2 DDD3; \
 	for n in 1 2 3; do cd DDD$$n; pwd;  c1541 -attach ../Dddc$$n.d64 -extract; cd ..; done
+
+.PHONY: palette
+palette: c64/colodore_vic2.png
+	@convert c64/colodore_vic2.png -format %c -depth 8 histogram:info:- \
+	  | cut -d\( -f2 | cut -d\) -f1 | sed 's/ //g' \
+	  | awk '{ print "[" $1 "], " }'
