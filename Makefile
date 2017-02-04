@@ -45,7 +45,7 @@ palette: c64/colodore_vic2.png
 	  | awk '{ print "[" $1 "], " }'
 
 
-TWN_FILES    := $(shell find $(C64DIR) -name 'ddd.twn?')
+TWN_FILES    := $(shell find $(C64DIR) -name 'ddd.twn?' -or -name ddd.konj)
 BASIC_SOURCES := $(TWN_FILES:=.txt)
 
 %.txt: %

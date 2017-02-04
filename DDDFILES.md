@@ -18,7 +18,7 @@ ddd.dspr| Multicolor sprite, 5 frames
 ddd.dttl|
 ddd.dtun|
 ddd.dtxt|
-ddd.konj|
+ddd.konj| [Basic loader code](AREAS.md)
 ddd.mapa| Map A - Overworld - meta tiles
 ddd.mapb| Map B - Druid cottage
 ddd.mapc| Map C -
@@ -45,7 +45,7 @@ ddd.chrh| Charset H -
 ddd.chri| Charset I -
 ddd.chrj| Charset J -
 ddd.code|
-ddd.konj|
+ddd.konj| [Basic loader code](AREAS.md)
 ddd.mapd| Map D -
 ddd.mape| Map E -
 ddd.mapf| Map F -
@@ -71,7 +71,7 @@ ddd.chrn| Charset N -
 ddd.chro| Charset O -
 ddd.chrq| Charset Q -
 ddd.code|
-ddd.konj|
+ddd.konj| [Basic loader code](AREAS.md)
 ddd.mapm| Map M -
 ddd.mapn| Map N -
 ddd.mapo| Map O -
