@@ -54,6 +54,19 @@ BASIC_SOURCES := $(TWN_FILES:=.txt)
 .PHONY: basic
 basic: $(BASIC_SOURCES)
 
+
+.PHONY: maps
+maps:
+	# town and castle maps
+	@for map in `find c64 -name ddd.map\? -size 1507c`; \
+	do \
+	  ./src/map2png.py $$map 35; \
+	done
+	# world map
+	@./src/map2png.py c64/DDD1/ddd.mapa 52
+	# druid cottage
+	@./src/map2png.py c64/DDD1/ddd.mapb 11
+
 CHR_FILES  := $(shell find $(C64DIR) -name 'ddd.chr?')
 CHR_IMAGES := $(CHR_FILES:=.png)
 
@@ -62,3 +75,8 @@ CHR_IMAGES := $(CHR_FILES:=.png)
 
 .PHONY: chars
 chars: $(CHR_IMAGES)
+
+
+.PHONY: gather
+gather: chars maps
+	@mv c64/*/*.png res
