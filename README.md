@@ -1,3 +1,6 @@
+[Areas of the game](AREAS.md), [Game files](DDDFILES.md),
+
+
 # Maps
 
 All map images are built by running
