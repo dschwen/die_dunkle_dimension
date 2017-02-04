@@ -9,6 +9,16 @@ data seems to be stored in `DDD1/ddd.mapa` and can be plotted with
 ./src/map2png.py c64/DDD1/ddd.mapa 52
 ```
 
+## Submaps
+
+```
+./src/map2png.py c64/DDD1/ddd.mapc 35
+./src/map2png.py c64/DDD1/ddd.mapk 35
+./src/map2png.py c64/DDD1/ddd.mapl 35
+```
+
+## Town maps
+
 It looks like the map file contains a 52 x 52*2 data set (52*3 == 39*4).
 
 # Graphics
