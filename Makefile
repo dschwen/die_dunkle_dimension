@@ -76,7 +76,9 @@ CHR_IMAGES := $(CHR_FILES:=.png)
 .PHONY: chars
 chars: $(CHR_IMAGES)
 
+.PHONY: sprites
+	@./src/spr2png.py
 
 .PHONY: gather
-gather: chars maps
+gather: chars maps sprites
 	@mv c64/*/*.png res

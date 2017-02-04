@@ -83,3 +83,9 @@ make chars
 ![](res/ddd.chrn.png)
 ![](res/ddd.chro.png)
 ![](res/ddd.chrq.png)
+
+## Sprites
+
+Only one spritesheet seems to be present and it looks like it should be a multicolor sprite
+
+![](res/ddd.dspr.png)
