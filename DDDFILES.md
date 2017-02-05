@@ -24,7 +24,7 @@ ddd.mapb| Map B - Druid cottage
 ddd.mapc| Map C -
 ddd.mapk| Map K -
 ddd.mapl| Map L -
-ddd.prep|
+ddd.prep| Basic code character generation
 ddd.titl|
 ddd.twna| Basic code A -
 ddd.twnb| Basic code B -

@@ -17,10 +17,10 @@ Analysis of the `ddd.konj` loader code reveals an area index `n` and a loader st
 9  | 2| J - "Mubrak" the independent city
 10 | 1| K - White wizzard
 11 | 1| L - Black wizzard
-12 | 3| M - Dragon cave(?)
+12 | 3| M - Dragon cave (3D dungeon)
 13 | 3| N - Dragon lair
 14 | 3| O - Fire castle
-15 | 3| P - Vampire count
+15 | 3| P - Vampire count (3D dungeon)
 16 | 3| Q - Skull keep
 17 | 1| R (B tiles) - Death!
 
