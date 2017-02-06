@@ -2,6 +2,7 @@
 
 File    |Address| Content
 --------|-------|----
+dunkle dimension|0x032d | Main loader
 ddd.asmb| 0x1000| Machine code routines
 ddd.boot| 0x1e01| Basic loader (loads ddd.chrb, ddd.asmb, ddd.mapa, ddd.prep)
 ddd.chra| 0x0800| Charset A - Overworld
@@ -11,13 +12,13 @@ ddd.chrk| 0x0800| Charset K -
 ddd.chrl| 0x0800| Charset L -
 ddd.code| 0xc540 (upper RAM)|
 ddd.dbas| 0x0801| Basic Title loader (loads ddd.dtxt, ddd.dttl, ddd.dcod, ddd.dspr, ddd.dsnd, ddd.dtun, ddd.titl, ddd.boot)
-ddd.dchr||
-ddd.dcod||
-ddd.dsnd||
+ddd.dchr|| main title file
+ddd.dcod|| main title file
+ddd.dsnd|| main title file
 ddd.dspr| 0x0e00| Multicolor sprite, 5 frames
-ddd.dttl||
-ddd.dtun||
-ddd.dtxt||
+ddd.dttl|| main title file
+ddd.dtun|| main title file
+ddd.dtxt|| main title file
 ddd.konj| 0x1e01| [Basic loader code](AREAS.md)
 ddd.mapa| 0xa000| Map A - Overworld - meta tiles
 ddd.mapb| 0x0340 (datasette buffer) | Map B - Druid cottage
@@ -25,7 +26,7 @@ ddd.mapc| 0x1800| Map C -
 ddd.mapk| 0x1800| Map K -
 ddd.mapl| 0x1800| Map L -
 ddd.prep| 0x1e01| Basic code character generation
-ddd.titl| 0x6000|
+ddd.titl| 0x6000| main title file
 ddd.twna| 0x0801 (loaded to new start of basic area with `,8`)| Basic code A -
 ddd.twnb| 0x0801| Basic code B -
 ddd.twnc| 0x0801| Basic code C -

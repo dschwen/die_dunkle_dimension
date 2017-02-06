@@ -59,6 +59,8 @@ basic: $(BASIC_SOURCES)
 disassemble:
 	# disassembling main loader
 	@./contrib/dis/dis -l -type prg -c 0334 c64/DDD1/dunkle\ dimension > c64/DDD1/dunkle\ dimension.asm
+	# disassembling assembler routines
+	@./contrib/dis/dis -l -t prg -i `./src/entrypts.py -dis c64/DDD1/ddd.asmb c64/DDD?/ddd.twn?.txt` c64/DDD1/ddd.asmb > c64/DDD1/ddd.asmb.asm
 
 .PHONY: maps
 maps:
