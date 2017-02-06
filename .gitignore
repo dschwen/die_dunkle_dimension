@@ -1,1 +1,20 @@
-c64
+*.d64
+*.zip
+
+# somewhat convoluted rules to get help Atom display the correct files
+# in the tree-view widget
+
+/c64/DDD1/*
+!/c64/DDD1
+!/c64/DDD1/*.asm
+!/c64/DDD1/*.txt
+
+/c64/DDD2/*
+!/c64/DDD2
+!/c64/DDD2/*.asm
+!/c64/DDD2/*.txt
+
+/c64/DDD3/*
+!/c64/DDD3
+!/c64/DDD3/*.asm
+!/c64/DDD3/*.txt
