@@ -55,6 +55,11 @@ BASIC_SOURCES := $(TWN_FILES:=.txt)
 basic: $(BASIC_SOURCES)
 
 
+.PHONY: disassemble
+disassemble:
+	# disassembling main loader
+	@./contrib/dis/dis -l -type prg -c 0334 c64/DDD1/dunkle\ dimension > c64/DDD1/dunkle\ dimension.asm
+
 .PHONY: maps
 maps:
 	# town and castle maps
