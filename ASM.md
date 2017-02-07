@@ -27,5 +27,9 @@ Address (hex) | Address (dec) | Purpose
 0x16ec | 5868 |
 0x174e | 5966 |
 0x176e | 5998 |
-0x1799 | 6041 | Draw map in druid cottage (no scrolling)
+0x1799 | 6041 | Zero out SID registers
 0x17a4 | 6052 | Draw map in towns with x in 2 and y in 182
+
+* `0x17a4`
+Fetch x coordinate from `0x02` (2) and add `0x4B` store in `0x22`, store `0x15` in `0x23` (temporary area)
+Fetch y ccordinate from `0xB6` (182)
