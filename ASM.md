@@ -30,6 +30,19 @@ Address (hex) | Address (dec) | Purpose
 0x1799 | 6041 | Zero out SID registers
 0x17a4 | 6052 | Draw map in towns with x in 2 and y in 182
 
+## C64 Symbols
+
+Address | Kernal routine / chip register
+--------|-----------
+`$F1CA` | CHROUT - output accumulator as character
+
+## Listing comments
+
+* `0x154e`
+Output `#$9a` (light blue), `#$93` (home), load `#$B0` (), jsr `0x1608`
+
+* `0x1608`
+
 * `0x17a4`
 Fetch x coordinate from `0x02` (2) and add `0x4B` store in `0x22`, store `0x15` in `0x23` (temporary area)
 Fetch y ccordinate from `0xB6` (182)
