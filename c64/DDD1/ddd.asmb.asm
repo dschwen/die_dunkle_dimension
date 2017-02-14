@@ -28,44 +28,44 @@ l044E equ $44E		; Access: 15D1
 l05CF equ $5CF		; Access: 156F 15B3
 l05DF equ $5DF		; Access: 15A9
 l0798 equ $798		; Access: 1564 15A1
-l07AF equ $7AF		; Access: 15A6
+l07AF equ $7AF		; Near bottom of default screen area (23,23) from top left; Access: 15A6
 l2285 equ $2285		; Access: 1632
-l9FFC equ $9FFC		; Access: 12D3
-lBFB0 equ $BFB0		; Access: 12CE
-lC000 equ $C000		; Access: 1278 127E 125C 125F 1091 11D3 11D9 11F3 11F9 12B5 12BB 129E 120D 1213 1236 123C
-lC001 equ $C001		; Access: 1283 1266 1096 11FC 1201 11DE 12C0 12A3 122D 1233 1241 1218
-lC002 equ $C002		; Access: 1269 126C 1275 16FC 12A6 12A9 12B2
-lC003 equ $C003		; Access: 171C 11E1 11E4 11F0 121B 121E 122A
-lC004 equ $C004		; Access: 124D 1250 1259 10DF 128F 1292 129B
-lC005 equ $C005		; Access: 16F2 11B9 12DE 12F2
-lC009 equ $C009		; Access: 16F7
-lC00E equ $C00E		; Access: 15CB
-lC00F equ $C00F		; Access: 16D9 14C5 14D9 15F0 1354 13B2 13F5 1625 1770 1792
-lC019 equ $C019		; Access: 1495 149C 13B7
-lC023 equ $C023		; Access: 1288 16CD 13CF 15F5 1516 1377 1335 1395 12C5
-lC02D equ $C02D		; Access: 16D2 13D4 15FC 151B 137A 139D 133F 1206 1246
-lC038 equ $C038		; Access: 1540
-lC039 equ $C039		; Access: 1545
-lC03A equ $C03A		; Access: 154A 15BD
-lC059 equ $C059		; Access: 16B8
-lC5A4 equ $C5A4		; Access: 16B2
-lC6FA equ $C6FA		; Access: 16BD
-lC720 equ $C720		; Access: 11AD
-lC790 equ $C790		; Access: 118A
-lC800 equ $C800		; Access: 112C 1137 1144 114F
-lC900 equ $C900		; Access: 1131
-lCA00 equ $CA00		; Access: 113C
-lCB00 equ $CB00		; Access: 1149
-lCC00 equ $CC00		; Access: 1154
-lCD00 equ $CD00		; Access: 10A8
-lCE00 equ $CE00		; Access: 10AF
-lCF00 equ $CF00		; Access: 10B6
-lD012 equ $D012		; Access: 16A8 135D 16E0
-lD3FF equ $D3FF		; Access: 179D
-lD83F equ $D83F		; Access: 15BA
-lD84E equ $D84E		; Access: 15C8
-lDC04 equ $DC04		; Access: 16A1
-lDC05 equ $DC05		; Access: 1381
+l9FFC equ $9FFC		; Near top of basic Area; Access: 12D3
+lBFB0 equ $BFB0		; Point in BASIC RAM; Access: 12CE
+lC000 equ $C000		; Start of Upper RAM; Access: 1278 127E 125C 125F 1091 11D3 11D9 11F3 11F9 12B5 12BB 129E 120D 1213 1236 123C
+lC001 equ $C001		; Point in Upper RAM; Access: 1283 1266 1096 11FC 1201 11DE 12C0 12A3 122D 1233 1241 1218
+lC002 equ $C002		; Point in Upper RAM; Access: 1269 126C 1275 16FC 12A6 12A9 12B2
+lC003 equ $C003		; Point in Upper RAM; Access: 171C 11E1 11E4 11F0 121B 121E 122A
+lC004 equ $C004		; Point in Upper RAM; Access: 124D 1250 1259 10DF 128F 1292 129B
+lC005 equ $C005		; Point in Upper RAM; Access: 16F2 11B9 12DE 12F2
+lC009 equ $C009		; Point in Upper RAM; Access: 16F7
+lC00E equ $C00E		; Point in Upper RAM; Access: 15CB
+lC00F equ $C00F		; Point in Upper RAM; Access: 16D9 14C5 14D9 15F0 1354 13B2 13F5 1625 1770 1792
+lC019 equ $C019		; Point in Upper RAM; Access: 1495 149C 13B7
+lC023 equ $C023		; Point in Upper RAM; Access: 1288 16CD 13CF 15F5 1516 1377 1335 1395 12C5
+lC02D equ $C02D		; Point in Upper RAM; Access: 16D2 13D4 15FC 151B 137A 139D 133F 1206 1246
+lC038 equ $C038		; Point in Upper RAM; Access: 1540
+lC039 equ $C039		; Point in Upper RAM; Access: 1545
+lC03A equ $C03A		; Point in Upper RAM; Access: 154A 15BD
+lC059 equ $C059		; Point in Upper RAM; Access: 16B8
+lC5A4 equ $C5A4		; Point in Upper RAM; Access: 16B2
+lC6FA equ $C6FA		; Point in Upper RAM; Access: 16BD
+lC720 equ $C720		; Point in Upper RAM; Access: 11AD
+lC790 equ $C790		; Point in Upper RAM; Access: 118A
+lC800 equ $C800		; Point in Upper RAM;Access: 112C 1137 1144 114F
+lC900 equ $C900		; Point in Upper RAM;Access: 1131
+lCA00 equ $CA00		; Point in Upper RAM; Access: 113C
+lCB00 equ $CB00		; Point in Upper RAM; Access: 1149
+lCC00 equ $CC00		; Point in Upper RAM; Access: 1154
+lCD00 equ $CD00		; Point in Upper RAM; Access: 10A8
+lCE00 equ $CE00		; Point in Upper RAM; Access: 10AF
+lCF00 equ $CF00		; Point in Upper RAM; Access: 10B6
+lD012 equ $D012		; Current raster line; Access: 16A8 135D 16E0
+lD3FF equ $D3FF		; Top of VIC-II register images (one below SID audio); Access: 179D
+lD83F equ $D83F		; Color RAM 0x3F (63) (1,23) from top left; Access: 15BA
+lD84E equ $D84E		; Color RAM 0x4E (78) (1,1) from top right; Access: 15C8
+lDC04 equ $DC04		; TIMERALO; Access: 16A1
+lDC05 equ $DC05		; TIMERAHI; Access: 1381
     opt h-
     dta a($1000)	; PRG Header
     opt h-
@@ -204,8 +204,8 @@ lDC05 equ $DC05		; Access: 1381
     dta $31		; 1083: 31
     dta $EA		; 1084: EA
 u1085			; Callers: u174E -c 1085
-    lda #$36		; 1085: A9 36
-    sta l01		; 1087: 85 01
+    lda #$36		; 0b110110 (clear bit 1)
+    sta l01		; Set BASIC ROM->RAM
     lda #$40		; 1089: A9 40
     sta l24		; 108B: 85 24
     lda #$03		; 108D: A9 03
@@ -278,10 +278,10 @@ l10FF			; Callers: 1102
     bne l10EE		; 1106: D0 E6
     rts    		; 1108: 60
 u1109			; Callers: 176B -c 1109
-    lda #$40		; 1109: A9 40
-    sta l57		; 110B: 85 57
-    lda #$03		; 110D: A9 03
-    sta l58		; 110F: 85 58
+    lda #$40		;
+    sta l57		;
+    lda #$03		; $0340 into
+    sta l58		; Arithmetic Register #3 (0x57-0x5B)
     lda #$29		; 1111: A9 29
     sta l22		; 1113: 85 22
     sta l24		; 1115: 85 24

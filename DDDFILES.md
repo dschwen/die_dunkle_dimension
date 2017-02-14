@@ -89,4 +89,4 @@ ddd.twnq|       | Basic code Q -
 
 File    |       | Content
 --------|-------|----
-ddd.sav?|       | Save game data
+ddd.sav?| 0xC000| Save game data (? = 0..9)
