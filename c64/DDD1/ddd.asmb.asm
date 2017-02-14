@@ -395,10 +395,10 @@ u11B9			; Callers: 1759 -c 11B9
     dta $12		; 11D0: 12
     dta $D4		; 11D1: D4
     dta $60		; 11D2: 60
-u11D3			; Callers: -c 11D3
+u11D3			; Callers: -c 11D3       # Player moves NORTH on world map ******************************************************
     lda lC000		; 11D3: AD 00 C0
     clc    		; 11D6: 18
-    adc #$CC		; 11D7: 69 CC
+    adc #$CC		; 11D7: 69 CC      # = -0x34 ?
     sta lC000		; 11D9: 8D 00 C0
     bcs l11E1		; 11DC: B0 03
     dec lC001		; 11DE: CE 01 C0
@@ -419,19 +419,19 @@ l11EE			; Callers: 11E9
     adc #$1D		; 11FF: 69 1D
     sta lC001		; 1201: 8D 01 C0
 l1204			; Callers: 11EB
-    ldx #$0A		; 1204: A2 0A
+    ldx #$0A		; 1204: A2 0A      # loop to increment content of addresses 0xC02e-0xC037
 l1206			; Callers: 120A
     inc lC02D,x		; 1206: FE 2D C0
     dex    		; 1209: CA
     bne l1206		; 120A: D0 FA
     rts    		; 120C: 60
-u120D			; Callers: -c 120D
+u120D			; Callers: -c 120D       # Player moves SOUTH on world map ******************************************************
     lda lC000		; 120D: AD 00 C0
     clc    		; 1210: 18
-    adc #$34		; 1211: 69 34
+    adc #$34		; 1211: 69 34      # add 0x34 = 52 (map size?)
     sta lC000		; 1213: 8D 00 C0
-    bcc l121B		; 1216: 90 03
-    inc lC001		; 1218: EE 01 C0
+    bcc l121B		; 1216: 90 03      # branch if carry clear (i.e. no overflow in the add)
+    inc lC001		; 1218: EE 01 C0   # increment the high byte of the map address pointer)
 l121B			; Callers: 1216
     inc lC003		; 121B: EE 03 C0
     lda lC003		; 121E: AD 03 C0
@@ -452,13 +452,13 @@ l1228			; Callers: 1223
     bcs l1244		; 123F: B0 03
     dec lC001		; 1241: CE 01 C0
 l1244			; Callers: 123F 1225
-    ldx #$0A		; 1244: A2 0A
+    ldx #$0A		; 1244: A2 0A      # loop to decrement content of addresses 0xC02e-0xC037
 l1246			; Callers: 124A
     dec lC02D,x		; 1246: DE 2D C0
     dex    		; 1249: CA
     bne l1246		; 124A: D0 FA
     rts    		; 124C: 60
-u124D			; Callers: -c 124D
+u124D			; Callers: -c 124D       # Player moves WEST on world map ******************************************************
     dec lC004		; 124D: CE 04 C0
     lda lC004		; 1250: AD 04 C0
     cmp #$FF		; 1253: C9 FF
@@ -467,9 +467,9 @@ u124D			; Callers: -c 124D
     sta lC004		; 1259: 8D 04 C0
     dec lC000		; 125C: CE 00 C0
     lda lC000		; 125F: AD 00 C0
-    cmp #$FF		; 1262: C9 FF
-    bne l1269		; 1264: D0 03
-    dec lC001		; 1266: CE 01 C0
+    cmp #$FF		; 1262: C9 FF      # 0-1 -> 0xff underflow!
+    bne l1269		; 1264: D0 03      # branch if no underflow occured
+    dec lC001		; 1266: CE 01 C0   # otherwise: underflow, decrement high byte of map address pointer
 l1269			; Callers: 1255 1264
     dec lC002		; 1269: CE 02 C0
     lda lC002		; 126C: AD 02 C0
@@ -484,22 +484,22 @@ l1269			; Callers: 1255 1264
     bcc l1286		; 1281: 90 03
     inc lC001		; 1283: EE 01 C0
 l1286			; Callers: 1271 1281
-    ldx #$0A		; 1286: A2 0A
+    ldx #$0A		; 1286: A2 0A      # loop to increment content of addresses 0xC024-0xC02d
 l1288			; Callers: 128C
     inc lC023,x		; 1288: FE 23 C0
     dex    		; 128B: CA
     bne l1288		; 128C: D0 FA
     rts    		; 128E: 60
-u128F			; Callers: -c 128F
+u128F			; Callers: -c 128F       # Player moves EAST on world map ******************************************************
     inc lC004		; 128F: EE 04 C0
     lda lC004		; 1292: AD 04 C0
     cmp #$03		; 1295: C9 03
     bne l12A6		; 1297: D0 0D
     lda #$00		; 1299: A9 00
     sta lC004		; 129B: 8D 04 C0
-    inc lC000		; 129E: EE 00 C0
-    bne l12A6		; 12A1: D0 03
-    inc lC001		; 12A3: EE 01 C0
+    inc lC000		; 129E: EE 00 C0   # increment
+    bne l12A6		; 12A1: D0 03      # branch if no overflow...
+    inc lC001		; 12A3: EE 01 C0   # ..otherwise increment high byte
 l12A6			; Callers: 1297 12A1
     inc lC002		; 12A6: EE 02 C0
     lda lC002		; 12A9: AD 02 C0
@@ -514,7 +514,7 @@ l12A6			; Callers: 1297 12A1
     bcs l12C3		; 12BE: B0 03
     dec lC001		; 12C0: CE 01 C0
 l12C3			; Callers: 12AE 12BE
-    ldx #$0A		; 12C3: A2 0A
+    ldx #$0A		; 12C3: A2 0A      # loop to increment content of addresses 0xC024-0xC02d
 l12C5			; Callers: 12C9
     dec lC023,x		; 12C5: DE 23 C0
     dex    		; 12C8: CA
