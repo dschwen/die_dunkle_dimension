@@ -45,7 +45,7 @@ palette: c64/colodore_vic2.png
 	  | awk '{ print "[" $1 "], " }'
 
 
-TWN_FILES    := $(shell find $(C64DIR) -name 'ddd.twn?' -or -name ddd.konj -or -name ddd.prep)
+TWN_FILES    := $(shell find $(C64DIR) -name 'ddd.twn?' -or -name ddd.konj -or -name ddd.prep -or -name ddd.dbas -or -name ddd.boot)
 BASIC_SOURCES := $(TWN_FILES:=.txt)
 
 %.txt: %
@@ -61,6 +61,8 @@ disassemble:
 	@./contrib/dis/dis -l -type prg -c 0334 c64/DDD1/dunkle\ dimension > c64/DDD1/dunkle\ dimension.asm
 	# disassembling assembler routines
 	@./contrib/dis/dis -l -t prg -i `./src/entrypts.py -dis c64/DDD1/ddd.asmb c64/DDD?/ddd.twn?.txt` c64/DDD1/ddd.asmb > c64/DDD1/ddd.asmb.asm
+	# disassembling title file
+	@./contrib/dis/dis -l -t prg -i `./src/entrypts.py -dis c64/DDD1/ddd.dcod c64/DDD?/ddd.dbas.txt` c64/DDD1/ddd.dcod > c64/DDD1/ddd.dcod.asm
 
 .PHONY: maps
 maps:

@@ -2,7 +2,7 @@
 import sys
 
 if len(sys.argv) < 2 :
-  print "Usage ./map2png.py ddd.mapa height offset"
+  print "Usage ./map2png.py ddd.mapb height offset"
   sys.exit(1)
 
 import png

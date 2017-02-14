@@ -21,7 +21,7 @@ cmd = sys.argv[1]
 # Print load address of the file
 #
 if cmd == 'info' :
-  print start
+  print start, hex(start)
 
 #
 # Histogram of the bytes in the specified file starting at offset using stride
