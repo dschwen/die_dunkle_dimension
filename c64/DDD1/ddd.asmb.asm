@@ -9,18 +9,18 @@ l58 equ $58		; Access: 1726 173F 1732 10A1 10C3 1457 145C 1465 1462 1479 15FF 15
 l59 equ $59		; Access: 163B 1653 1660
 l5A equ $5A		; Access: 15E2 15E6 15ED 1605 164B 1668
 l5F equ $5F		; Access: 14F3 142D 1432 143B 14FE 1403 13DE 13E3 13EC 140E 1125 116A
-l60 equ $60		; Access: 16EE 16F0 1744 1717 10EC 1104 1362 136B 1370 1372 137F 139B 1393 138A 1121 117D 1320 12EC 1306 12F9 12FF 1328 1318 1310
-l00A2 equ $A2		; Access: 138C
+l60 equ $60		; Top of BASIC numeric work area; Access: 16EE 16F0 1744 1717 10EC 1104 1362 136B 1370 1372 137F 139B 1393 138A 1121 117D 1320 12EC 1306 12F9 12FF 1328 1318 1310
+l00A2 equ $A2		; Top of Software Jiffy clock. 0xA2 is increased every jiffy (1/60s) Access: 138C
 lB6 equ $B6		; Access: 142B 1438 14F8 1503 1489 1492 15DD 1603 1510 152B 1539 16C6 13B0 13DC 13E9 1408 1413 12DC 12E5 12E3 17AF
 l0334 equ $334		; Access: 1748
-l033F equ $33F		; Access: 169A
-l0340 equ $340		; Access: 16E8
-l0371 equ $371		; Access: 130D
-l037B equ $37B		; Access: 131D
-l037C equ $37C		; Access: 1751 162D
-l037D equ $37D		; Access: 1325
-l0387 equ $387		; Access: 1315
-l0400 equ $400		; Access: 1561
+l033F equ $33F		; Cassette Buffer; Access: 169A
+l0340 equ $340		; Cassette Buffer; Access: 16E8
+l0371 equ $371		; Cassette Buffer; Access: 130D
+l037B equ $37B		; Cassette Buffer; Access: 131D
+l037C equ $37C		; Cassette Buffer; Access: 1751 162D
+l037D equ $37D		; Cassette Buffer; Access: 1325
+l0387 equ $387		; Cassette Buffer; Access: 1315
+l0400 equ $400		; Start of default screen area; Access: 1561
 l0417 equ $417		; Access: 156C 15AE
 l0427 equ $427		; Access: 15D6
 l043F equ $43F		; Access: 15C0
@@ -277,7 +277,7 @@ l10FF			; Callers: 1102
     dec l60		; 1104: C6 60
     bne l10EE		; 1106: D0 E6
     rts    		; 1108: 60
-u1109			; Callers: 176B -c 1109
+u1109			; Callers: 176B -c 1109   # Hitpoint changes?
     lda #$40		;
     sta l57		;
     lda #$03		; $0340 into
@@ -531,7 +531,7 @@ l12D3			; Callers: 12D7
     rts    		; 12D9: 60
 l12DA			; Callers: 1322 132A 131A 1312
     lda #$00		; 12DA: A9 00
-    sta lB6		; 12DC: 85 B6
+    sta lB6		; 12DC: 85 B6       # address 182
     lda lC005		; 12DE: AD 05 C0
     bne l12EC		; 12E1: D0 09
     inc lB6		; 12E3: E6 B6
@@ -561,21 +561,21 @@ l1306			; Callers: 12F7
     cmp #$02		; 1308: C9 02
     bpl l12E5		; 130A: 10 D9
     rts    		; 130C: 60
-u130D			; Callers: -c 130D
+u130D			; Callers: -c 130D      # Player wants to go NORTH on world map
     lda l0371		; 130D: AD 71 03
     sta l60		; 1310: 85 60
     jmp l12DA		; 1312: 4C DA 12
-u1315			; Callers: -c 1315
+u1315			; Callers: -c 1315      # Player wants to go SOUTH on world map
     lda l0387		; 1315: AD 87 03
     sta l60		; 1318: 85 60
     jmp l12DA		; 131A: 4C DA 12
-u131D			; Callers: -c 131D
+u131D			; Callers: -c 131D      # Player wants to go WEST on world map
     lda l037B		; 131D: AD 7B 03
     sta l60		; 1320: 85 60
     jmp l12DA		; 1322: 4C DA 12
-u1325			; Callers: -c 1325
+u1325			; Callers: -c 1325      # Player wants to go EAST on world map
     lda l037D		; 1325: AD 7D 03
-    sta l60		; 1328: 85 60
+    sta l60		; 1328: 85 60       # Store A in Address 96
     jmp l12DA		; 132A: 4C DA 12
 l132D			; Callers: 13A0 1417
     lda #$34		; 132D: A9 34
