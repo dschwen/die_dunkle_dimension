@@ -70,139 +70,68 @@ lDC05 equ $DC05		; TIMERAHI; Access: 1381
     dta a($1000)	; PRG Header
     opt h-
     org $1000
-    dta $A9		; 1000: A9
-    dta $1		; 1001: 01
-    dta $8D		; 1002: 8D
-    dta $3C		; 1003: 3C
-    dta $3		; 1004: 03
-    dta $8D		; 1005: 8D
-    dta $3D		; 1006: 3D
-    dta $3		; 1007: 03
-    dta $A9		; 1008: A9
-    dta $13		; 1009: 13
-    dta $8D		; 100A: 8D
-    dta $14		; 100B: 14
-    dta $3		; 100C: 03
-    dta $A9		; 100D: A9
-    dta $10		; 100E: 10
-    dta $8D		; 100F: 8D
-    dta $15		; 1010: 15
-    dta $3		; 1011: 03
-    dta $60		; 1012: 60
-    dta $AD		; 1013: AD
-    dta $3D		; 1014: 3D
-    dta $3		; 1015: 03
-    dta $D0		; 1016: D0
-    dta $3		; 1017: 03
-    dta $4C		; 1018: 4C
-    dta $31		; 1019: 31
-    dta $EA		; 101A: EA
-    dta $CE		; 101B: CE
-    dta $3C		; 101C: 3C
-    dta $3		; 101D: 03
-    dta $D0		; 101E: D0
-    dta $F8		; 101F: F8
-    dta $A9		; 1020: A9
-    dta $C		; 1021: 0C
-    dta $8D		; 1022: 8D
-    dta $3C		; 1023: 3C
-    dta $3		; 1024: 03
-    dta $A2		; 1025: A2
-    dta $8		; 1026: 08
-    dta $A9		; 1027: A9
-    dta $F		; 1028: 0F
-    dta $85		; 1029: 85
-    dta $A7		; 102A: A7
-    dta $A9		; 102B: A9
-    dta $A		; 102C: 0A
-    dta $85		; 102D: 85
-    dta $A8		; 102E: A8
-    dta $A0		; 102F: A0
-    dta $0		; 1030: 00
-    dta $B1		; 1031: B1
-    dta $A7		; 1032: A7
-    dta $9D		; 1033: 9D
-    dta $BF		; 1034: BF
-    dta $2		; 1035: 02
-    dta $A5		; 1036: A5
-    dta $A7		; 1037: A7
-    dta $18		; 1038: 18
-    dta $69		; 1039: 69
-    dta $8		; 103A: 08
-    dta $85		; 103B: 85
-    dta $A7		; 103C: A7
-    dta $CA		; 103D: CA
-    dta $D0		; 103E: D0
-    dta $F1		; 103F: F1
-    dta $A9		; 1040: A9
-    dta $46		; 1041: 46
-    dta $85		; 1042: 85
-    dta $A7		; 1043: A7
-    dta $A2		; 1044: A2
-    dta $3F		; 1045: 3F
-    dta $A0		; 1046: A0
-    dta $0		; 1047: 00
-    dta $B1		; 1048: B1
-    dta $A7		; 1049: A7
-    dta $C8		; 104A: C8
-    dta $91		; 104B: 91
-    dta $A7		; 104C: A7
-    dta $C6		; 104D: C6
-    dta $A7		; 104E: A7
-    dta $CA		; 104F: CA
-    dta $D0		; 1050: D0
-    dta $F4		; 1051: F4
-    dta $AD		; 1052: AD
-    dta $C5		; 1053: C5
-    dta $2		; 1054: 02
-    dta $8D		; 1055: 8D
-    dta $8		; 1056: 08
-    dta $A		; 1057: 0A
-    dta $AD		; 1058: AD
-    dta $C4		; 1059: C4
-    dta $2		; 105A: 02
-    dta $8D		; 105B: 8D
-    dta $10		; 105C: 10
-    dta $A		; 105D: 0A
-    dta $AD		; 105E: AD
-    dta $C7		; 105F: C7
-    dta $2		; 1060: 02
-    dta $8D		; 1061: 8D
-    dta $18		; 1062: 18
-    dta $A		; 1063: 0A
-    dta $AD		; 1064: AD
-    dta $C6		; 1065: C6
-    dta $2		; 1066: 02
-    dta $8D		; 1067: 8D
-    dta $20		; 1068: 20
-    dta $A		; 1069: 0A
-    dta $AD		; 106A: AD
-    dta $C3		; 106B: C3
-    dta $2		; 106C: 02
-    dta $8D		; 106D: 8D
-    dta $28		; 106E: 28
-    dta $A		; 106F: 0A
-    dta $AD		; 1070: AD
-    dta $C2		; 1071: C2
-    dta $2		; 1072: 02
-    dta $8D		; 1073: 8D
-    dta $30		; 1074: 30
-    dta $A		; 1075: 0A
-    dta $AD		; 1076: AD
-    dta $C1		; 1077: C1
-    dta $2		; 1078: 02
-    dta $8D		; 1079: 8D
-    dta $38		; 107A: 38
-    dta $A		; 107B: 0A
-    dta $AD		; 107C: AD
-    dta $C0		; 107D: C0
-    dta $2		; 107E: 02
-    dta $8D		; 107F: 8D
-    dta $40		; 1080: 40
-    dta $A		; 1081: 0A
-    dta $4C		; 1082: 4C
-    dta $31		; 1083: 31
-    dta $EA		; 1084: EA
+u1000			; Callers: -c 1000
+    lda #$01		; 1000: A9 01
+    sta l033C		; 1002: 8D 3C 03
+    sta l033D		; 1005: 8D 3D 03
+    lda #$13		; 1008: A9 13
+    sta l0314		; 100A: 8D 14 03
+    lda #$10		; 100D: A9 10
+    sta l0315		; 100F: 8D 15 03
+    rts    		; 1012: 60
+u1013			; Callers: -c 1013
+    lda l033D		; 1013: AD 3D 03
+    bne l101B		; 1016: D0 03
+l1018			; Callers: 101E
+    jmp $EA31		; 1018: 4C 31 EA
+l101B			; Callers: 1016
+    dec l033C		; 101B: CE 3C 03
+    bne l1018		; 101E: D0 F8
+    lda #$0C		; 1020: A9 0C
+    sta l033C		; 1022: 8D 3C 03
+    ldx #$08		; 1025: A2 08
+    lda #$0F		; 1027: A9 0F
+    sta lA7		; 1029: 85 A7
+    lda #$0A		; 102B: A9 0A
+    sta lA8		; 102D: 85 A8
+    ldy #$00		; 102F: A0 00
+l1031			; Callers: 103E
+    lda (lA7),y		; 1031: B1 A7
+    sta l02BF,x		; 1033: 9D BF 02
+    lda lA7		; 1036: A5 A7
+    clc    		; 1038: 18
+    adc #$08		; 1039: 69 08
+    sta lA7		; 103B: 85 A7
+    dex    		; 103D: CA
+    bne l1031		; 103E: D0 F1
+    lda #$46		; 1040: A9 46
+    sta lA7		; 1042: 85 A7
+    ldx #$3F		; 1044: A2 3F
+l1046			; Callers: 1050
+    ldy #$00		; 1046: A0 00
+    lda (lA7),y		; 1048: B1 A7
+    iny    		; 104A: C8
+    sta (lA7),y		; 104B: 91 A7
+    dec lA7		; 104D: C6 A7
+    dex    		; 104F: CA
+    bne l1046		; 1050: D0 F4
+    lda l02C5		; 1052: AD C5 02
+    sta l0A08		; 1055: 8D 08 0A
+    lda l02C4		; 1058: AD C4 02
+    sta l0A10		; 105B: 8D 10 0A
+    lda l02C7		; 105E: AD C7 02
+    sta l0A18		; 1061: 8D 18 0A
+    lda l02C6		; 1064: AD C6 02
+    sta l0A20		; 1067: 8D 20 0A
+    lda l02C3		; 106A: AD C3 02
+    sta l0A28		; 106D: 8D 28 0A
+    lda l02C2		; 1070: AD C2 02
+    sta l0A30		; 1073: 8D 30 0A
+    lda l02C1		; 1076: AD C1 02
+    sta l0A38		; 1079: 8D 38 0A
+    lda l02C0		; 107C: AD C0 02
+    sta l0A40		; 107F: 8D 40 0A
+    jmp $EA31		; 1082: 4C 31 EA
 u1085			; Callers: u174E -c 1085
     lda #$36		; 0b110110 (clear bit 1)
     sta l01		; Set BASIC ROM->RAM
