@@ -32,11 +32,11 @@ l07AF equ $7AF		; Near bottom of default screen area (23,23) from top left; Acce
 l2285 equ $2285		; Access: 1632
 l9FFC equ $9FFC		; Near top of basic Area; Access: 12D3
 lBFB0 equ $BFB0		; Point in BASIC RAM; Access: 12CE
-lC000 equ $C000		; Start of Upper RAM; Access: 1278 127E 125C 125F 1091 11D3 11D9 11F3 11F9 12B5 12BB 129E 120D 1213 1236 123C
-lC001 equ $C001		; Point in Upper RAM; Access: 1283 1266 1096 11FC 1201 11DE 12C0 12A3 122D 1233 1241 1218
-lC002 equ $C002		; Point in Upper RAM; Access: 1269 126C 1275 16FC 12A6 12A9 12B2
-lC003 equ $C003		; Point in Upper RAM; Access: 171C 11E1 11E4 11F0 121B 121E 122A
-lC004 equ $C004		; Point in Upper RAM; Access: 124D 1250 1259 10DF 128F 1292 129B
+lC000 equ $C000		; lsb for pointer to map memory for current player position; Start of Upper RAM; Access: 1278 127E 125C 125F 1091 11D3 11D9 11F3 11F9 12B5 12BB 129E 120D 1213 1236 123C
+lC001 equ $C001		; msb for pointer to map memory for current player position; Point in Upper RAM; Access: 1283 1266 1096 11FC 1201 11DE 12C0 12A3 122D 1233 1241 1218
+lC002 equ $C002		; player x coordinate; Point in Upper RAM; Access: 1269 126C 1275 16FC 12A6 12A9 12B2
+lC003 equ $C003		; player y coordinate; Point in Upper RAM; Access: 171C 11E1 11E4 11F0 121B 121E 122A
+lC004 equ $C004		; 0,1,2 subtile position in x direction  Point in Upper RAM; Access: 124D 1250 1259 10DF 128F 1292 129B
 lC005 equ $C005		; Point in Upper RAM; Access: 16F2 11B9 12DE 12F2
 lC009 equ $C009		; Point in Upper RAM; Access: 16F7
 lC00E equ $C00E		; Point in Upper RAM; Access: 15CB
@@ -329,13 +329,13 @@ u11D3			; Callers: -c 11D3       # Player moves NORTH on world map *************
     clc    		; 11D6: 18
     adc #$CC		; 11D7: 69 CC      # = -0x34 ?
     sta lC000		; 11D9: 8D 00 C0
-    bcs l11E1		; 11DC: B0 03
-    dec lC001		; 11DE: CE 01 C0
+    bcs l11E1		; 11DC: B0 03      # branch if the add overflowed (which means subtracting 0x34 would NOT have underflowed)
+    dec lC001		; 11DE: CE 01 C0   # subtracting 0x34 would have underflowed, so decrement the high byte
 l11E1			; Callers: 11DC
-    dec lC003		; 11E1: CE 03 C0
+    dec lC003		; 11E1: CE 03 C0   # *(0xc003)-- decrement ACTUAL y position
     lda lC003		; 11E4: AD 03 C0
-    cmp #$04		; 11E7: C9 04
-    beq l11EE		; 11E9: F0 03
+    cmp #$04		; 11E7: C9 04      # the North/South wraparound happens with a padding of five tiles each to avoid displaying tiles from outside of the map memory!
+    beq l11EE		; 11E9: F0 03      # jump if *(0xc003) == 4 (sailing to the edge of the map!)
     jmp l1204		; 11EB: 4C 04 12
 l11EE			; Callers: 11E9
     lda #$96		; 11EE: A9 96
@@ -362,9 +362,9 @@ u120D			; Callers: -c 120D       # Player moves SOUTH on world map *************
     bcc l121B		; 1216: 90 03      # branch if carry clear (i.e. no overflow in the add)
     inc lC001		; 1218: EE 01 C0   # increment the high byte of the map address pointer)
 l121B			; Callers: 1216
-    inc lC003		; 121B: EE 03 C0
+    inc lC003		; 121B: EE 03 C0   # *(0xc003)++ increment ACTUAL y position
     lda lC003		; 121E: AD 03 C0
-    cmp #$97		; 1221: C9 97
+    cmp #$97		; 1221: C9 97      # jump if *(0xc003) == 151 (sailing to the edge of the map!)
     beq l1228		; 1223: F0 03
     jmp l1244		; 1225: 4C 44 12
 l1228			; Callers: 1223
@@ -388,30 +388,30 @@ l1246			; Callers: 124A
     bne l1246		; 124A: D0 FA
     rts    		; 124C: 60
 u124D			; Callers: -c 124D       # Player moves WEST on world map ******************************************************
-    dec lC004		; 124D: CE 04 C0
+    dec lC004		; 124D: CE 04 C0   # *(0xc004)-- decrement 0,1,2 subtile position (each byte represents a 3x1 set of tiles!)
     lda lC004		; 1250: AD 04 C0
-    cmp #$FF		; 1253: C9 FF
+    cmp #$FF		; 1253: C9 FF      # underflow 0 -> 2
     bne l1269		; 1255: D0 12
-    lda #$02		; 1257: A9 02
-    sta lC004		; 1259: 8D 04 C0
-    dec lC000		; 125C: CE 00 C0
+    lda #$02		; 1257: A9 02      # wrap around...
+    sta lC004		; 1259: 8D 04 C0   # ...to subtile position 2
+    dec lC000		; 125C: CE 00 C0   # only if we wrap we need to change the map position pointer!
     lda lC000		; 125F: AD 00 C0
     cmp #$FF		; 1262: C9 FF      # 0-1 -> 0xff underflow!
     bne l1269		; 1264: D0 03      # branch if no underflow occured
     dec lC001		; 1266: CE 01 C0   # otherwise: underflow, decrement high byte of map address pointer
 l1269			; Callers: 1255 1264
-    dec lC002		; 1269: CE 02 C0
+    dec lC002		; 1269: CE 02 C0   # *(0xc003)++ decrement ACTUAL x position
     lda lC002		; 126C: AD 02 C0
-    cmp #$FF		; 126F: C9 FF
-    bne l1286		; 1271: D0 13
-    lda #$9B		; 1273: A9 9B
-    sta lC002		; 1275: 8D 02 C0
+    cmp #$FF		; 126F: C9 FF      # did we underflow (0-1 = ff)?
+    bne l1286		; 1271: D0 13      # no: jump
+    lda #$9B		; 1273: A9 9B      # yes: set x position...
+    sta lC002		; 1275: 8D 02 C0   # .. to 155
     lda lC000		; 1278: AD 00 C0
     clc    		; 127B: 18
-    adc #$34		; 127C: 69 34
+    adc #$34		; 127C: 69 34      # increment the map position pointer to teh end of the row
     sta lC000		; 127E: 8D 00 C0
-    bcc l1286		; 1281: 90 03
-    inc lC001		; 1283: EE 01 C0
+    bcc l1286		; 1281: 90 03      # did the add overflow? no: jump, yes: continue
+    inc lC001		; 1283: EE 01 C0   # increment high byte
 l1286			; Callers: 1271 1281
     ldx #$0A		; 1286: A2 0A      # loop to increment content of addresses 0xC024-0xC02d
 l1288			; Callers: 128C
@@ -420,7 +420,7 @@ l1288			; Callers: 128C
     bne l1288		; 128C: D0 FA
     rts    		; 128E: 60
 u128F			; Callers: -c 128F       # Player moves EAST on world map ******************************************************
-    inc lC004		; 128F: EE 04 C0
+    inc lC004		; 128F: EE 04 C0   # *(0xc004)-- increment ACTUAL x position
     lda lC004		; 1292: AD 04 C0
     cmp #$03		; 1295: C9 03
     bne l12A6		; 1297: D0 0D
