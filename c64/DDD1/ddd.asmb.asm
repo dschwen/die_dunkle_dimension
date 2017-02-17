@@ -132,26 +132,26 @@ l1046			; Callers: 1050
     lda l02C0		; 107C: AD C0 02
     sta l0A40		; 107F: 8D 40 0A
     jmp $EA31		; 1082: 4C 31 EA
-u1085			; Callers: u174E -c 1085
+u1085			; Callers: u174E -c 1085         # candidate for map drawing routine!!!!
     lda #$36		; 0b110110 (clear bit 1)
     sta l01		; Set BASIC ROM->RAM
-    lda #$40		; 1089: A9 40
-    sta l24		; 108B: 85 24
+    lda #$40		; 1089: A9 40              #
+    sta l24		; 108B: 85 24                # *(0x24) = 64
     lda #$03		; 108D: A9 03
-    sta l25		; 108F: 85 25
+    sta l25		; 108F: 85 25                # *(0x25) = 3
     lda lC000		; 1091: AD 00 C0
-    sta l22		; 1094: 85 22
+    sta l22		; 1094: 85 22                # *(0x22) = *(0xC000)  lsb map position pointer
     lda lC001		; 1096: AD 01 C0
-    sta l23		; 1099: 85 23
+    sta l23		; 1099: 85 23                # *(0x22) = *(0xC000)  msb map position pointer
     lda #$0B		; 109B: A9 0B
-    sta l57		; 109D: 85 57
+    sta l57		; 109D: 85 57                # *(0x57) = 11
 l109F			; Callers: 10D4
     lda #$05		; 109F: A9 05
-    sta l58		; 10A1: 85 58
+    sta l58		; 10A1: 85 58                # *(0x58) = 5
     ldy #$00		; 10A3: A0 00
 l10A5			; Callers: 10C5
     lda (l22),y		; 10A5: B1 22
-    tax    		; 10A7: AA
+    tax    		; 10A7: AA                   # X = A
     lda lCD00,x		; 10A8: BD 00 CD
     sta (l24),y		; 10AB: 91 24
     inc l24		; 10AD: E6 24
@@ -169,35 +169,35 @@ l10C3			; Callers: 10BF
     bne l10A5		; 10C5: D0 DE
     lda l22		; 10C7: A5 22
     clc    		; 10C9: 18
-    adc #$2F		; 10CA: 69 2F
-    sta l22		; 10CC: 85 22
+    adc #$2F		; 10CA: 69 2F              # add 47 (52 - 5)
+    sta l22		; 10CC: 85 22                # store in lsb temp map pointer
     bcc l10D2		; 10CE: 90 02
-    inc l23		; 10D0: E6 23
+    inc l23		; 10D0: E6 23                # if overflow increment msb in temp map pointer
 l10D2			; Callers: 10CE
-    dec l57		; 10D2: C6 57
-    bne l109F		; 10D4: D0 C9
-    lda #$37		; 10D6: A9 37
-    sta l01		; 10D8: 85 01
+    dec l57		; 10D2: C6 57                # *(0x57)--
+    bne l109F		; 10D4: D0 C9              # if not zero yet jump
+    lda #$37		; 10D6: A9 37              # 0b110111 (set bit 1)
+    sta l01		; 10D8: 85 01                # Set BASIC RAM->ROM
     lda #$40		; 10DA: A9 40
-    sta l24		; 10DC: 85 24
+    sta l24		; 10DC: 85 24                # *(0x24) = 64
     clc    		; 10DE: 18
-    adc lC004		; 10DF: 6D 04 C0
+    adc lC004		; 10DF: 6D 04 C0           # A = A + *(0xC004); add subtile position onto accumulator
     sta l22		; 10E2: 85 22
     lda #$03		; 10E4: A9 03
-    sta l23		; 10E6: 85 23
-    sta l25		; 10E8: 85 25
+    sta l23		; 10E6: 85 23                # $22/$23 points to 0x0340 + *(0xC004) now
+    sta l25		; 10E8: 85 25                # $24/$25 points to 0x0340 now
     lda #$0B		; 10EA: A9 0B
     sta l60		; 10EC: 85 60
 l10EE			; Callers: 1106
     ldx #$0B		; 10EE: A2 0B
     ldy #$00		; 10F0: A0 00
 l10F2			; Callers: 10FB
-    lda (l22),y		; 10F2: B1 22
-    sta (l24),y		; 10F4: 91 24
+    lda (l22),y		; 10F2: B1 22            # fetch data from 0,1,or 2 bytes ahead
+    sta (l24),y		; 10F4: 91 24            # put it into (l24); for (i=0; i<11; ++i) mem[0x340 + i] = mem[0x340 + i + *(0xC004)];
     inc l22		; 10F6: E6 22
     inc l24		; 10F8: E6 24
     dex    		; 10FA: CA
-    bne l10F2		; 10FB: D0 F5
+    bne l10F2		; 10FB: D0 F5              # Loop 11 times
     ldx #$04		; 10FD: A2 04
 l10FF			; Callers: 1102
     inc l22		; 10FF: E6 22
@@ -237,7 +237,7 @@ l1127			; Callers: 116C
     lda lCA00,x		; 113C: BD 00 CA
     sta (l22),y		; 113F: 91 22
     lda #$28		; 1141: A9 28
-    tay    		; 1143: A8
+    tay    		; 1143: A8                   # Y = A
     lda lC800,x		; 1144: BD 00 C8
     sta (l24),y		; 1147: 91 24
     lda lCB00,x		; 1149: BD 00 CB
@@ -339,14 +339,14 @@ l11E1			; Callers: 11DC
     jmp l1204		; 11EB: 4C 04 12
 l11EE			; Callers: 11E9
     lda #$96		; 11EE: A9 96
-    sta lC003		; 11F0: 8D 03 C0
+    sta lC003		; 11F0: 8D 03 C0   # set y coordinate to 150
     lda lC000		; 11F3: AD 00 C0
     clc    		; 11F6: 18
-    adc #$A8		; 11F7: 69 A8
-    sta lC000		; 11F9: 8D 00 C0
+    adc #$A8		; 11F7: 69 A8      # add 168 to..
+    sta lC000		; 11F9: 8D 00 C0   # low byte (an overflow cannot occur, as the player is currently in row 5 where the lsb can be 5...57!)
     lda lC001		; 11FC: AD 01 C0
-    adc #$1D		; 11FF: 69 1D
-    sta lC001		; 1201: 8D 01 C0
+    adc #$1D		; 11FF: 69 1D      # add 29 to..
+    sta lC001		; 1201: 8D 01 C0   # high byte (adds 7592 =  146 * 52 to the mappointer)
 l1204			; Callers: 11EB
     ldx #$0A		; 1204: A2 0A      # loop to increment content of addresses 0xC02e-0xC037
 l1206			; Callers: 120A
