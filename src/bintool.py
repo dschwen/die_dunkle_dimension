@@ -54,7 +54,7 @@ elif cmd == 'tail' :
 # Look for a specified sequence of bytes in the file
 #
 elif cmd == 'grep' :
-  bytes = sys.argv[3:]
+  bytes = [int(b) for b in sys.argv[3:]]
   print bytes
 
   for y in range(len(ba) - len(bytes) - 1) :

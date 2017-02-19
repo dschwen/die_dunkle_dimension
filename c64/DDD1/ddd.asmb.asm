@@ -31,7 +31,7 @@ l0798 equ $798		; Access: 1564 15A1
 l07AF equ $7AF		; Near bottom of default screen area (23,23) from top left; Access: 15A6
 l2285 equ $2285		; Access: 1632
 l9FFC equ $9FFC		; Near top of basic Area; Access: 12D3
-lBFB0 equ $BFB0		; Point in BASIC RAM; Access: 12CE
+lBFB0 equ $BFB0		; End of mapa Point in BASIC RAM; Access: 12CE
 lC000 equ $C000		; lsb for pointer to map memory for current player position; Start of Upper RAM; Access: 1278 127E 125C 125F 1091 11D3 11D9 11F3 11F9 12B5 12BB 129E 120D 1213 1236 123C
 lC001 equ $C001		; msb for pointer to map memory for current player position; Point in Upper RAM; Access: 1283 1266 1096 11FC 1201 11DE 12C0 12A3 122D 1233 1241 1218
 lC002 equ $C002		; player x coordinate; Point in Upper RAM; Access: 1269 126C 1275 16FC 12A6 12A9 12B2
