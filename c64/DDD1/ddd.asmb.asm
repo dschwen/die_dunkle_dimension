@@ -953,64 +953,64 @@ l162A			; Callers: 1623
 l162D			; Callers: 11BF
     sta l037C		; 162D: 8D 7C 03
     rts    		; 1630: 60
-u1631			; Callers: -c 1631
-    jam    		; 1631: 02
-    slo l2285,x		; 1632: 1F 85 22
-    sta l57		; 1635: 85 57
-    lda #$F7		; 1637: A9 F7
-    sta l24		; 1639: 85 24
-    sta l59		; 163B: 85 59
-    lda #$06		; 163D: A9 06
-    sta l23		; 163F: 85 23
-    lda #$05		; 1641: A9 05
-    sta l25		; 1643: 85 25
-    lda #$DA		; 1645: A9 DA
-    sta l58		; 1647: 85 58
-    lda #$D9		; 1649: A9 D9
-    sta l5A		; 164B: 85 5A
-    ldx #$0C		; 164D: A2 0C
-l164F			; Callers: 167A
+u1631			; Callers: -c 1631         # Move and "nicht hier"
+    jam    		; 1631: 02             # illegal opcode... ??!
+    slo l2285,x		; 1632: 1F 85 22   # could be an STA l22
+    sta l57		; 1635: 85 57          #
+    lda #$F7		; 1637: A9 F7        #
+    sta l24		; 1639: 85 24          #
+    sta l59		; 163B: 85 59          #
+    lda #$06		; 163D: A9 06        #
+    sta l23		; 163F: 85 23          # 22/23 = 0x061F (1F is not confirmed)
+    lda #$05		; 1641: A9 05        #
+    sta l25		; 1643: 85 25          # 24/25 = 0x05F7
+    lda #$DA		; 1645: A9 DA        #
+    sta l58		; 1647: 85 58          # 57/58 = 0xDA1F (1F is not confirmed)
+    lda #$D9		; 1649: A9 D9        #
+    sta l5A		; 164B: 85 5A          # 59/5a = 0xD9F7
+    ldx #$0C		; 164D: A2 0C        # Nested loop over x and y
+l164F			; Callers: 167A            #
     ldy #$10		; 164F: A0 10
-l1651			; Callers: 165A
-    lda (l57),y		; 1651: B1 57
-    sta (l59),y		; 1653: 91 59
-    lda (l22),y		; 1655: B1 22
-    sta (l24),y		; 1657: 91 24
+l1651			; Callers: 165A              #
+    lda (l57),y		; 1651: B1 57        # copy from address pointed to by 57/58+y
+    sta (l59),y		; 1653: 91 59        # to address pointed by 59/5a+y
+    lda (l22),y		; 1655: B1 22        # copy from address pointed to by 22/23+y
+    sta (l24),y		; 1657: 91 24        # to address pointed by 24/25+y
     dey    		; 1659: 88
-    bne l1651		; 165A: D0 F5
-    lda l22		; 165C: A5 22
-    sta l24		; 165E: 85 24
-    sta l59		; 1660: 85 59
-    lda l23		; 1662: A5 23
-    sta l25		; 1664: 85 25
-    lda l58		; 1666: A5 58
-    sta l5A		; 1668: 85 5A
-    lda l22		; 166A: A5 22
-    clc    		; 166C: 18
-    adc #$28		; 166D: 69 28
-    sta l22		; 166F: 85 22
-    sta l57		; 1671: 85 57
-    bcc l1679		; 1673: 90 04
-    inc l23		; 1675: E6 23
-    inc l58		; 1677: E6 58
+    bne l1651		; 165A: D0 F5          # y = 0x10..1
+    lda l22		; 165C: A5 22          # Copy pointers
+    sta l24		; 165E: 85 24          # 22/23 -> 24/25, 59/5A
+    sta l59		; 1660: 85 59          #
+    lda l23		; 1662: A5 23          #
+    sta l25		; 1664: 85 25          #
+    lda l58		; 1666: A5 58          #
+    sta l5A		; 1668: 85 5A          #.
+    lda l22		; 166A: A5 22          # This block adds 0x28 (40) (screen line length?)
+    clc    		; 166C: 18             #
+    adc #$28		; 166D: 69 28        # to the pointers in
+    sta l22		; 166F: 85 22          # 22/23 and 57/58
+    sta l57		; 1671: 85 57          #
+    bcc l1679		; 1673: 90 04        #
+    inc l23		; 1675: E6 23          # high bytes
+    inc l58		; 1677: E6 58          #.
 l1679			; Callers: 1673
-    dex    		; 1679: CA
+    dex    		; 1679: CA             # x = 0xC..1
     bne l164F		; 167A: D0 D3
-    lda #$13		; 167C: A9 13
-    jsr $F1CA		; 167E: 20 CA F1
-    ldx #$17		; 1681: A2 17
-    lda #$11		; 1683: A9 11
-l1685			; Callers: 1689
-    jsr $F1CA		; 1685: 20 CA F1
+    lda #$13		; 167C: A9 13        # The following positions the cursor at the game prompt
+    jsr $F1CA		; 167E: 20 CA F1     # CHROUT 0x13 (HOME)
+    ldx #$17		; 1681: A2 17        # Loop 23 times
+    lda #$11		; 1683: A9 11        #
+l1685			; Callers: 1689            #
+    jsr $F1CA		; 1685: 20 CA F1     # CHROUT 0x11 (CRSRDOWN)
     dex    		; 1688: CA
     bne l1685		; 1689: D0 FA
-    ldx #$18		; 168B: A2 18
-    lda #$1D		; 168D: A9 1D
-l168F			; Callers: 1693
-    jsr $F1CA		; 168F: 20 CA F1
+    ldx #$18		; 168B: A2 18        # Loop 24 times
+    lda #$1D		; 168D: A9 1D        #
+l168F			; Callers: 1693            #
+    jsr $F1CA		; 168F: 20 CA F1     # CHROUT 0x1D (CRSRRIGHT)
     dex    		; 1692: CA
     bne l168F		; 1693: D0 FA
-    rts    		; 1695: 60
+    rts    		; 1695: 60             # done
 u1696			; Callers: -c 1696
     ldx #$79		; 1696: A2 79
     lda l02		; 1698: A5 02
@@ -1155,14 +1155,14 @@ l1795			; Callers: 1773 178E
     dex    		; 1795: CA
     bne l1770		; 1796: D0 D8
     rts    		; 1798: 60
-u1799			; Callers: -c 1799
-    ldx #$0E		; 1799: A2 0E
-    lda #$00		; 179B: A9 00
-l179D			; Callers: 17A1
-    sta lD3FF,x		; 179D: 9D FF D3
-    dex    		; 17A0: CA
-    bne l179D		; 17A1: D0 FA
-    rts    		; 17A3: 60
+u1799			; Callers: -c 1799        # Called after move (Zero out SID registers)
+    ldx #$0E		; 1799: A2 0E       # x = 14
+    lda #$00		; 179B: A9 00       #
+l179D			; Callers: 17A1           #
+    sta lD3FF,x		; 179D: 9D FF D3  # set D400 - D40D to zero
+    dex    		; 17A0: CA            #
+    bne l179D		; 17A1: D0 FA       #
+    rts    		; 17A3: 60            # done
 u17A4			; Callers: -c 17A4
     lda l02		; 17A4: A5 02
     clc    		; 17A6: 18
