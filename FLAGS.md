@@ -14,21 +14,25 @@ In the overworld (`ddd.twna`):
 
 Address| (hex)  | Value | Comment
 -------|--------|----|-------
-49152  | 0xc000 |    | (starts at 34)
-49153  | 0xc001 |    | (starts at 177)
-49154  | 0xc002 |    | Player X in overword (starts at 64)
-49155  | 0xc003 |    | Player Y in overword (starts at 89)
-49156  | 0xc004 |    | (starts at 2)
+49152  | 0xc000 |    | LSB Address of top left tile in viewport (34 at game start)
+49153  | 0xc001 |    | MSB " (177 at game start)
+49154  | 0xc002 |    | Player X in overword (starts at 64 at game start)
+49155  | 0xc003 |    | Player Y in overword (starts at 89 at game start)
+49156  | 0xc004 |    | Subtile index (0,1,2) (2 at game start)
 49157  | 0xc005 |    | Transportation mode
 "|"| 1  | Player on foot
 "|"| 2  | Player on horse
 "|"| 3  | Player on unicorn (einhorn)
 "|"| 4  | Player on ship
 "|"| 5  | Player on fire lizzard (feuerechse)
-49158  | 0xc006 |    | (starts at 255)
-49161  | 0xc009 |<255| Player took the fire lizzard
-...    |
-49165  | 0xc00d |    | (starts at 255)
+49158  | 0xc006 |    | X position horse (255 at game start - off map)
+49159  | 0xc007 |    | X position unicorn (255 at game start)
+49160  | 0xc008 |    | X position ship (255 at game start)
+49161  | 0xc009 |    | X position fire lizzard (255 at game start)
+49162  | 0xc006 |    | Y position horse (255 at game start - off map)
+49163  | 0xc007 |    | Y position unicorn (255 at game start)
+49164  | 0xc008 |    | Y position ship (255 at game start)
+49165  | 0xc009 |    | Y position fire lizzard (255 at game start)
 49166  | 0xc00e |    | Player gender
 "|"| 0  | male
 "|"| 1  | female
@@ -49,6 +53,8 @@ Address| (hex)  | Value | Comment
 49211  | 0xc03b | Player name letter 1
 ...    |
 49223  | 0xc047 | Player name letter 13
+
+When buying a ship in Worthal the ship coordinates are set to `x=48`, `y=35`
 
 ## Character stats
 
@@ -121,44 +127,55 @@ Address| (hex)  | index| string | comment
 -------|--------|------|--------|-----
 49273  | 0xc079 | 26 | kleiner schild
 49274  | 0xc07a | 27 | grosser schild | cannot be used with two-handed weapons(?)
+(gap)|
 
 ## Countdown registers
 Starting at `0xc07f` (49279) seven countdown registers are located that are decremented at each turn (and perform an action when they reach one)
 
 Address| (hex)  | Value | Comment
 -------|--------|----|-------
-49279  | 0xc07f | >0 | Player is dazed
-...|
-49285  | 0xc085 | >0 | Zauberbann abgewehrt  
+49279  | 0xc07f | >0 |  (betaeubt) Player is dazed (no parry, no shield use)
+(gap)|
+49282  | 0xc082 | >0 | Agility spell (lasts 23 turns) - Enemies move every second turn
+49283  | 0xc083 | >0 | Freeze time spell (lasts 13 turns) - Enemies do not move
+49284  | 0xc084 | >0 | Shield spell (lasts 13 turns)
+49285  | 0xc085 | >0 | Shield of light (lasts 13 turns)
+(gap)|
 
 ## State
 
 Address| (hex)  |  Comment
 -------|--------|-------
 49287  | 0xc087 | Points to spend on skill training
+(gap)|
 
 
 ## Spells
 Starting at `0xc097` (49303) 16 flags determine if the spells "a" through "p" are known by the player.
 
-Address| (hex)  | Value | Comment
+WM 302,307,321,312,302,337,342,326
+BM 346,353,357,366,361,370,374,378
+
+Address| (hex)  | min Astral| Ingredients | Comment
 -------|--------|----|-------
-49303  | 0xc097 | >0 | Player knows "mag. licht" (light) - White Magic
-49304  | 0xc098 | >0 | Player knows "gift neutral." (cure poison)
-49305  | 0xc099 | >0 | Player knows "schutzschild" (shield)
-49306  | 0xc09a | >0 | Player knows "wunderheilung" (heal)
-49307  | 0xc09b | >0 | Player knows "bannbrecher" (break curse)
-49308  | 0xc09c | >0 | Player knows "lichtschild" (shield of light)
-49309  | 0xc09d | >0 | Player knows "gewandtheit" (agility)
-49310  | 0xc09e | >0 | Player knows "totenbann" (ban undead)
-49311  | 0xc09f | >0 | Player knows "donnerkeil" (thunder strike) - Black Magic
-49312  | 0xc0a0 | >0 | Player knows "gift u. galle" (poison)
-49313  | 0xc0a1 | >0 | Player knows "feuerball" (fire ball)
-49314  | 0xc0a2 | >0 | Player knows "flammenspur" (flame trace)
-49315  | 0xc0a3 | >0 | Player knows "furchtfluch" (curse of fear)
-49316  | 0xc0a4 | >0 | Player knows "zeit gefrier." (freeze time)
-49317  | 0xc0a5 | >0 | Player knows "todesblitz" (death lightning)
-49318  | 0xc0a6 | >0 | Player knows "mag. bombe" (magic bomb)
+**White Magic** |
+49303  | 0xc097 |  2 || Light (mag. licht), duration is tracked using the local variable `f`
+49304  | 0xc098 |  5 || Cure poison (gift neutral.), costs 3 AS per poison point
+49305  | 0xc099 | 10 || Shield (schutzschild), does not work if shield of light is active
+49306  | 0xc09a | 10 || Heal (wunderheilung), costs 1 AS per HP and one extra AS
+49307  | 0xc09b |  ? || Break curse (bannbrecher)
+49308  | 0xc09c | 15 || Shield of light (lichtschild), does not work if shield spell is active
+49309  | 0xc09d | 20 || Agility (gewandtheit)
+49310  | 0xc09e |  ? || Ban undead (totenbann)
+**Black Magic** |
+49311  | 0xc09f |  5 || Thunder strike (donnerkeil)
+49312  | 0xc0a0 |  7 || Poison (gift u. galle)
+49313  | 0xc0a1 | 10 || Fire ball (feuerball)
+49314  | 0xc0a2 |  ? || Flame trace (flammenspur)
+49315  | 0xc0a3 |  ? || Curse of fear (furchtfluch)
+49316  | 0xc0a4 | 25 || Freeze time (zeit gefrier.)
+49317  | 0xc0a5 | 20 || Death lightning (todesblitz)
+49318  | 0xc0a6 |  ? || Magic bomb (mag. bombe)
 
 The use of 49319 - 49335 is not yet known
 
@@ -197,7 +214,7 @@ Address| (hex)  | Item    | Comment
 49351  | 0xc0c7 | Shard (splitter) | Found in dragon cave, play flute to get it
 49352  | 0xc0c8 | >0 | Player gave the location of Mubrak to the king (for 2000gp)
 49353  | 0xc0c9 | >0 | Player found 1000 gold pieces at `x=48`, `y=138` in the overworld
-49354  | 0xc0ca | Compass (kompass) |
+49354  | 0xc0ca | Compass (kompass) | Shows the direction in dungeon levels
 49355  | 0xc0cb | Lamp (lampe) |
 49356  | 0xc0cc | Torches (fackeln) | This contains the *number* of torches held
 49357  | 0xc0cd | >0 | Player found 500 gold pieces in the dragon cave
