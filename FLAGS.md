@@ -26,6 +26,7 @@ Address| (hex)  | Value | Comment
 "|"| 4  | Player on ship
 "|"| 5  | Player on fire lizzard (feuerechse)
 49158  | 0xc006 |    | (starts at 255)
+49161  | 0xc009 |<255| Player took the fire lizzard
 ...    |
 49165  | 0xc00d |    | (starts at 255)
 49166  | 0xc00e |    | Player gender
@@ -128,7 +129,7 @@ Address| (hex)  | Value | Comment
 -------|--------|----|-------
 49279  | 0xc07f | >0 | Player is dazed
 ...|
-49285  | 0xc085 |
+49285  | 0xc085 | >0 | Zauberbann abgewehrt  
 
 ## State
 
@@ -142,7 +143,7 @@ Starting at `0xc097` (49303) 16 flags determine if the spells "a" through "p" ar
 
 Address| (hex)  | Value | Comment
 -------|--------|----|-------
-49303  | 0xc097 | >0 | Player knows "mag. licht" (light)
+49303  | 0xc097 | >0 | Player knows "mag. licht" (light) - White Magic
 49304  | 0xc098 | >0 | Player knows "gift neutral." (cure poison)
 49305  | 0xc099 | >0 | Player knows "schutzschild" (shield)
 49306  | 0xc09a | >0 | Player knows "wunderheilung" (heal)
@@ -150,33 +151,55 @@ Address| (hex)  | Value | Comment
 49308  | 0xc09c | >0 | Player knows "lichtschild" (shield of light)
 49309  | 0xc09d | >0 | Player knows "gewandtheit" (agility)
 49310  | 0xc09e | >0 | Player knows "totenbann" (ban undead)
-49311  | 0xc09f | >0 | Player knows "donnerkeil" (thunder strike)
+49311  | 0xc09f | >0 | Player knows "donnerkeil" (thunder strike) - Black Magic
 49312  | 0xc0a0 | >0 | Player knows "gift u. galle" (poison)
 49313  | 0xc0a1 | >0 | Player knows "feuerball" (fire ball)
 49314  | 0xc0a2 | >0 | Player knows "flammenspur" (flame trace)
 49315  | 0xc0a3 | >0 | Player knows "furchtfluch" (curse of fear)
 49316  | 0xc0a4 | >0 | Player knows "zeit gefrier." (freeze time)
 49317  | 0xc0a5 | >0 | Player knows "todesblitz" (death lightning)
-49318  | 0xc0a6 | >0 | Player knows "mag. bombe" (magig bomb)
+49318  | 0xc0a6 | >0 | Player knows "mag. bombe" (magic bomb)
 
-## Magic ingredients Inventory
+The use of 49319 - 49335 is not yet known
+
+## Magic ingredients Inventory (`g$` array)
 Counters for carried ingredients.
 Magic ingredients for each spell are defined using a bit set (8bit).
 
 Address| (hex)  | index | Comment
 -------|--------|-------|--------
-49336  | 0xc0b8 | 0     | Magic ingredient 0
-49337  | 0xc0b9 | 1     | Magic ingredient 1
-49338  | 0xc0ba | 2     | Magic ingredient 2
-49339  | 0xc0bb | 3     | Magic ingredient 3
-49340  | 0xc0bc | 4     | Magic ingredient 4
-49341  | 0xc0bd | 5     | Magic ingredient 5
-49342  | 0xc0be | 6     | Magic ingredient 6
-49343  | 0xc0bf | 7     | Alraune root
+49336  | 0xc0b8 | 0     | Sulfur (schwefel)
+49337  | 0xc0b9 | 1     | Garlic (knoblauch)
+49338  | 0xc0ba | 2     | Ginseng
+49339  | 0xc0bb | 3     | Blood moss (blutflechte)
+49340  | 0xc0bc | 4     | (zirbelkraut)
+49341  | 0xc0bd | 5     | Flower of death (totenblume)
+49342  | 0xc0be | 6     | Poison of the night mushroom (g. d. nacht)
+49343  | 0xc0bf | 7     | Alraune root (alraune)
 
-
-## Story flags
+schwefel,knoblauch,ginseng,blutflechte,zirbelkraut,totenblume
+60301 datag. d. nacht,alraune
 
 Address| (hex)  | Value | Comment
--------|--------|----|-------
+-------|--------|-------|--------
+49344  | 0xc0c0 |       | Trainer countdown Kings Castle
+49345  | 0xc0c1 |       | ?
+49346  | 0xc0c2 |       | When pressing `h` riding a horse or unicorn in the overworld
+"|"| 0  | say 'hooh!
+"|"| 1  | say 'haa!'
+
+Address| (hex)  | Item    | Comment
+-------|--------|---------|--------
+49347  | 0xc0c3 | Sextant | player can get the overword position with `p`
+49348  | 0xc0c4 | Lava protection ring (feuerring) | Found at fire castle as reward for killing kroloc
+49349  | 0xc0c5 | Oak dagger (eichendolch) | Found in Mubrak by t'kul
+49350  | 0xc0c6 | Glass flute (glasfloete) |
+49351  | 0xc0c7 | Shard (splitter) | Found in dragon cave, play flute to get it
+49352  | 0xc0c8 | >0 | Player gave the location of Mubrak to the king (for 2000gp)
 49353  | 0xc0c9 | >0 | Player found 1000 gold pieces at `x=48`, `y=138` in the overworld
+49354  | 0xc0ca | Compass (kompass) |
+49355  | 0xc0cb | Lamp (lampe) |
+49356  | 0xc0cc | Torches (fackeln) | This contains the *number* of torches held
+49357  | 0xc0cd | >0 | Player found 500 gold pieces in the dragon cave
+49358  | 0xc0ce | Dragon Claw (drachenkralle) | obtained from princess in dragon cave, opens the dragon cave loot room door
+49359  | 0xc0cf | >0 | Count kroloc is dead (last byte in game status)
