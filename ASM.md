@@ -46,3 +46,15 @@ Output `#$9a` (light blue), `#$93` (home), load `#$B0` (), jsr `0x1608`
 * `0x17a4`
 Fetch x coordinate from `0x02` (2) and add `0x4B` store in `0x22`, store `0x15` in `0x23` (temporary area)
 Fetch y ccordinate from `0xB6` (182)
+
+## The Map
+
+### Current viewport
+
+The current viewport is stored in the datasette buffer starting at `0x340`. It is 11 x 11 tiles in size. The center of the viewport (i.e. the tile underneath the player) is located at `0x37c` (892). The twn basic files contain `l=peek(892)` to fetch the current tile beneath the player.
+
+The druid cottage (ddd.mapb) is a non-scolling single viewport map that is loaded straight into the datasette buffer.
+
+The overwolrd map is unpacked into the datasettee buffer by a routine starting at `0x1085` (`sys4229` - tentative).
+
+The town maps
