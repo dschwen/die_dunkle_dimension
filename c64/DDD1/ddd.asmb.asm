@@ -132,7 +132,7 @@ l1046			; Callers: 1050
     lda l02C0		; 107C: AD C0 02
     sta l0A40		; 107F: 8D 40 0A
     jmp $EA31		; 1082: 4C 31 EA
-u1085			; Callers: u174E -c 1085         # candidate for map drawing routine!!!!
+u1085			; Callers: u174E -c 1085         # unpack overworld map viewport into cassette buffer
     lda #$36		; 0b110110 (clear bit 1)
     sta l01		; Set BASIC ROM->RAM
     lda #$40		; 1089: A9 40              #
@@ -189,8 +189,8 @@ l10D2			; Callers: 10CE
     lda #$0B		; 10EA: A9 0B
     sta l60		; 10EC: 85 60
 l10EE			; Callers: 1106
-    ldx #$0B		; 10EE: A2 0B
-    ldy #$00		; 10F0: A0 00
+    ldx #$0B		; 10EE: A2 0B              # x =11
+    ldy #$00		; 10F0: A0 00              # y = 0
 l10F2			; Callers: 10FB
     lda (l22),y		; 10F2: B1 22            # fetch data from 0,1,or 2 bytes ahead
     sta (l24),y		; 10F4: 91 24            # put it into (l24); for (i=0; i<11; ++i) mem[0x340 + i] = mem[0x340 + i + *(0xC004)];
@@ -206,7 +206,7 @@ l10FF			; Callers: 1102
     dec l60		; 1104: C6 60
     bne l10EE		; 1106: D0 E6
     rts    		; 1108: 60
-u1109			; Callers: 176B -c 1109   # Hitpoint changes?
+u1109			; Callers: 176B -c 1109   # Render map viewport from cassette buffer
     lda #$40		;
     sta l57		;
     lda #$03		; $0340 into

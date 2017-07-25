@@ -53,7 +53,11 @@ Fetch y ccordinate from `0xB6` (182)
 
 The current viewport is stored in the datasette buffer starting at `0x340`. It is 11 x 11 tiles in size. The center of the viewport (i.e. the tile underneath the player) is located at `0x37c` (892). The twn basic files contain `l=peek(892)` to fetch the current tile beneath the player.
 
+`sys4229` unpacks the current viewport from the packed map into the cassette buffer
+
 The druid cottage (ddd.mapb) is a non-scolling single viewport map that is loaded straight into the datasette buffer.
+
+`sys4361` renders the current viewport to the screen.
 
 The overwolrd map is unpacked into the datasettee buffer by a routine starting at `0x1085` (`sys4229` - tentative).
 
