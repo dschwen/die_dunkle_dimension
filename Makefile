@@ -63,6 +63,8 @@ disassemble:
 	@./contrib/dis/dis -l -t prg -i `./src/entrypts.py -dis c64/DDD1/ddd.asmb c64/DDD?/ddd.twn?.txt` c64/DDD1/ddd.asmb > c64/DDD1/ddd.asmb.asm
 	# disassembling title file
 	@./contrib/dis/dis -l -t prg -i `./src/entrypts.py -dis c64/DDD1/ddd.dcod c64/DDD?/ddd.dbas.txt` c64/DDD1/ddd.dcod > c64/DDD1/ddd.dcod.asm
+	# disassembling dungeon assembler routines
+	@./contrib/dis/dis -l -t prg -i `./src/entrypts.py -dis c64/DDD3/ddd.assm c64/DDD3/ddd.twn[mp].txt` c64/DDD3/ddd.assm > c64/DDD3/ddd.assm.asm
 
 .PHONY: maps
 maps:
