@@ -19,16 +19,18 @@ Address| (hex)  | Value | Comment
 49154  | 0xc002 |    | Player X in overword (starts at 64)
 49155  | 0xc003 |    | Player Y in overword (starts at 89)
 49156  | 0xc004 |    | (starts at 2)
-49157  | 0xc005 | 1  | Player on foot
-       |        | 2  | Player on horse
-       |        | 3  | Player on unicorn (einhorn)
-       |        | 4  | Player on ship
-       |        | 5  | Player on fire lizzard (feuerechse)
+49157  | 0xc005 |    | Transportation mode
+"|"| 1  | Player on foot
+"|"| 2  | Player on horse
+"|"| 3  | Player on unicorn (einhorn)
+"|"| 4  | Player on ship
+"|"| 5  | Player on fire lizzard (feuerechse)
 49158  | 0xc006 |    | (starts at 255)
 ...    |
 49165  | 0xc00d |    | (starts at 255)
-49166  | 0xc00e | 0  | Player is male
-       |        | 1  | Player is female
+49166  | 0xc00e |    | Player gender
+"|"| 0  | male
+"|"| 1  | female
 49167  | 0xc00f || Current shield (see `w$` array)
 49168  | 0xc010 || Monster 0 - type (active on the overworld)
 ...    |
@@ -75,7 +77,7 @@ Address| (hex)  |  Comment
 49245  | 0xc05d | Poison factor
 49246  | 0xc05e | Current weapon (see `w$` array)
 49247  | 0xc05f | Current armor (see `w$` array)
-49248  | 0xc060 | _this is erroneously assigned to `sh` in some places_
+<s>49248>/s>  | <s>0xc060</s> | _this is erroneously assigned to `sh` in some places_
 
 
 ### `w$` array inventory items
@@ -83,7 +85,7 @@ Set to `>0` if owned
 
 Address| (hex)  | index| string | comment
 -------|--------|------|--------|-----
-  |  | 0 | haende | always owned
+<s>49247</s>  | <s>0xc05f</s> | 0 | haende | always owned
 49248  | 0xc060 | 1 | messer
 49249  | 0xc061 | 2 | dolch
 49250  | 0xc062 | 3 | kurzschwert
@@ -126,7 +128,7 @@ Starting at `0xc07f` (49279) seven countdown registers are located that are decr
 Address| (hex)  | Value | Comment
 -------|--------|----|-------
 49279  | 0xc07f | >0 | Player is dazed
-...
+...|
 49285  | 0xc085 |
 
 ## State
