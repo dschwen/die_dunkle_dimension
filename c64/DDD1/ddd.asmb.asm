@@ -241,7 +241,7 @@ l1127			; Callers: 116C
     lda lC800,x		; 1144: BD 00 C8
     sta (l24),y		; 1147: 91 24
     lda lCB00,x		; 1149: BD 00 CB
-    sta (l22),y		; 114C: 91 22
+    sta (l22),y		; 114C: 91 22            # Writes to char ram
     iny    		; 114E: C8
     lda lC800,x		; 114F: BD 00 C8
     sta (l24),y		; 1152: 91 24

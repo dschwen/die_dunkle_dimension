@@ -58,3 +58,11 @@ The druid cottage (ddd.mapb) is a non-scolling single viewport map that is loade
 The overwolrd map is unpacked into the datasettee buffer by a routine starting at `0x1085` (`sys4229` - tentative).
 
 The town maps
+
+## Vice monitor tips
+
+Using the monitor in `x64` (vice) the `sys` calls can be traced using
+
+1. `bk E144` (sets a breakpoint in the kernal right before the jump to the sys destination address)
+2. `m 14` (look at the LSB (`0x14`) and MSB (`0x15`) of the destination address )
+3. `ret` and `x` (to jump back into basic)
