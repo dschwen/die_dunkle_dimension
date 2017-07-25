@@ -79,7 +79,6 @@ Address| (hex)  |  Comment
 49247  | 0xc05f | Current armor (see `w$` array)
 <s>49248>/s>  | <s>0xc060</s> | _this is erroneously assigned to `sh` in some places_
 
-
 ### `w$` array inventory items
 Set to `>0` if owned
 
@@ -160,12 +159,21 @@ Address| (hex)  | Value | Comment
 49317  | 0xc0a5 | >0 | Player knows "todesblitz" (death lightning)
 49318  | 0xc0a6 | >0 | Player knows "mag. bombe" (magig bomb)
 
-## Misc Inventory
-Counters for carried inventory items.
+## Magic ingredients Inventory
+Counters for carried ingredients.
+Magic ingredients for each spell are defined using a bit set (8bit).
 
-Address| (hex)  |  Comment
--------|--------|-------
-49343  | 0xc0bf | Number of Alraune root
+Address| (hex)  | index | Comment
+-------|--------|-------|--------
+49336  | 0xc0b8 | 0     | Magic ingredient 0
+49337  | 0xc0b9 | 1     | Magic ingredient 1
+49338  | 0xc0ba | 2     | Magic ingredient 2
+49339  | 0xc0bb | 3     | Magic ingredient 3
+49340  | 0xc0bc | 4     | Magic ingredient 4
+49341  | 0xc0bd | 5     | Magic ingredient 5
+49342  | 0xc0be | 6     | Magic ingredient 6
+49343  | 0xc0bf | 7     | Alraune root
+
 
 ## Story flags
 
