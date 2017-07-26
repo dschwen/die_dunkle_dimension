@@ -157,7 +157,7 @@ WM 302,307,321,312,302,337,342,326
 BM 346,353,357,366,361,370,374,378
 
 Address| (hex)  | min Astral| Ingredients | Comment
--------|--------|----|-------
+-------|--------|-----------|-------------|---------
 **White Magic** |
 49303  | 0xc097 |  2 || Light (mag. licht), duration is tracked using the local variable `f`
 49304  | 0xc098 |  5 || Cure poison (gift neutral.), costs 3 AS per poison point
