@@ -48,18 +48,18 @@ lC038 equ $C038		; Point in Upper RAM; Access: 1540
 lC039 equ $C039		; Point in Upper RAM; Access: 1545
 lC03A equ $C03A		; Point in Upper RAM; Access: 154A 15BD
 lC059 equ $C059		; Point in Upper RAM; Access: 16B8
-lC5A4 equ $C5A4		; Point in Upper RAM; Access: 16B2
+lC5A4 equ $C5A4		; Point in Upper RAM; Access: 16B2 This and the following index into ddd.code data
 lC6FA equ $C6FA		; Point in Upper RAM; Access: 16BD
 lC720 equ $C720		; Point in Upper RAM; Access: 11AD
 lC790 equ $C790		; Point in Upper RAM; Access: 118A
 lC800 equ $C800		; Point in Upper RAM;Access: 112C 1137 1144 114F
-lC900 equ $C900		; Point in Upper RAM;Access: 1131
-lCA00 equ $CA00		; Point in Upper RAM; Access: 113C
-lCB00 equ $CB00		; Point in Upper RAM; Access: 1149
-lCC00 equ $CC00		; Point in Upper RAM; Access: 1154
-lCD00 equ $CD00		; Point in Upper RAM; Access: 10A8
-lCE00 equ $CE00		; Point in Upper RAM; Access: 10AF
-lCF00 equ $CF00		; Point in Upper RAM; Access: 10B6
+lC900 equ $C900		; Point in Upper RAM;Access: 1131  (I bet those are the 4 chracters in each tile!
+lCA00 equ $CA00		; Point in Upper RAM; Access: 113C  ..
+lCB00 equ $CB00		; Point in Upper RAM; Access: 1149  ..
+lCC00 equ $CC00		; Point in Upper RAM; Access: 1154 )
+lCD00 equ $CD00		; Point in Upper RAM; Access: 10A8 (subtile 0 table)
+lCE00 equ $CE00		; Point in Upper RAM; Access: 10AF (subtile 1 table)
+lCF00 equ $CF00		; Point in Upper RAM; Access: 10B6 (subtile 2 table)
 lD012 equ $D012		; Current raster line; Access: 16A8 135D 16E0
 lD3FF equ $D3FF		; Top of VIC-II register images (one below SID audio); Access: 179D
 lD83F equ $D83F		; Color RAM 0x3F (63) (1,23) from top left; Access: 15BA
@@ -133,7 +133,7 @@ l1046			; Callers: 1050
     sta l0A40		; 107F: 8D 40 0A
     jmp $EA31		; 1082: 4C 31 EA
 u1085			; Callers: u174E -c 1085         # unpack overworld map viewport into cassette buffer
-    lda #$36		; 0b110110 (clear bit 1)
+    lda #$36		; 0b110110 (clear bit 1)   # the main map data is beneath the Basic ROM! ($A000-$BFFF)
     sta l01		; Set BASIC ROM->RAM
     lda #$40		; 1089: A9 40              #
     sta l24		; 108B: 85 24                # *(0x24) = 64
@@ -150,23 +150,23 @@ l109F			; Callers: 10D4
     sta l58		; 10A1: 85 58                # *(0x58) = 5
     ldy #$00		; 10A3: A0 00
 l10A5			; Callers: 10C5
-    lda (l22),y		; 10A5: B1 22
+    lda (l22),y		; 10A5: B1 22            # load supertile index
     tax    		; 10A7: AA                   # X = A
-    lda lCD00,x		; 10A8: BD 00 CD
-    sta (l24),y		; 10AB: 91 24
-    inc l24		; 10AD: E6 24
-    lda lCE00,x		; 10AF: BD 00 CE
-    sta (l24),y		; 10B2: 91 24
-    inc l24		; 10B4: E6 24
-    lda lCF00,x		; 10B6: BD 00 CF
-    sta (l24),y		; 10B9: 91 24
-    inc l24		; 10BB: E6 24
-    inc l22		; 10BD: E6 22
-    bne l10C3		; 10BF: D0 02
-    inc l23		; 10C1: E6 23
+    lda lCD00,x		; 10A8: BD 00 CD         # fetch subtile 0
+    sta (l24),y		; 10AB: 91 24            #   write it to cassette buffer
+    inc l24		; 10AD: E6 24                # increment cassette buffer pointer
+    lda lCE00,x		; 10AF: BD 00 CE         # fetch subtile 1
+    sta (l24),y		; 10B2: 91 24            #   write it to cassette buffer
+    inc l24		; 10B4: E6 24                # increment cassette buffer pointer
+    lda lCF00,x		; 10B6: BD 00 CF         # fetch subtile 2
+    sta (l24),y		; 10B9: 91 24            #   write it to cassette buffer
+    inc l24		; 10BB: E6 24                # increment cassette buffer pointer
+    inc l22		; 10BD: E6 22                # increment overworld buffer pointer
+    bne l10C3		; 10BF: D0 02              # (if LSB overflows)
+    inc l23		; 10C1: E6 23                #  increment MSB)
 l10C3			; Callers: 10BF
-    dec l58		; 10C3: C6 58
-    bne l10A5		; 10C5: D0 DE
+    dec l58		; 10C3: C6 58                #
+    bne l10A5		; 10C5: D0 DE              # This performs 5 iterations to decode an entire line of the viewport (why 5?!)
     lda l22		; 10C7: A5 22
     clc    		; 10C9: 18
     adc #$2F		; 10CA: 69 2F              # add 47 (52 - 5)

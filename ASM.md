@@ -59,7 +59,9 @@ The druid cottage (ddd.mapb) is a non-scolling single viewport map that is loade
 
 `sys4361` renders the current viewport to the screen.
 
-The overwolrd map is unpacked into the datasettee buffer by a routine starting at `0x1085` (`sys4229` - tentative).
+The overworld map is unpacked into the datasette buffer by a routine starting at `0x1085` (`sys4229` - tentative).
+The 3 sub-tiles making up an overworld super tile _i_ are tabulated at 0xCD00+i, 0xCE00+i, and 0xCF00+i.
+`worldmap2png.py` decodes the overworld map.
 
 The town maps
 

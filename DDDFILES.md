@@ -10,7 +10,7 @@ ddd.chrb| 0x0800| Charset B - Druid cottage
 ddd.chrc| 0x0800| Charset C -
 ddd.chrk| 0x0800| Charset K -
 ddd.chrl| 0x0800| Charset L -
-ddd.code| 0xc540 (upper RAM)|
+ddd.code| 0xc540 (upper RAM)| Overworld sub-tile data
 ddd.dbas| 0x0801| Basic Title loader (loads ddd.dtxt, ddd.dttl, ddd.dcod, ddd.dspr, ddd.dsnd, ddd.dtun, ddd.titl, ddd.boot)
 ddd.dchr| 0x8800| main title file
 ddd.dcod| 0x1000| main title file

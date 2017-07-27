@@ -74,7 +74,7 @@ maps:
 	  ./src/map2png.py $$map 35; \
 	done
 	# world map
-	@./src/map2png.py c64/DDD1/ddd.mapa 52
+	@./src/worldmap2png.py
 	# druid cottage
 	@./src/map2png.py c64/DDD1/ddd.mapb 11
 
