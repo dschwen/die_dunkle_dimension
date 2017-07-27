@@ -14,15 +14,14 @@ and can be found in the `res` directory.
 ## World map
 
 The world map is shown to consist of `(39*4) * (39*4)` tiles (as can be seen in the pencil drawing of the map available on the web).
-The data seems to be stored in `DDD1/ddd.mapa` and can be plotted with
+The data is stored in `DDD1/ddd.mapa` (and `DDD1/ddd.code`) and can be plotted with
 
 ```
-./src/map2png.py c64/DDD1/ddd.mapa 52
+./src/worldmap2png.py
 ```
 
-It looks like the map file contains a `52 x (52*3)` data set (`52*3` == `39*4`).
-The rendering and asm code suggest that each entry represents a strip of `4*1`
-actual tiles (the subtiles).
+The map file contains a `52 x (52*3)` data set (`52*3` == `39*4`).
+Each entry represents a strip of `3*1` actual tiles (the subtiles).
 
 ![](res/ddd.mapa.png)
 
