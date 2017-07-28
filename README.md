@@ -88,6 +88,25 @@ make chars
 ![](res/ddd.chro.png)
 ![](res/ddd.chrq.png)
 
+### ...and the tiles they make up
+
+![](res/ddd.chra.tiles.png)
+![](res/ddd.chrb.tiles.png)
+![](res/ddd.chrc.tiles.png)
+![](res/ddd.chrd.tiles.png)
+![](res/ddd.chre.tiles.png)
+![](res/ddd.chrf.tiles.png)
+![](res/ddd.chrg.tiles.png)
+![](res/ddd.chrh.tiles.png)
+![](res/ddd.chri.tiles.png)
+![](res/ddd.chrj.tiles.png)
+![](res/ddd.chrk.tiles.png)
+![](res/ddd.chrl.tiles.png)
+![](res/ddd.chrm.tiles.png)
+![](res/ddd.chrn.tiles.png)
+![](res/ddd.chro.tiles.png)
+![](res/ddd.chrq.tiles.png)
+
 ## Sprites
 
 Only one spritesheet seems to be present and it looks like it should be a multicolor sprite

@@ -83,6 +83,7 @@ CHR_IMAGES := $(CHR_FILES:=.png)
 
 %.png: %
 	@./src/chr2png.py $<
+	@./src/tiles2png.py $<
 
 .PHONY: chars
 chars: $(CHR_IMAGES)
