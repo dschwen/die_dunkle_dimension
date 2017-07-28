@@ -211,65 +211,65 @@ u1109			; Callers: 176B -c 1109   # Render map viewport from cassette buffer
     sta l57		;
     lda #$03		; $0340 into
     sta l58		; Arithmetic Register #3 (0x57-0x5B)
-    lda #$29		; 1111: A9 29
+    lda #$29		; 1111: A9 29              # LSB 0x29 is 41 = one row down, one column left (top left inside the 1 char wide frame around the game are)
     sta l22		; 1113: 85 22
     sta l24		; 1115: 85 24
     lda #$04		; 1117: A9 04
-    sta l23		; 1119: 85 23
+    sta l23		; 1119: 85 23                # (l22) points to 0x0429
     lda #$D8		; 111B: A9 D8
-    sta l25		; 111D: 85 25
-    lda #$0B		; 111F: A9 0B
-    sta l60		; 1121: 85 60
+    sta l25		; 111D: 85 25                # (l24) points to 0xD829
+    lda #$0B		; 111F: A9 0B              # put 11 into...
+    sta l60		; 1121: 85 60                # 0x60 (outer loop counter)
 l1123			; Callers: 117F
-    lda #$0B		; 1123: A9 0B
-    sta l5F		; 1125: 85 5F
+    lda #$0B		; 1123: A9 0B              # put 11 into...
+    sta l5F		; 1125: 85 5F                # 0x5f (inner loop counter)
 l1127			; Callers: 116C
-    ldy #$00		; 1127: A0 00
-    lda (l57),y		; 1129: B1 57
-    tax    		; 112B: AA
-    lda lC800,x		; 112C: BD 00 C8
-    sta (l24),y		; 112F: 91 24
-    lda lC900,x		; 1131: BD 00 C9
-    sta (l22),y		; 1134: 91 22
-    iny    		; 1136: C8
-    lda lC800,x		; 1137: BD 00 C8
-    sta (l24),y		; 113A: 91 24
-    lda lCA00,x		; 113C: BD 00 CA
-    sta (l22),y		; 113F: 91 22
-    lda #$28		; 1141: A9 28
-    tay    		; 1143: A8                   # Y = A
-    lda lC800,x		; 1144: BD 00 C8
+    ldy #$00		; 1127: A0 00              # Y=0
+    lda (l57),y		; 1129: B1 57            # get tile form cassette buffer...
+    tax    		; 112B: AA                   # and store it in X
+    lda lC800,x		; 112C: BD 00 C8         # get tile color...
+    sta (l24),y		; 112F: 91 24            # ..and set color ram (at *(0x24) + Y)
+    lda lC900,x		; 1131: BD 00 C9         # get top left tile char...
+    sta (l22),y		; 1134: 91 22            # ..and set screen ram (at *(0x22) + Y)
+    iny    		; 1136: C8                   # Y=1
+    lda lC800,x		; 1137: BD 00 C8         # get tile color (again)...
+    sta (l24),y		; 113A: 91 24            # ..and set color ram (at *(0x24) + Y)
+    lda lCA00,x		; 113C: BD 00 CA         # get top right tile char...
+    sta (l22),y		; 113F: 91 22            # ..and set screen ram (at *(0x22) + Y)
+    lda #$28		; 1141: A9 28              # 40 (next screen line)
+    tay    		; 1143: A8                   # Y = A = 40
+    lda lC800,x		; 1144: BD 00 C8         # get tile color (again)
     sta (l24),y		; 1147: 91 24
     lda lCB00,x		; 1149: BD 00 CB
     sta (l22),y		; 114C: 91 22            # Writes to char ram
-    iny    		; 114E: C8
-    lda lC800,x		; 114F: BD 00 C8
+    iny    		; 114E: C8                   # y = 41 now
+    lda lC800,x		; 114F: BD 00 C8         # get tile color (again)
     sta (l24),y		; 1152: 91 24
     lda lCC00,x		; 1154: BD 00 CC
     sta (l22),y		; 1157: 91 22
-    inc l57		; 1159: E6 57
+    inc l57		; 1159: E6 57                # increase datasette pointer (there will be no overflow as the viewport has only 11*11=121 bytes)
     lda l22		; 115B: A5 22
     clc    		; 115D: 18
     adc #$02		; 115E: 69 02
-    sta l22		; 1160: 85 22
-    sta l24		; 1162: 85 24
-    bcc l116A		; 1164: 90 04
-    inc l23		; 1166: E6 23
-    inc l25		; 1168: E6 25
+    sta l22		; 1160: 85 22                # increase screen ram...
+    sta l24		; 1162: 85 24                # ...and color ram pointer by two each
+    bcc l116A		; 1164: 90 04              # LSBs are always the same (they start on 256byte boundaries)
+    inc l23		; 1166: E6 23                # so if one overflows...
+    inc l25		; 1168: E6 25                # ... both overflow
 l116A			; Callers: 1164
     dec l5F		; 116A: C6 5F
-    bne l1127		; 116C: D0 B9
+    bne l1127		; 116C: D0 B9              # inner loop end
     lda l22		; 116E: A5 22
     clc    		; 1170: 18
-    adc #$3A		; 1171: 69 3A
-    sta l22		; 1173: 85 22
-    sta l24		; 1175: 85 24
-    bcc l117D		; 1177: 90 04
+    adc #$3A		; 1171: 69 3A              # 58, which together with the 2*11=22 bytes the screen/color ram pointer was advanced in the inner loop,...
+    sta l22		; 1173: 85 22                # gets botyh pointers 80 bytes further than the beginning of the previous outer iteration...
+    sta l24		; 1175: 85 24                # which is exactly two lines down
+    bcc l117D		; 1177: 90 04              # again, when one overflows, both overflow
     inc l23		; 1179: E6 23
     inc l25		; 117B: E6 25
 l117D			; Callers: 1177
-    dec l60		; 117D: C6 60
-    bne l1123		; 117F: D0 A2
+    dec l60		; 117D: C6 60                # decrease outer loop counter
+    bne l1123		; 117F: D0 A2              # outer loop end
     rts    		; 1181: 60
 u1182			; Callers: 1765 -c 1182
     ldy #$00		; 1182: A0 00
