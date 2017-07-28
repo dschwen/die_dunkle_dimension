@@ -1,6 +1,25 @@
 #!/usr/bin/env python
 import sys
 
+palette = [
+  (0,0,0),
+  (255,255,255),
+  (104,55,43),
+  (112,164,178),
+  (111,61,134),
+  (88,141,67),
+  (53,40,121),
+  (184,199,111),
+  (111,79,37),
+  (67,57,0),
+  (154,103,89),
+  (68,68,68),
+  (108,108,108),
+  (154,210,132),
+  (108,94,181),
+  (149,149,149)
+]
+
 if len(sys.argv) < 2 :
   print "Usage ./map2png.py ddd.mapb height offset"
   sys.exit(1)
@@ -9,6 +28,10 @@ import png
 
 fh = open(sys.argv[1], 'rb')
 ba = bytearray(fh.read())
+fh.close()
+
+fh = open('c64/DDD1/ddd.code', 'rb')
+code = bytearray(fh.read())
 fh.close()
 
 xsize = 52
@@ -28,8 +51,9 @@ image = []
 for y in range(lines) :
   row = []
   for x in range(xsize) :
-    b = ba[offset + x + y * xsize]
-    row.append((b,(9 * b) % 256, (21 * b) % 256))
+    tile = ba[offset + x + y * xsize]
+    color = palette[code[0xC800 - 0xC540 + 2 + tile]]
+    row.append(color)
 
   image.append(row)
 
