@@ -42,7 +42,7 @@ data: images
 palette: c64/colodore_vic2.png
 	@convert c64/colodore_vic2.png -format %c -depth 8 histogram:info:- \
 	  | cut -d\( -f2 | cut -d\) -f1 | sed 's/ //g' \
-	  | awk '{ print "[" $1 "], " }'
+	  | awk '{ print "[" $$1 "], " }'
 
 
 TWN_FILES    := $(shell find $(C64DIR) -name 'ddd.twn?' -or -name ddd.konj -or -name ddd.prep -or -name ddd.dbas -or -name ddd.boot)
