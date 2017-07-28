@@ -1,33 +1,22 @@
 #!/usr/bin/env python
 import sys
+import png
+from utils.gfx import drawChar
 
 if len(sys.argv) != 2 :
   print "Usage ./chr2png.py ddd.chra"
   sys.exit(1)
 
-import png
-
 
 fh = open(sys.argv[1], 'rb')
-ba = bytearray(fh.read())
+chars = bytearray(fh.read())
 fh.close()
 
-print len(ba), "bytes read"
+# allocate array for the final image (16*16 chars of 8*8 size each)
+image = [[(0,0,0) for i in range(8*16)] for j in range(8*16)]
 
-bits = [128, 64, 32, 16, 8, 4, 2, 1]
-image = []
-
-for y in range(128) :
-	row = []
-	for x in range(128) :
-		c = int(y/8) * 16 + int(x/8)
-		v = ba[2 + c*8 + y % 8] & bits[x % 8]
-
-		if v == 0 :
-			row.append((255,255,255))
-		else:
-			row.append((0,0,0))
-
-	image.append(row)
+for x in range(16) :
+    for y in range(16) :
+        drawChar(image, chars, x + 16*y, (255,255,255), x*8, y*8)
 
 png.from_array(image, 'RGB').save('%s.png' % sys.argv[1])

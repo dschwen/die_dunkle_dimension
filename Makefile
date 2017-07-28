@@ -71,12 +71,12 @@ maps:
 	# town and castle maps
 	@for map in `find c64 -name ddd.map\? -size 1507c`; \
 	do \
-	  ./src/map2png.py $$map 35; \
+	  ./src/map2png.py $$map $${map/map/chr}; \
 	done
 	# world map
 	@./src/worldmap2png.py
 	# druid cottage
-	@./src/map2png.py c64/DDD1/ddd.mapb 11
+	@./src/map2png.py c64/DDD1/ddd.mapb c64/DDD1/ddd.chrb 11
 
 CHR_FILES  := $(shell find $(C64DIR) -name 'ddd.chr?')
 CHR_IMAGES := $(CHR_FILES:=.png)
