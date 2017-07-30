@@ -66,7 +66,7 @@ ddd.twnj|       | Basic code J -
 
 File    |       | Content
 --------|-------|----
-ddd.assm|
+ddd.assm| 0xc100| Possibly dungeon render routines
 ddd.chrm|       | Charset M -
 ddd.chrn|       | Charset N -
 ddd.chro|       | Charset O -
