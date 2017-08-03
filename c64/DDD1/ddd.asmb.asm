@@ -262,7 +262,7 @@ l116A			; Callers: 1164
     lda l22		; 116E: A5 22
     clc    		; 1170: 18
     adc #$3A		; 1171: 69 3A              # 58, which together with the 2*11=22 bytes the screen/color ram pointer was advanced in the inner loop,...
-    sta l22		; 1173: 85 22                # gets botyh pointers 80 bytes further than the beginning of the previous outer iteration...
+    sta l22		; 1173: 85 22                # gets both pointers 80 bytes further than the beginning of the previous outer iteration...
     sta l24		; 1175: 85 24                # which is exactly two lines down
     bcc l117D		; 1177: 90 04              # again, when one overflows, both overflow
     inc l23		; 1179: E6 23
@@ -303,9 +303,9 @@ l11AD			; Callers: 1193 1199 119F 11A5
     sta (l24),y		; 11B4: 91 24
     jmp l11A7		; 11B6: 4C A7 11
 u11B9			; Callers: 1759 -c 11B9
-    lda lC005		; 11B9: AD 05 C0
+    lda lC005		; 11B9: AD 05 C0         # transportation mode flag
     clc    		; 11BC: 18
-    adc #$1A		; 11BD: 69 1A
+    adc #$1A		; 11BD: 69 1A            # +26
     jmp l162D		; 11BF: 4C 2D 16
     dta $A9		; 11C2: A9
     dta $8F		; 11C3: 8F
@@ -602,9 +602,9 @@ l13C8			; Callers: 13BF
     bmi l1422		; 13CC: 30 54
     rts    		; 13CE: 60
 l13CF			; Callers: l14CE l13FE 1775
-    lda lC023,x		; Copy value from 0xC023...
+    lda lC023,x		; Copy value from 0xC023... # monster x position (monster id in x)
     sta l24		; ...to 0x24
-    lda lC02D,x		; Copy value from 0xC02D...
+    lda lC02D,x		; Copy value from 0xC02D... # monster y position
     sta l25		; ...to 0x25
     rts    		; 13D9: 60
 l13DA			; Callers: 1405 1410
@@ -624,16 +624,16 @@ l13EC			; Callers: 13E7
     cmp #$0B		; 13EE: C9 0B
     bpl l13E9		; 13F0: 10 F7
     rts    		; 13F2: 60
-u13F3			; Callers: 1768 -c 13F3
-    ldx #$0A		; 13F3: A2 0A
+u13F3			; Callers: 1768 -c 13F3         # iterate over monsters
+    ldx #$0A		; 13F3: A2 0A             # start with the last monster in the list (id=10)
 l13F5			; Callers: 13FB
-    lda lC00F,x		; 13F5: BD 0F C0
-    bne l13FE		; 13F8: D0 04
+    lda lC00F,x		; 13F5: BD 0F C0        # fetch monster type(id)
+    bne l13FE		; 13F8: D0 04             # if active (i.e. type>0) jump...
 l13FA			; Callers: 140A 1415 l162A
-    dex    		; 13FA: CA
+    dex    		; 13FA: CA                  # decrement monster id
     bne l13F5		; 13FB: D0 F8
     rts    		; 13FD: 60
-l13FE			; Callers: 13F8
+l13FE			; Callers: 13F8                 # place monster on map
     jsr l13CF		; 13FE: 20 CF 13
     lda l24		; 1401: A5 24
     sta l5F		; 1403: 85 5F
@@ -951,7 +951,7 @@ l161F			; Callers: 141A
 l162A			; Callers: 1623
     jmp l13FA		; 162A: 4C FA 13
 l162D			; Callers: 11BF
-    sta l037C		; 162D: 8D 7C 03
+    sta l037C		; 162D: 8D 7C 03     # store transportation mode + 26 in 892
     rts    		; 1630: 60
 u1631			; Callers: -c 1631         # Move and "nicht hier"
     jam    		; 1631: 02             # illegal opcode... ??!
