@@ -5,7 +5,7 @@ from utils.palette import palette
 from utils.gfx import drawTile
 
 if len(sys.argv) < 3 :
-    print "Usage ./map2png.py ddd.mapm [width]"
+    print("Usage ./map2png.py ddd.mapm [width]")
     sys.exit(1)
 
 

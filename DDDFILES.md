@@ -73,11 +73,11 @@ ddd.chro|       | Charset O -
 ddd.chrq|       | Charset Q -
 ddd.code|
 ddd.konj|       | [Basic loader code](AREAS.md)
-ddd.mapm|       | Map M -
-ddd.mapn|       | Map N -
-ddd.mapo|       | Map O -
-ddd.mapp|       | Map P - ?
-ddd.mapq|       | Map Q -
+ddd.mapm| 0x1800| Map M - Dragon cave 3D dungeon, 12x12 floors after a 0xB3-byte stub
+ddd.mapn| 0x1800| Map N - Dragon lair support/encounter data
+ddd.mapo| 0x1800| Map O - Fire castle, 35x43 top-down map
+ddd.mapp| 0x1800| Map P - Vampire Count 3D dungeon, 20x20 floors after a 0xB3-byte stub
+ddd.mapq| 0x1800| Map Q - Skull Keep, 35x43 top-down map
 ddd.scrl|
 ddd.twnm|       | Basic code M -
 ddd.twnn|       | Basic code N -
