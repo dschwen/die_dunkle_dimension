@@ -4,6 +4,7 @@ ifeq ($(VICE_OK),127)
 endif
 
 C64DIR := c64
+DUNGEON_PRGS := c64/DDD3/ddd.mapm c64/DDD3/ddd.mapp
 
 .PHONY: all
 all:
@@ -12,6 +13,7 @@ all:
 	@echo    "images  - downloads the DDD c64 disk images"
 	@echo    "palette - generates C64 palette data from the colodore.com image"
 	@echo    "basic   - convert all basic programs to source"
+	@echo    "dungeons - generates first-person dungeon map dumps"
 
 .PHONY: images
 images: c64/Dddc1.d64 c64/Dddc2.d64 c64/Dddc3.d64
@@ -67,7 +69,7 @@ disassemble:
 	@./contrib/dis/dis -l -t prg -i `./src/entrypts.py -dis c64/DDD3/ddd.assm c64/DDD3/ddd.twn[mp].txt` c64/DDD3/ddd.assm > c64/DDD3/ddd.assm.asm
 
 .PHONY: maps
-maps:
+maps: dungeons
 	# town and castle maps
 	@for map in `find c64 -name ddd.map\? -size 1507c`; \
 	do \
@@ -77,6 +79,14 @@ maps:
 	@./src/worldmap2png.py
 	# druid cottage
 	@./src/map2png.py c64/DDD1/ddd.mapb c64/DDD1/ddd.chrb 11
+
+.PHONY: dungeons
+dungeons:
+	# first-person dungeon maps
+	@mkdir -p res/dungeons
+	@rm -f res/dungeons/ddd_mapm_*.json res/dungeons/ddd_mapm_*.png
+	@rm -f res/dungeons/ddd_mapp_*.json res/dungeons/ddd_mapp_*.png
+	@./src/dungeon_split.py $(DUNGEON_PRGS) --output res/dungeons
 
 CHR_FILES  := $(shell find $(C64DIR) -name 'ddd.chr?')
 CHR_IMAGES := $(CHR_FILES:=.png)
