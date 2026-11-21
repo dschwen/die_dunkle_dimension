@@ -3,7 +3,7 @@
 21|{lred}att.:   {grn}def.:|{up}{pur}str.:   {yel}dex.:
 22|{gry3}int.:   {lblu}cha.:|{up}{lgrn}exp.:      (  )
 23|{yel}gold pcs.:|{up}{orng}food supply:
-240|talk|{yel} -direction? {wht}G{left}
+240|talk|{yel} -where? {wht}G{left}
 258|no{home}
 270|{lred}no answer!{home}
 280|{cyn}you talk to|a cat.{home}

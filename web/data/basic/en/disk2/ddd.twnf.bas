@@ -37,7 +37,7 @@
 232 pokep,q:q=j:p=p-1:x=x-1:goto6100
 234 print"east{home}":j=peek(893):ifj<3orj=5orj=9orj>11goto214
 236 pokep,q:q=j:p=p+1:x=x+1:goto6100
-240 print"talk";:sys5681:print"{yel} -direction? {wht}G{left}";:z=0
+240 print"talk";:sys5681:print"{yel} -where? {wht}G{left}";:z=0
 250 z=z+1:ifz>499goto258
 252 getu$:ifu$=""goto252
 254 ifu$="{up}"thenprint"north{home}":j=-11:goto260
@@ -173,7 +173,7 @@
 896 ifh=15thenprint"again. save{home}":sys5681:print"our world";
 897 print".%{home}":sys5681:sys5681:print"{yel}he";:ifh>13thenprint"{left}{left}she";
 898 print" turns{home}":sys5681:print"away.{home}":sys5681:goto100
-899 print"i'm the hangman";:return
+899 print"i'm a hangman";:return
 900 gosub999:print"{yel}your business?";:sys5681:print"{wht}@G{left}";:z=0:n$="":poke198,0
 910 getu$:ifu$=chr$(13)thenn$=n$+mid$("bye",1,-3*(z=0)):printmid$("bye",1,-3*(z=0));:return
 912 ifu$=chr$(20)andz>0thenz=z-1:n$=left$(n$,z):print" {left}{left}G{left}";

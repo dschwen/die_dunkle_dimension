@@ -119,7 +119,7 @@
 580 sys6041:j=peek(h):pokeh,87:poke51287,1:sys4361:pokes+5,9:pokes+4,129
 582 fori=9to35:pokes+1,i:next:pokeh,j:sys4361:return
 600 print"attack{home}":sys5681:ifpeek(49246)<18goto570
-601 print"{yel}-direction? {wht}G{left}";:z=.
+601 print"{yel}-where? {wht}G{left}";:z=.
 602 z=z+1:getu$:ifu$=""andz<599goto602
 603 ifu$="{up}"goto610
 604 ifu$="{down}"goto614
@@ -429,7 +429,7 @@
 12920 printpeek(49208)+256*peek(49209)+65536*peek(49210);:return
 13000 poke892,26:sys4361:poke49230,0:gosub10000:pokev+23,0:pokev+29,0
 13002 sys5681:gosub12900:gosub12910:gosub12910:print"you are dead{home}
-13010 gosub12910:gosub12900:sys5681:sys5681:print"{yel}you played";:gosub12920
+13010 gosub12910:gosub12900:sys5681:sys5681:print"{yel}you made";:gosub12920
 13020 sys5681:print"moves.{home}":sys5681:sys5681:print"{wht}cause of death:{home}
 13022 sys5681:ifk=1thenprint"{lgrn}a phantom";
 13024 ifk=2thenprint"{cyn}a golem";

@@ -3,7 +3,7 @@
 1802|-- you flee! --{home}
 1820|{yel}for your{home}|cowardice you{home}
 13000|you are dead{home}
-13010|{yel}you played
+13010|{yel}you made
 13020|moves.{home}|{wht}cause of death:{home}
 60100|hands|knife|dagger|short sword|hand axe|sword|morning star|quarterstaff
 60101|bastard sword|battle axe|greatsword|sling|short bow|blowpipe
@@ -117,7 +117,7 @@
 5341|in combat. your{home}|magic armour{home}
 5342|protects you{home}|only{home}
 5347|tolerably.
-5348| you grip{home}|the hilt of{home}
+5348| you{home}|grip the hilt of{home}
 5349|your spellwing{home}|tightly with{home}
 5350|both hands...{home}
 6000|{wht}--- victory! ---{home}|{yel}the dragon is{home}

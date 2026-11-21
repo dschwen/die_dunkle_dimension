@@ -157,13 +157,19 @@ class SidProcessor extends AudioWorkletProcessor {
       if (filt & 4) fin += o2; else direct += o2;
       // state variable filter
       const fc = (R[0x15] & 7) | (R[0x16] << 3);
-      const fhz = 30 + fc * 5.8;
-      const w = Math.min(1.4, 2 * Math.sin(Math.PI * Math.min(fhz, sampleRate / 4) / sampleRate));
+      // Chamberlin state variable filter, run twice per sample (2x oversampling) and with the
+      // coefficient capped so that high cutoff + high resonance stays stable.
+      const fhz = Math.min(30 + fc * 5.8, sampleRate * 0.45);
+      const w = Math.min(0.9, 2 * Math.sin(Math.PI * fhz / (2 * sampleRate)));
       const res = R[0x17] >> 4;
       const q = 1.0 / (0.707 + res * 0.15);
-      const hp = fin - this.lp - q * this.bp;
-      this.bp += w * hp;
-      this.lp += w * this.bp;
+      let hp = 0;
+      for (let k = 0; k < 2; k++) {
+        hp = fin - this.lp - q * this.bp;
+        this.bp += w * hp;
+        this.lp += w * this.bp;
+      }
+      if (!Number.isFinite(this.lp) || !Number.isFinite(this.bp) || Math.abs(this.lp) > 1e6) { this.lp = 0; this.bp = 0; hp = 0; }
       let f = 0;
       const mode = R[0x18];
       if (mode & 0x10) f += this.lp;

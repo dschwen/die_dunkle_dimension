@@ -35,7 +35,7 @@
 232 pokep,q:q=j:x=x-1:goto6100
 234 print"east{home}":j=peek(893):ifj<3orj=5orj=9orj=6orj>11goto214
 236 pokep,q:q=j:x=x+1:goto6100
-240 print"talk";:sys5681:print"{yel} -direction? {wht}G{left}";:z=0
+240 print"talk";:sys5681:print"{yel} -where? {wht}G{left}";:z=0
 250 z=z+1:ifz>499goto258
 252 getu$:ifu$=""goto252
 254 ifu$="{up}"thenprint"north{home}":j=-11:goto260

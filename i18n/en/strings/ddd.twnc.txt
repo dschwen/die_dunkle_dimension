@@ -91,7 +91,7 @@
 831|torquill
 832|thea
 833|helmut,{home}|but everyone{home}
-834|calls me 'pear'
+834|calls me pear
 835|dakteon
 836|gunli
 837|harlekin
@@ -129,7 +129,7 @@
 880|i must get back{home}|to guard duty
 881|i will pray{home}|for you
 882|stay healthy,{home}|always
-883|enjoy your meal
+883|bon appetit
 884|safe journey
 885|be brave
 886|bye. perhaps{home}|we'll meet
@@ -144,7 +144,7 @@
 895|farewell
 896|have fun{home}|then, haha
 898| turns{home}|away.{home}
-899|i'm the hangman
+899|i'm a hangman
 1000|d{home}|i guard the{home}|castle and{home}
 1001|the king. want{home}|an audience?
 1002|it's better not{home}|to disturb{home}

@@ -100,7 +100,7 @@
 99 j=peek(p+1):ifj<3orj>11goto91
 100 pokep,q:p=p+1:x=x+1:goto90
 101 if(wa>10andwa<16)orwa=17thenifld<2goto152
-102 print"attack{home}":sys5681:print"{yel}-direction? {wht}G{left}";:z=0:zz=0
+102 print"attack{home}":sys5681:print"{yel}-where? {wht}G{left}";:z=0:zz=0
 103 z=z+1:ifz>600thenprint"none{home}":goto153
 104 getu$:ifu$=""goto103
 105 ifu$="{up}"thenr=.:print"north{home}":goto110
@@ -220,7 +220,7 @@
 219 poke53281,1:sys5681:gosub591:iffnr(20)<=kgthenpoke53281,0:goto217
 220 ifpeek(49285)thenpoke53281,10:poke53280,10:gosub591:poke53281,0:poke53280,0
 221 ifpeek(49285)thensys5681:print"{lblu}magic spell{home}":sys5681:print"repelled!{home}":goto217
-222 print"{pur}the magic of{home}":sys5681:print"the "m$(m(i))"{home}":sys5681:print"{home}":sys5681:poke53281,0:gosub592:goto198
+222 print"{pur}magic of the{home}":sys5681:print""m$(m(i))"{home}":sys5681:print"{home}":sys5681:poke53281,0:gosub592:goto198
 223 k=0:ifm(i)<10andm(i)>4goto230
 224 ifm(i)>4goto227
 225 ifpeek(z)<3thenk=1
@@ -254,14 +254,14 @@
 253 ifsr<peek(50559+j)thenprint"such heavy{home}":sys5681:print"armour.{home}":return
 254 rs=j:poke49247,j:print"put on.{home}":sys5681:return
 255 ifg=.goto3
-256 sys5681:print"{yel}your loot:{home}":sys5681:printmid$(str$(g),2)" gold pieces!{home}
+256 sys5681:print"{yel}your loot:{home}":sys5681:printmid$(str$(g),2)" gold coins!{home}
 257 sys5681:gp=gp+g:ifgp>5e4thengp=5e4
 258 poke49243,gp/256:poke49242,gp-256*peek(49243):gosub466:goto3
-259 h=peek(892):poke51223,13:poke892,23:sys4361:gosub592:sys5681:print"{lgrn}the poison works!":hp=hp-fnr(peek(49245)):poke892,h:sys4361:k=1
+259 h=peek(892):poke51223,13:poke892,23:sys4361:gosub592:sys5681:print"{lgrn}poison hurts!":hp=hp-fnr(peek(49245)):poke892,h:sys4361:k=1
 260 ifhp<1thenhp=0:poke892,26:sys4361:goto530
 261 poke49231,hp/256:poke49230,hp-256*peek(49231):goto466
 262 iffnr(3)>1thenreturn
-263 h=peek(892):poke51223,3:poke892,23:sys4361:gosub592:sys5681:print"{cyn}you are starving!":hp=hp-1:poke892,h:sys4361:k=2:goto260
+263 h=peek(892):poke51223,3:poke892,23:sys4361:gosub592:sys5681:print"{cyn}you starve!":hp=hp-1:poke892,h:sys4361:k=2:goto260
 264 iffnr(3)>1thenreturn
 265 sys5681:print"{lgrn}swamp gas!{home}":ifge=>fnr(20)thenreturn
 266 h=peek(892):poke51223,13:poke892,23:sys4361:gosub591:sys5681:print"{lgrn}poisoned!{home}":poke892,h:sys4361:j=peek(49245)+1:ifj>9thenj=9
@@ -332,7 +332,7 @@
 331 h=832+x(i)+11*y(i):ifj=22andfnr(3)=3goto333
 332 ifj<28orj>33goto330
 333 poke51223,7:m(i)=99:pokeh,23:sys6041:pokes+5,9:pokes+1,fnr(6):pokes+4,129:sys4361:pokeh,q(i):ifj=22thenpokeh,24
-334 l=peek(50634+j):sys5681:print"{yel}"m$(j);:ifj=22thenprint"stone troll{home}
+334 l=peek(50634+j):sys5681:print"{yel}"m$(j);:ifj=22thenprint"{left}{left}{left}{left}{left}stone troll{home}
 335 sys5681:printmid$(str$(l),2)" points.{home}":sys4361:ef=ef+l:ifef>999999thenef=999999
 336 poke49239,ef/256:poke49238,ef-256*peek(49239):goto330
 337 z=15:ifas<zgoto303
@@ -348,7 +348,7 @@
 347 ifkp=.goto302
 348 gosub305:iffnr(20)>chgoto304
 349 gosub306:gosub270:sys6041:pokes+5,10:pokes+4,33:poke53281,14:poke53280,14:fori=153to3step-3:pokes+1,i:next:poke53281,0:poke53280,0:zz=1
-350 sys5681:print"{yel}-direction? {wht}G{left}";:z=0:return
+350 sys5681:print"{yel}-where? {wht}G{left}";:z=0:return
 351 ifzz=.goto153
 352 goto103
 353 z=7:ifas<zgoto303
@@ -387,7 +387,7 @@
 388 poke53281,z:poke53280,z:forj=0to99:next:return
 389 j=peek(49157):ifj>1goto417
 390 forj=5to2step-1:ifpeek(49156+j)=peek(49154)andpeek(49160+j)=peek(49155)goto419
-391 next:print"entering ";:ifpeek(2)=14goto401
+391 next:print"enter ";:ifpeek(2)=14goto401
 392 ifpeek(2)=13goto403
 393 ifpeek(2)=12goto410
 394 ifpeek(2)=16goto404
@@ -437,7 +437,7 @@
 438 ifh=.thenprint"nothing.{home}
 439 goto4
 440 ifpeek(49157)<>4goto33
-441 print"catapult{home}":sys5681:print"{yel}-direction? {wht}G{left}";:z=0
+441 print"catapult{home}":sys5681:print"{yel}-where? {wht}G{left}";:z=0
 442 z=z+1:ifz>600thenprint"none{home}":goto4
 443 getu$:ifu$=""goto442
 444 ifu$="{up}"thenr=.:print"north{home}":goto449
@@ -524,7 +524,7 @@
 527 sys5681:print"{wht}****************{home}":return
 528 sys5681:print"{wht}*              *";:return
 529 printpeek(49208)+256*peek(49209)+65536*peek(49210);:return
-530 poke51226,15:sys4361:poke49230,0:gosub466:sys5681:gosub527:gosub528:gosub528:print"you are dead{home}":gosub528:gosub527:sys5681:sys5681:print"{yel}you played";:gosub529:sys5681:print"moves.{home}":sys5681:sys5681:print"{wht}cause of death:{home}":sys5681:ifk=1thenprint"{lgrn}poison{home}
+530 poke51226,15:sys4361:poke49230,0:gosub466:sys5681:gosub527:gosub528:gosub528:print"you are dead{home}":gosub528:gosub527:sys5681:sys5681:print"{yel}you made";:gosub529:sys5681:print"moves.{home}":sys5681:sys5681:print"{wht}cause of death:{home}":sys5681:ifk=1thenprint"{lgrn}poison{home}
 531 ifk=2thenprint"{cyn}starvation{home}
 532 ifk=3thenprint"{lred}"m$(m(i))"{home}":sys5681:print"killed you.{home}
 533 ifk=4thenprint"{cyn}burned{home}

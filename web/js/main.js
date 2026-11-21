@@ -9,7 +9,7 @@ const FPS = 985248 / CYCLES_PER_FRAME; // ~50.12 Hz (PAL)
 const params = new URLSearchParams(location.search);
 let storedLang = null;
 try { storedLang = localStorage.getItem('ddd-lang'); } catch (e) { /* storage unavailable */ }
-const lang = params.get('lang') || storedLang || 'de';
+const lang = params.get('lang') || storedLang || 'en';
 try { if (params.get('lang')) localStorage.setItem('ddd-lang', lang); } catch (e) { /* ignore */ }
 document.documentElement.lang = lang;
 const MSG = {

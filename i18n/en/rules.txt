@@ -9,9 +9,9 @@ print"schwer ";:sys5681 => print"hard";
 sys5681:print"getroffen!{left}";:poke53281,0 => print"{left}";:poke53281,0
 print"getroffen!{left}"; => print"!{left}";
 # --- magic of the monster stuns you (dungeons use m$(m))
-print"{pur}die magie des{home}":sys5681:printm$(m)"s{home}":sys5681:print"hat dich{home} => print"{pur}the magic of{home}":sys5681:print"the "m$(m)"{home}":sys5681:print"{home}
+print"{pur}die magie des{home}":sys5681:printm$(m)"s{home}":sys5681:print"hat dich{home} => print"{pur}magic of the{home}":sys5681:print""m$(m)"{home}":sys5681:print"{home}
 # --- magic of the monster stuns you ---------------------------------------------------------
-print"{pur}die magie des{home}":sys5681:printm$(m(i))"s{home}":sys5681:print"hat dich{home}" => print"{pur}the magic of{home}":sys5681:print"the "m$(m(i))"{home}":sys5681:print"{home}"
+print"{pur}die magie des{home}":sys5681:printm$(m(i))"s{home}":sys5681:print"hat dich{home}" => print"{pur}magic of the{home}":sys5681:print""m$(m(i))"{home}":sys5681:print"{home}"
 #
 # --- English keys -------------------------------------------------------------------------
 # yes/no: j -> y

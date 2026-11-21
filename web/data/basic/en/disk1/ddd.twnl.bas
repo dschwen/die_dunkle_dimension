@@ -34,7 +34,7 @@
 232 pokep,q:q=j:p=p-1:x=x-1:goto6100
 234 print"east{home}":j=peek(893):if(j<>11andj>0andj<>8)or(j+bb=0)goto214
 236 pokep,q:q=j:p=p+1:x=x+1:goto6100
-240 print"talk";:sys5681:print"{yel} -direction? {wht}G{left}";:z=0
+240 print"talk";:sys5681:print"{yel} -where? {wht}G{left}";:z=0
 250 z=z+1:ifz>499goto258
 252 getu$:ifu$=""goto252
 254 ifu$="{up}"thenprint"north{home}":j=-11:goto260

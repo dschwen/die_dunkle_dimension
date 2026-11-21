@@ -143,7 +143,7 @@
 5252|    fortress{home}|{yel}  -coming soon{home}
 5254|   to this{home}|   screen
 6000|{lred}you leave{home}|the fortress.{home}
-13010|{yel}you played
+13010|{yel}you made
 13022|{lgrn}a phantom
 13024|{cyn}a golem
 13025|{cyn}the demon

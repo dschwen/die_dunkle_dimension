@@ -165,7 +165,7 @@
 5341 sys5681:print"in combat. your{home}":sys5681:print"magic armour{home}
 5342 sys5681:print"protects you{home}":sys5681:print"only{home}
 5347 sys5681:print"tolerably.";:ifwa<18thengosub900:goto100
-5348 print" you grip{home}":sys5681:print"the hilt of{home}
+5348 print" you{home}":sys5681:print"grip the hilt of{home}
 5349 sys5681:print"your spellwing{home}":sys5681:print"tightly with{home}
 5350 sys5681:print"both hands...{home}":gosub900:goto100
 6000 print"{wht}--- victory! ---{home}":sys5681:sys5681:print"{yel}the dragon is{home}
@@ -325,7 +325,7 @@
 12910 sys5681:print"{wht}*              *";:return
 12920 printpeek(49208)+256*peek(49209)+65536*peek(49210);:return
 13000 sys5681:gosub12900:gosub12910:gosub12910:print"you are dead{home}
-13010 gosub12910:gosub12900:sys5681:sys5681:print"{yel}you played";:gosub12920
+13010 gosub12910:gosub12900:sys5681:sys5681:print"{yel}you made";:gosub12920
 13020 sys5681:print"moves.{home}":sys5681:sys5681:print"{wht}cause of death:{home}
 13022 sys5681:print"{lred}dragon fire{home}
 13030 poke56295,1:poke2023,71:poke198,0:wait198,1:poke2,17:goto6200

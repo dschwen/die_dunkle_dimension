@@ -178,7 +178,7 @@
 2920 poke53281,1:sys5681:gosub30052:iffnr(20)<=kgthenpoke53281,0:goto1100
 2922 ifpeek(49285)thenpoke53281,10:poke53280,10:gosub30052:poke53281,0:poke53280,0
 2924 ifpeek(49285)thensys5681:print"{lblu}magic spell{home}":sys5681:print"repelled!{home}":goto1100
-2925 print"{pur}the magic of{home}":sys5681:print"the "m$(m)"{home}":sys5681:print"{home}
+2925 print"{pur}magic of the{home}":sys5681:print""m$(m)"{home}":sys5681:print"{home}
 2930 sys5681:poke53281,0:gosub30054:goto2410
 2940 poke53281,8:sys5681:gosub30052
 2942 print"{orng}a kobold steals{home}":sys5681:print"your food!{home}
@@ -209,15 +209,15 @@
 3144 ifsr<peek(50559+j)thenprint"such heavy{home}":sys5681:print"armour.{home}":return
 3150 rs=j:poke49247,j:print"put on.{home}":sys5681:return
 3200 sys5681:print"{wht}--- victory! ---{home}":sys5681:ifl<1orpeek(50820+m)=.goto99
-3210 sys5681:print"{yel}your loot:{home}":sys5681:printmid$(str$(g),2)" gold pieces!{home}
+3210 sys5681:print"{yel}your loot:{home}":sys5681:printmid$(str$(g),2)" gold coins!{home}
 3220 sys5681:gp=gp+g:ifgp>5e4thengp=5e4
 3230 poke49243,gp/256:poke49242,gp-256*peek(49243):gosub10000:goto99
 3250 gosub30054:sys5681
-3252 print"{lgrn}the poison works!":hp=hp-fnr(peek(49245)):k=1
+3252 print"{lgrn}poison hurts!":hp=hp-fnr(peek(49245)):k=1
 3260 ifhp<1thenhp=.:goto13000
 3262 poke49231,hp/256:poke49230,hp-256*peek(49231):goto10000
 3280 gosub30054:sys5681
-3282 print"{cyn}you are starving!":hp=hp-1:k=2:goto3260
+3282 print"{cyn}you starve!":hp=hp-1:k=2:goto3260
 3296 poke49245,j:poke1449,j+48:poke55720,13:return
 3300 iffnr(2)>1oras=>amthenreturn
 3302 as=as+1:poke49235,as/256:poke49234,as-256*peek(49235)
@@ -324,7 +324,7 @@
 5200 k=int((p-5922)/400):h=fnr(9)-1:ifh/2.5>kgoto240
 5202 ifh=.theng=fnr(k*4)+1:sys5681:print"{yel}you find{home}":sys5681:print"a";
 5204 ifh=.thenprintmid$(" pouch   chest  ",fnr(1)*8+1,8)" with{home}
-5206 ifh=.thensys5681:printmid$(str$(g),2)" gold pieces!{home}":fori=1tog*1.5:gosub30052:next
+5206 ifh=.thensys5681:printmid$(str$(g),2)" gold coins!{home}":fori=1tog*1.5:gosub30052:next
 5208 ifh=.goto3220
 5210 sys5681:print"{yel}you walked{home}":sys5681:print"into a trap:{home}":sys5681
 5212 ifge>fnr(22)thengosub30052:print"{gry3}dodged it{home}":sys5681:print"just in time.{home}":goto100
@@ -459,7 +459,7 @@
 12920 printpeek(49208)+256*peek(49209)+65536*peek(49210);:return
 13000 poke49230,0:gosub10000
 13002 sys5681:gosub12900:gosub12910:gosub12910:print"you are dead{home}
-13010 gosub12910:gosub12900:sys5681:sys5681:print"{yel}you played";:gosub12920
+13010 gosub12910:gosub12900:sys5681:sys5681:print"{yel}you made";:gosub12920
 13020 sys5681:print"moves.{home}":sys5681:sys5681:print"{wht}cause of death:{home}
 13022 sys5681:ifk=1thenprint"{lgrn}poison{home}
 13024 ifk=2thenprint"{cyn}starvation{home}

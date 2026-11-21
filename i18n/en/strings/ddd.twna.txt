@@ -25,7 +25,7 @@
 92|south{home}
 95|west{home}
 98|east{home}
-102|attack{home}|{yel}-direction? {wht}G{left}
+102|attack{home}|{yel}-where? {wht}G{left}
 103|none{home}
 105|north{home}
 106|south{home}
@@ -68,9 +68,9 @@
 252|you are too{home}|weak to wear{home}
 253|such heavy{home}|armour.{home}
 254|put on.{home}
-256|{yel}your loot:{home}| gold pieces!{home}
-259|{lgrn}the poison works!
-263|{cyn}you are starving!
+256|{yel}your loot:{home}| gold coins!{home}
+259|{lgrn}poison hurts!
+263|{cyn}you starve!
 265|{lgrn}swamp gas!{home}
 266|{lgrn}poisoned!{home}
 272|{lgrn}swamp gas!{home}
@@ -86,10 +86,10 @@
 304|{lred}it fails!{home}
 306|{cyn}it works!{home}
 314|{yel}-how much? 
-334|stone troll{home}
+334|{left}{left}{left}{left}{left}stone troll{home}
 335| points.{home}
-350|{yel}-direction? {wht}G{left}
-391|entering 
+350|{yel}-where? {wht}G{left}
+391|enter 
 401|cottage{home}
 402|ddd.konj
 403|castle{home}
@@ -118,7 +118,7 @@
 436|mandrake root.{home}
 437|you now have|of them.{home}
 438|nothing.{home}
-441|catapult{home}|{yel}-direction? {wht}G{left}
+441|catapult{home}|{yel}-where? {wht}G{left}
 456|driven off!{home}
 460|save game{home}|{lgrn}so far
 463|%return%. {wht}G{left}
@@ -128,7 +128,7 @@
 492|{left}{lred}woodwoses{home}
 493|{left}{lred}bog wights{home}
 506|pirate
-530|you are dead{home}|{yel}you played|moves.{home}|{wht}cause of death:{home}|{lgrn}poison{home}
+530|you are dead{home}|{yel}you made|moves.{home}|{wht}cause of death:{home}|{lgrn}poison{home}
 531|{cyn}starvation{home}
 532|{home}|killed you.{home}
 533|{cyn}burned{home}

@@ -27,7 +27,7 @@
 232 pokej+1,11:x=x-1:goto202
 234 print"east{home}":j=833+x+11*y:ifpeek(j)>8andpeek(j)<>11goto214
 236 pokej-1,11:x=x+1:goto202
-240 print"talk";:sys5681:print"{yel} -direction? {wht}G{left}";:z=0
+240 print"talk";:sys5681:print"{yel} -where? {wht}G{left}";:z=0
 250 z=z+1:ifz>499goto258
 252 getu$:ifu$=""goto252
 254 ifu$="{up}"thenprint"north{home}":j=-11:goto260

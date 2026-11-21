@@ -70,7 +70,7 @@
 4202|{yel}-how much? 
 5202|{yel}you find{home}|a
 5204| pouch   chest  | with{home}
-5206| gold pieces!{home}
+5206| gold coins!{home}
 5210|{yel}you walked{home}|into a trap:{home}
 5212|{gry3}dodged it{home}|just in time.{home}
 5221|{gry3}rockfall!{home}
@@ -117,7 +117,7 @@
 6212|dragon's{home}|claw.{home}
 11003|level    1 {lblu}$
 13002|you are dead{home}
-13010|{yel}you played
+13010|{yel}you made
 13020|moves.{home}|{wht}cause of death:{home}
 13022|{lgrn}poison{home}
 13024|{cyn}starvation{home}
