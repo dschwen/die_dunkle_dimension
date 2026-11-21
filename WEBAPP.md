@@ -61,8 +61,9 @@ The start screen offers two editions (also `?edition=regular|enhanced`; the choi
   languages only texts are translated (including the texts in the title pictures).
 * **Enhanced** – changes on top of that:
   * remastered shading of the dragon title picture,
-  * fewer but more rewarding fights: random encounters are 10× less likely, experience and gold won in combat are
-    10× higher; the experience lost when fleeing is unchanged.
+  * fewer but more rewarding fights: random encounters are half as likely, experience and gold won in combat are
+    10× higher; the experience lost when fleeing is unchanged (`ENCOUNTER_FACTOR` and `REWARD_FACTOR` in
+    `web/js/enhanced.js`).
 
 The gameplay changes live in `web/js/enhanced.js`:
 
@@ -76,10 +77,10 @@ The gameplay changes live in `web/js/enhanced.js`:
 * Overworld monsters are spawned by machine code: on every move `ddd.asmb` tests `lda $DC04 : and #mask` at
   `$16A1`, where `ddd.twna` lines 1–2 POKE the mask into `$16A5` depending on the game's progress (`$80` = every
   second move passes). The enhanced edition redirects the load to a 25 byte helper in the free bytes after
-  `ddd.asmb` (`$17E7–$17FF`) that applies the same mask and lets only every 10th success through.
+  `ddd.asmb` (`$17E7–$17FF`) that applies the same mask and lets only every `ENCOUNTER_FACTOR`-th success through.
 * `node tools/test-enhanced.mjs` plays the overworld in both editions and prints the measured spawn check rate and
-  the experience/gold of fights against goblins (regular 3–4 XP and 2–17 gold, enhanced 30–40 XP and 30–220 gold,
-  flee penalty −3/−4 in both).
+  the experience/gold of fights against goblins (regular: check passes 49% of moves, 3–4 XP and 5–22 gold;
+  enhanced: 26%, 30–40 XP and 70–160 gold; flee penalty −3/−4 in both).
 
 Save games are the same in both editions and can be loaded in either.
 
