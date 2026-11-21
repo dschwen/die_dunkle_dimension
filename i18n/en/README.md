@@ -8,6 +8,8 @@ turns them into `web/data/basic/en/`, which the web app loads with `?lang=en`.
 | `strings/<file>.txt` | `<line>\|<text>\|<text>…` – English for the texts (string literals and DATA items) of one BASIC line, in order. `<line>=` keeps the German texts (graphics drawn with letters). An entry whose German texts are long enough is reused for identical lines in other files. |
 | `common.txt` | `<german> => <english>` pairs for short texts that mean the same everywhere. |
 | `rules.txt` | Literal code rewrites applied to every file: English keys, conversation input, sentence structures that differ in English. |
+| `ddd.dtxt.txt` | Title scroller text (upper case; the German product names are kept with an English rendering). |
+| `../../art/en/*.png`, `../../art/enhanced/en/*.png` | English title pictures ("The Dark Dimension", "PRESENTS:", tagline) for the regular and the enhanced edition, see WEBAPP.md. |
 | `code/<file>.txt` | Whole-line replacements where the English needs different code (keyword completions, grammar tricks, inventory summary). Line numbers never change. |
 
 Checks: `node tools/i18n.mjs build en` warns about texts wider than the 16 column message window and
@@ -53,6 +55,5 @@ areas with random keys in both languages.
   (`hinfort`, German for "begone!") wins. The English version currently keeps both words – the
   puzzle still works, but the pun is lost. An English 7-letter word would also need new tablet
   glyphs in seven charsets.
-* **Title screens**: the bitmap pictures and the scroller (`ddd.dtxt`) are still German.
 * **Shared fragments**: short sentence pieces that are reused by different sentences were checked
   file by file, but a playthrough will surely find a few awkward joins.

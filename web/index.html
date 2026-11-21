@@ -35,6 +35,11 @@
   html[lang=de] [data-lang=en], html[lang=en] [data-lang=de] { display: none; }
   .langs { margin-left: 18px; }
   .langs a { color: #b8c76f; }
+  .edition { margin-top: 14px; }
+  .edition a { color: #b8c76f; padding: 1px 6px; border: 2px solid transparent; text-decoration: none; }
+  html[data-edition=regular] .edition a[data-edition=regular],
+  html[data-edition=enhanced] .edition a[data-edition=enhanced] { border-color: #b8c76f; color: #fff; }
+  .edition small { display: block; color: #959595; margin-top: 4px; }
   #toast {
     position: fixed; bottom: 2vh; left: 50%; transform: translateX(-50%);
     background: #000; border: 2px solid #6c5eb5; padding: 6px 16px; opacity: 0; transition: opacity 0.3s; z-index: 20;
@@ -66,6 +71,13 @@
     </table>
     <button id="start" disabled>Start</button>
     <span class="langs"><a href="?lang=de">Deutsch</a> · <a href="?lang=en">English</a></span>
+    <div class="edition">
+      <span data-lang="de">Ausgabe:</span><span data-lang="en">Edition:</span>
+      <a href="?edition=regular" data-edition="regular"><span data-lang="de">Original</span><span data-lang="en">Regular</span></a>
+      <a href="?edition=enhanced" data-edition="enhanced"><span data-lang="de">Erweitert</span><span data-lang="en">Enhanced</span></a>
+      <small data-lang="de">Original: das Spiel mit der Originalgrafik · Erweitert: überarbeitete Grafik</small>
+      <small data-lang="en">Regular: the original game and graphics · Enhanced: improved graphics</small>
+    </div>
   </div>
 </div>
 

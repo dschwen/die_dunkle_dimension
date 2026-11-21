@@ -21,3 +21,4 @@
 
 # web app: binary game data is generated from the disk images (make web)
 /web/data/bin/
+__pycache__/

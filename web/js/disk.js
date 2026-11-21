@@ -35,13 +35,20 @@ export class Disk {
   constructor() {
     this.disks = { 1: new Map(), 2: new Map(), 3: new Map() };
     this.saves = new Map();
+    this.artOverrides = new Map();
     this.db = null;
   }
 
   // load everything: fetchFn(path) -> Promise<ArrayBuffer|string>
-  async init(base, lang = 'de', fetchBin, fetchText) {
+  // options.edition: 'regular' (original graphics; only texts translated) or 'enhanced' (new graphics)
+  async init(base, lang = 'de', fetchBin, fetchText, options = {}) {
     const manifest = JSON.parse(await fetchText(base + 'manifest.json'));
     const jobs = [];
+    const edition = options.edition === 'enhanced' ? 'enhanced' : 'regular';
+    const art = ((manifest.art || {})[edition] || {})[lang] || [];
+    for (const name of art) {
+      jobs.push(fetchBin(`${base}bin/${edition}/${lang}/${name}.prg`).then((buf) => { this.artOverrides.set(name, new Uint8Array(buf)); }));
+    }
     for (const d of [1, 2, 3]) {
       for (const name of manifest.disks[d]) {
         jobs.push(fetchBin(`${base}bin/disk${d}/${name}.prg`).then((buf) => {
@@ -76,6 +83,9 @@ export class Disk {
       }
     }
     await Promise.all(jobs);
+    for (const [name, data] of this.artOverrides) {
+      for (const d of [1, 2, 3]) if (this.disks[d].has(name)) this.disks[d].set(name, { name, data });
+    }
     try {
       this.db = await openDb();
       if (this.db) await this.loadSaves();

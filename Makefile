@@ -17,6 +17,7 @@ all:
 	@echo    "web     - extracts game data for the web app into web/data"
 	@echo    "serve   - serves the web app on http://localhost:8642/"
 	@echo    "test    - headless smoke test of all game areas"
+	@echo    "art     - regenerate the edited title pictures in art/ (needs numpy, scipy, Pillow)"
 	@echo    "i18n    - rebuild and check the English translation (i18n/en -> web/data/basic/en)"
 
 .PHONY: images
@@ -113,6 +114,10 @@ gather: chars maps sprites
 web:
 	@node tools/build-data.mjs
 	@node tools/i18n.mjs build en | tail -1
+
+.PHONY: art
+art:
+	@python3 tools/title_art.py
 
 .PHONY: i18n
 i18n:

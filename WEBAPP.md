@@ -51,6 +51,38 @@ because the screen editor and direct mode (`SEARCHING FOR`/`LOADING`/`READY.` ou
 * **Copy protection**: `ddd.prep` asks for a word from the printed manual and otherwise leaves `sys5681` broken
   (`poke5681,2` → a JAM opcode). Line 2000 is patched to `poke5681,169:return` (`PATCHES` in `web/js/disk.js`).
 * **Character ROM**: only visible for a moment while booting; replaced by the game's own font.
+* **Title pictures**: the English version has translated title pictures and scroller text (see below).
+
+### Editions
+
+The start screen offers two editions (also `?edition=regular|enhanced`; the choice is remembered like the language):
+
+* **Regular** – the original game with the original graphics. In German it is exactly the original; in other
+  languages only texts are translated (including the texts in the title pictures).
+* **Enhanced** – new graphics on top of that: currently the remastered shading of the dragon title picture.
+
+### Title pictures
+
+Both title pictures are Koala multicolor bitmaps (`$6000`: 8000 bytes bitmap, 1000 screen, 1000 colour, background).
+The edited versions are PNG sources in `art/` that `make web` converts to PRGs (`tools/koala.mjs`) per edition and
+language (`web/data/bin/<edition>/<lang>/`). The most specific file wins: `art/enhanced/<lang>/`, `art/enhanced/`
+(enhanced edition only), then `art/<lang>/` (translated texts, both editions). They can be edited by hand as long as
+they keep the C64 palette and the multicolor rule (background + 3 colours per 4×8 cell, check with
+`tools/koala.py check file.png`).
+`make art` (Python 3 with numpy, scipy, Pillow) regenerates them from the original files with `tools/title_art.py`:
+
+* **Shading** (enhanced edition, `tools/titl_shade.py`): the dragon's neck is lit like a cylinder from the left (light green streak,
+  dark grey shadow side), the wing membranes sag between the bones (lit under each bone, in shadow where they fold
+  into the next), the hill crests catch the glow of the volcano and the sunrise, and the sky gets a dawn gradient.
+  Everything is ordered dithering in fat-pixel space within each cell's free colour slots; details such as the eye,
+  mouth and scale dots are protected.
+* **English logo**: "The Dark Dimension". Both pictures use the same calligraphic skeleton (the first picture renders
+  it with a wider shadow), so the English first line is composed once from the original strokes (D, e and k are
+  copied, T, h, a and r drawn in the same style) and only the changed strokes are re-rendered.
+* **First picture**: "PRESENTS:" is assembled from the letters of "PRÄSENTIERT:", the tagline is set in a small font
+  matching the original one.
+* **Scroller**: `i18n/<lang>/ddd.dtxt.txt` (upper case text, line breaks become spaces) replaces the screen code
+  text of `ddd.dtxt`.
 
 ## Music and sound effects
 
@@ -100,6 +132,5 @@ make test                                 # all areas, random keys, both languag
 ```
 
 Texts ending in `{home}` are printed into the 16 column message window (`sys5681` scrolls it); the build warns
-when they get longer than 16 characters. Not covered by the `.bas` files: the bitmap title pictures (`ddd.dttl`,
-`ddd.titl`), the title scroller text (screen codes in `ddd.dtxt` at `$4000`) and the 2×2 letters on the clay
-tablets (part of the town character sets).
+when they get longer than 16 characters. Not covered by the `.bas` files: the title pictures and the scroller
+text (see "Title pictures" above) and the 2×2 letters on the clay tablets (part of the town character sets).

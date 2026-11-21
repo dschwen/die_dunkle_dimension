@@ -12,6 +12,13 @@ try { storedLang = localStorage.getItem('ddd-lang'); } catch (e) { /* storage un
 const lang = params.get('lang') || storedLang || 'en';
 try { if (params.get('lang')) localStorage.setItem('ddd-lang', lang); } catch (e) { /* ignore */ }
 document.documentElement.lang = lang;
+// edition: 'regular' = original game and graphics, 'enhanced' = new graphics (?edition=..., remembered)
+let storedEdition = null;
+try { storedEdition = localStorage.getItem('ddd-edition'); } catch (e) { /* storage unavailable */ }
+const edition = ['regular', 'enhanced'].includes(params.get('edition')) ? params.get('edition')
+  : (storedEdition === 'enhanced' ? 'enhanced' : 'regular');
+try { if (params.get('edition')) localStorage.setItem('ddd-edition', edition); } catch (e) { /* ignore */ }
+document.documentElement.dataset.edition = edition;
 const MSG = {
   de: { loading: 'Lade Spieldaten…', ready: 'Klicken oder eine Taste drücken, um zu starten', halted: 'Programm angehalten: ', saved: 'Gespeichert: ', loadError: 'Fehler beim Laden: ', turboOn: 'Turbo AN', turboOff: 'Turbo AUS (Originalgeschwindigkeit)', soundOff: 'Ton aus', soundOn: 'Ton an' },
   en: { loading: 'Loading game data…', ready: 'Click or press a key to start', halted: 'Program halted: ', saved: 'Saved: ', loadError: 'Error while loading: ', turboOn: 'Turbo ON', turboOff: 'Turbo OFF (original speed)', soundOff: 'Sound off', soundOn: 'Sound on' },
@@ -49,7 +56,8 @@ async function init() {
   const disk = new Disk();
   await disk.init(new URL('../data/', import.meta.url).href, lang,
     async (p) => { const r = await fetch(p); if (!r.ok) throw new Error(p); return r.arrayBuffer(); },
-    async (p) => { const r = await fetch(p); if (!r.ok) throw new Error(p); return r.text(); });
+    async (p) => { const r = await fetch(p); if (!r.ok) throw new Error(p); return r.text(); },
+    { edition });
   sid = new SidAudio();
   machine = new Machine({ disk, sid, charRom: makeCharRom(disk) });
   machine.on('halt', (e) => { status.textContent = T.halted + e.message; overlay.classList.remove('hidden'); });

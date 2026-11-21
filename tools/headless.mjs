@@ -13,10 +13,10 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const args = process.argv.slice(2);
 const opt = (n, d) => { const i = args.indexOf(n); return i >= 0 ? args[i + 1] : d; };
 
-export async function createMachine({ lang = 'de' } = {}) {
+export async function createMachine({ lang = 'de', edition = 'regular' } = {}) {
   const disk = new Disk();
   const base = path.join(root, 'web/data') + '/';
-  await disk.init(base, lang, async (p) => fs.readFileSync(p), async (p) => fs.readFileSync(p, 'utf8'));
+  await disk.init(base, lang, async (p) => fs.readFileSync(p), async (p) => fs.readFileSync(p, 'utf8'), { edition });
   disk.db = null;
   const sidLog = [];
   const m = new Machine({ disk, sid: { write: (r, v, t) => sidLog.push([t, r, v]) }, charRom: makeCharRom(disk) });
@@ -74,7 +74,7 @@ export async function runScript(m, keys, frames, { log = false } = {}) {
 }
 
 if (process.argv[1] && process.argv[1].endsWith('headless.mjs')) {
-  const m = await createMachine({ lang: opt('--lang', 'de') });
+  const m = await createMachine({ lang: opt('--lang', 'de'), edition: opt('--edition', 'regular') });
   const loads = [];
   m.on('load', (n) => loads.push(m.frameCount + ':' + n));
   m.boot(opt('--start', 'ddd.dbas'));

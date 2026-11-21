@@ -85,5 +85,24 @@
    "ddd.twnp",
    "ddd.twnq"
   ]
+ },
+ "art": {
+  "regular": {
+   "en": [
+    "ddd.dttl",
+    "ddd.dtxt",
+    "ddd.titl"
+   ]
+  },
+  "enhanced": {
+   "de": [
+    "ddd.titl"
+   ],
+   "en": [
+    "ddd.dttl",
+    "ddd.dtxt",
+    "ddd.titl"
+   ]
+  }
  }
 }
