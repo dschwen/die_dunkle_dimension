@@ -1,0 +1,12 @@
+14920 gosub14900:i=2:gosub14910:print"you are wearing
+14922 printspc(24)"clothes";:j=peek(49247):ifj=0goto14928
+14924 print" and":printspc(24)"{up}over them your
+14925 rem
+14926 rem
+14928 print".":printspc(24)"{up}as a weapon you
+14930 printspc(24)"now have your":j=peek(49246):goto14940
+14940 printspc(24)"{up}"w$(j):printspc(24)"ready.":j=peek(49167)
+14950 printspc(24)"{up}you use ";:ifj=0thenprint"no":printspc(24)"";
+14952 ifj=1thenprint"the":printspc(24)"small";
+14954 ifj=2thenprint"the":printspc(24)"large";
+14956 print" shield.":poke198,0:wait198,1:goto14900

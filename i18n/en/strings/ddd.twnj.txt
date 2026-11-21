@@ -1,0 +1,288 @@
+# mubrak, the independent city
+284|a cook.{home}
+285|a man.{home}
+286|a beggar.{home}
+287|a croupier.{home}
+288|a lady of{home}|easy virtue.
+294|a gambler.{home}
+295|a fire{home}|devil.
+296|a warrior.{home}
+401|guar
+402|town
+404|armo
+405|weap
+406|heal
+407|pois
+408|rest
+409|food
+410|herb
+411|peep
+412|begg
+416|wait
+417|head
+419|crou
+422|begg|ar{home}
+423|flut
+424|wiza
+425|adep
+426|tabl
+427|pois
+428|drui
+429|help
+430|tabl
+432|body
+433|help
+434|gamb
+435|brok
+436|gamb
+437|gamb
+438|mone
+439|nigh
+440|game
+441|domi
+442|dagg
+443|serv
+444|fulg
+445|warr
+446|elit
+447|gian
+448|shei|prin
+449|blow
+807|beggar{home}
+814|croupier{home}
+816|gambler{home}
+817|fire devil{home}
+821|harp
+822|laython
+823|krummfus
+824|raskell
+825|cydren
+826|zamak
+827|sherrar
+828|tellus
+829|jeanette
+830|calhan
+831|lizeth
+832|merril
+833|greg
+834|jerint
+835|domick
+836|t'kul
+837|arnor
+844|i'm hot
+846|i am{home}|hungry
+850|business{home}|is good
+851|i have a{home}|headache
+852|my rheumatism{home}|plagues me
+855|i'm{home}|broke
+856|i'm cold
+857|lousy
+865|i run this{home}|peep show
+866|i am a{home}|beggar
+870|i am the{home}|waitress
+872|i sell{home}|my body
+873|i am a{home}|warrior
+874|i am the{home}|croupier
+875|i am a{home}|gambler
+876|i serve{home}|fulgar
+883|dig in
+884|take a look
+885|have pity
+886|bye
+890|adieu, cherie
+896|unlucky at{home}|cards, lucky{home}|in love
+1002|independent{home}|town.
+1003| want to{home}|come in?
+1004|then you'll{home}|stay outside
+1005|but whoever{home}|wants in must{home}
+1006|pay taxes,{home}|which we need{home}
+1007|for the upkeep{home}|of the town.{home}
+1008|do you agree{home}|to that?
+1009|{lgrn}thanks, your{home}|way is clear
+1012|the minimum{home}|stake is five{home}
+1013|gold pieces.{home}
+1037|{lgrn}now you are{home}|cured.%{home}
+1041|oil change,{home}|but would you{home}
+1042|like{home}|10 rations{home}|anyway?
+1045|{lgrn}more?
+1050|{home}|i really don't{home}|want to talk{home}
+1051|about that.{home}|but on another{home}
+1052|matter: i hear{home}|that you come{home}
+1053|from another{home}|world and want{home}
+1054|to save us,{home}|is that{home}
+1055|right?|then beat it
+1056|then perhaps{home}|i can{home}
+1060|{home}|a druid who{home}|visited me{home}
+1061|told me{home}|something.{home}|only the druids{home}
+1062|know the right{home}|order of the{home}
+1063|tablets with{home}|the name of{home}
+1064|evil, which are{home}|spread across{home}
+1065|the towns.{home}
+1066|ask the druids{home}|in the towns{home}
+1067|about the{home}|tablets.%{home}
+1070|tshade{home}|psst!{home}
+1071|keep your{home}|voice down!{home}
+1072|ck{home}|for very special{home}|customers i keep{home}
+1073|a small supply{home}|of this{home}
+1074|powerful{home}|reagent.{home}
+1075|would you like{home}|some?
+1077|one mushroom is{home}|enough for four{home}
+1078|spells.{home}
+1079|{lgrn}good, you now{home}|have
+1080|portions.{home}|more?
+1090|who told you{home}|that?{home}
+1100| show{home}|hey, are you{home}|even{home}
+1101|eighteen?|then get out
+1102|talk to one{home}|of the hatches{home}
+1103|on the wall and{home}|drop in a coin.{home}
+1104|then you'll{home}|see.%{home}
+1110|{yel}do you want to{home}|drop in a{home}
+1111|coin?
+1112|{yel}ten seconds!{home}
+1120|ar{home}|i play{home}|tunes on{home}
+1122|my flute and{home}|hope that{home}
+1123|passers-by will{home}|give me a few{home}
+1124|coins.{home}
+1125|have you got{home}|a gold piece{home}|for me?
+1126|skinflint
+1127|{lgrn}thank you.{home}|ask the{home}
+1128|weaponsmith{home}|about a{home}
+1129|blowpipe
+1130|e{home}|funny thing,{home}|made all of{home}
+1131|glass, innit?{home}|but it has a{home}|good sound.{home}
+1132|wanna buy{home}|it,{home}|maybe?
+1133|hrmmpf!%{home}
+1134|{lgrn}there you go.%{home}
+1140|ress{home}|silly question,{home}|surely you know{home}
+1141|what a{home}|waitress{home}|is.{home}
+1142|oh, 
+1150|ache{home}|yes, the beggar{home}|out there{home}
+1151|tootles on his{home}|flute all day{home}
+1152|long. it's{home}|enough to drive{home}
+1153|you mad.{home}|by the way, it's{home}
+1154|a very strange{home}|flute. ask him{home}
+1155|about it. i bet{home}|he stole{home}
+1156|it.%{home}
+1160|ler{home}|i've gambled{home}|everything away{home}
+1161|now i'm totally{home}|broke.%{home}
+1162|e{home}|i badly need{home}|money.{home}
+1163|perhaps{home}|you can give me{home}
+1164|some.{home}|oh, not for{home}
+1165|nothing. i have{home}|a strange{home}
+1166|piece of iron{home}|that attracts{home}
+1167|other iron and,{home}|when you hang it{home}
+1168|up, always{home}|points{home}
+1169|north. do you{home}|want it?
+1171|{lgrn}there you go.%{home}
+1180|ler{home}|why don't you{home}|just join in?{home}
+1181|just talk to{home}|the croupier{home}
+1182|across the{home}|table. he'll{home}
+1183|surely let you{home}|join the game{home}
+1184|right{home}|away.%{home}
+1185|ler{home}|yes, i gamble,{home}|because i made{home}
+1186|a lot of money{home}|earlier.%{home}
+1188|then i won't{home}|tell you!%{home}
+1189|deep in the{home}|woods i found{home}|a whole lot of{home}
+1190|the nightshade{home}|mushroom{home}
+1191|and flogged it{home}|to the herb{home}
+1192|woman here.{home}|ask her about it{home}
+1193|if you need{home}|some.{home}
+1200|you betrayed{home}|our town to{home}
+1201|the king, and{home}|you still dare{home}
+1202|to show your{home}|face{home}
+1203|here?{home}|get out of{home}
+1204|here, before{home}|we beat you{home}
+1205|to death
+1210|er{home}|oh, i completely{home}|forgot to give{home}
+1211|it to{home}|you. here it{home}|is.%{home}
+1220|ar{home}|fulgar, my{home}|master, has{home}
+1221|told me to{home}|seek the one{home}
+1222|who comes from{home}|another world.{home}
+1223|are you that{home}|one, perhaps?
+1224|my master would{home}|like to talk{home}
+1225|to you. i think{home}|he has a{home}
+1226|rewarding{home}|task for{home}
+1227|you. are you{home}|interested?
+1228|go to fulgar's{home}|castle. it lies{home}
+1229|in the fire{home}|mountains far{home}
+1230|to the northeast{home}|you can reach{home}
+1231|it only if you{home}|land by ship{home}
+1232|south-east of{home}|the great{home}
+1233|cliffs in the{home}|bay of the{home}
+1234|thousand{home}|reefs.{home}
+1235|then go through{home}|the rock{home}
+1236|labyrinth until{home}|you find his{home}
+1237|castle. he will{home}|explain
+1238|everything.%{home}
+1300|ior{home}|i was a member{home}|of an{home}
+1301|elite troop.%{home}
+1310|e troop{home}|the troop{home}|no longer{home}
+1311|exists.{home}|the king had{home}|sent us to{home}
+1312|slay the giant{home}|wyrm.%{home}
+1320|t wyrm{home}|it was{home}
+1321|terrible. our{home}|men had no{home}
+1322|chance against{home}|the beast.
+1323|only the famous{home}|magic armour{home}
+1324|would be strong{home}|enough to resist{home}
+1325|its fire, and{home}|only the famous{home}
+1326|spellwing{home}|could{home}
+1327|pierce its{home}|scaly{home}
+1328|hide.{home}|sadly these{home}
+1329|weapons are just{home}|a legend. so the{home}
+1330|fair{home}|princess{home}
+1332|sheila will soon{home}|be killed by{home}
+1333|the dragon.%{home}
+1340|ask the king{home}|himself.%{home}
+2040|ons{home}
+2122|{lgrn}here you are!{home}
+2123|{lgrn}you now have
+2200|pipe|you have one.%{home}
+2210|but that is{home}|forbidden.%{home}
+2220|{yel}he whispers:{home}
+2230|{lgrn}here, but don't{home}|tell anyone.%{home}
+3010|i'm practising{home}|the poison &{home}
+3011|gall spell.%{home}
+3020|on & gall{home}|a forbidden but{home}|useful{home}
+3021|combat spell.{home}|do you know{home}|it?
+3031|you use the{home}|rightmost{home}
+3032|hatch, you'll{home}|see the tablet.%{home}
+3121|in gaht.%{home}
+3201|{yel}you find{home}|nothing.{home}
+3300|{yel}do you want to{home}|leave mubrak{home}
+4000|pier{home}|i run the{home}|game here.%{home}
+4011|do you know{home}|the rules?
+4012|the rules are{home}|actually quite{home}|simple:{home}
+4013|we play with{home}|cards worth{home}
+4014|between one{home}|and seven{home}
+4015|points{home}|each.{home}
+4016|you get two{home}|cards at the{home}
+4017|start and may{home}|take up to four{home}
+4018|more if you{home}|wish.{home}
+4019|the aim of the{home}|game is to reach{home}
+4020|thirteen{home}|points (a satan){home}|or to get as{home}
+4021|close as{home}|possible to{home}
+4022|thirteen.{home}|if you reach{home}
+4023|thirteen with{home}|your first two{home}
+4024|cards, you have{home}|a 'devil' and{home}
+4025|win{home}|immediately.{home}
+4026|but if you go{home}|over thirteen{home}
+4027|points, it's{home}|'bust, devil',{home}
+4028|and the game{home}|is{home}
+4029|lost.{home}|the player goes{home}
+4030|first, then me.{home}|on a{home}
+4031|tie i win.{home}|in return you{home}
+4032|have the{home}|'devil'.{home}
+4033|did you get{home}|all that?
+4100|fancy a{home}|little{home}|game?
+4120|how much will{home}|you bet? {blu}00{left}{left}{wht}
+4130|{lgrn}shuffling...{home}
+4150|{yel}{up}{left}you:|{lgrn}dealing..{home}
+4200|{lgrn}another? {wht}G{left}
+4300|{yel}me:         {home}
+4400|{lred}you have    {home}|lost!{home}
+4410|your|gold{home}|pieces are gone!{home}
+4420|{lgrn}play again?
+4500|{lgrn}you have    {home}|won!{home}
+4510|you receive|gold pieces.{home}
+5070|{left}, satan!|{left}{left}{left}{left}{left}{left}devil! {home}
+5080|{left}{left}{left}{left}{left}{left}{left}{left}  you're bust! {home}

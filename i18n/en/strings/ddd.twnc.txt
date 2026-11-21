@@ -1,0 +1,322 @@
+# king's castle (casiodorus rex)
+129|weapon{home}
+130|armour{home}
+131|inventory{home}
+191|{yel}do that{home}|outside!{home}
+280|{cyn}you talk to{home}|a guard.
+281|the treasure{home}|guard.
+282|a priest.{home}
+283|a healer.{home}
+284|a cook.
+285|a cartographer.{home}
+286|a fighter.{home}
+287|the executioner.{home}
+288|an elderly{home}|man.
+289|the king.
+290|an officer.
+291|the queen.{home}
+292|a man in a{home}|blue pinstripe{home}
+293|suit.{home}
+294|a bard.{home}
+295|a young{home}|maid.
+296|a jester.{home}
+297|{home}
+401|guar
+402|trea
+403|gold
+404|prie
+406|heal
+407|pois
+408|rest
+409|food
+410|geog
+412|swor
+416|trai
+417|atta
+418|defe
+419|exec
+421|heal|th?{home}
+422|stew
+423|king
+424|land
+425|daug
+426|pact
+427|sher
+428|crim
+429|mubr
+430|desp
+431|daug
+432|lott
+433|wyrm
+434|pact
+435|chan
+436|kohl
+437|psst
+438|maid
+439|help|aid
+440|mubr
+441|uyrp
+442|jest
+443|joke
+445|i can't tell{home}|you anything{home}
+446|about that.%{home}
+801|guard{home}
+802|treasure{home}|guard{home}
+803|priest{home}
+804|healer{home}
+805|cook{home}
+806|cartographer{home}
+807|swordmaster{home}
+808|executioner{home}
+809|old man{home}
+810|king{home}
+811|officer{home}
+812|queen{home}
+813|man{home}
+814|bard{home}
+815|maid{home}
+816|jester{home}
+819|says:{home}
+820|i am |a{home}|guard
+821|the{home}|treasure guard
+822|father{home}|antonius
+823|hypochondrius
+824|corollus
+825|theodorus
+826|ator
+827|vultan,{home}|but people{home}
+828|mostly call me{home}|'the axe'
+829|haflar
+830|casiodorus rex
+831|torquill
+832|thea
+833|helmut,{home}|but everyone{home}
+834|calls me 'pear'
+835|dakteon
+836|gunli
+837|harlekin
+840|very well,{home}|thank you
+841|i feel{home}|great
+842|i am totally|drunk on the|altar wine
+843|i feel fine,{home}|of course
+844|it's a bit{home}|hot in here
+845|i am a bit{home}|stressed
+846|excellent
+847|i am always{home}|bloodthirsty
+848|i have{home}|caught a cold
+849|i am well,{home}|but{home}
+850|my land is{home}|sick
+851|so-so, thanks{home}|for asking
+852|i am in{home}|despair
+853|fine - until{home}|the next vote
+854|psst
+855|fine, thanks
+862|i am the|priest of this|castle
+863|healing is my{home}|job
+864|i do the{home}|cooking here
+865|i am a{home}|geographer
+866|i am the{home}|swordmaster
+867|guess. surely{home}|you can see{home}
+868|i am the{home}|king's{home}|steward
+869|i am the{home}|king of this{home}|land
+870|i am the{home}|king's sheriff
+871|i am the{home}|king's{home}|wife
+872|i am the{home}|chancellor of{home}
+873|this our{home}|dimension
+874|psst
+875|i am only{home}|a maid
+876|me be the{home}|court jester
+880|i must get back{home}|to guard duty
+881|i will pray{home}|for you
+882|stay healthy,{home}|always
+883|enjoy your meal
+884|safe journey
+885|be brave
+886|bye. perhaps{home}|we'll meet
+887|i'm keeping an{home}|eye on you
+888|again some day,{home}|on business
+889|are you finally|leaving
+890|save our{home}|world
+891|pay your taxes{home}|on time
+892|save our{home}|daughter
+893|'twas a{home}|pleasure to{home}|meet you
+894|i'll go on{home}|singing now
+895|farewell
+896|have fun{home}|then, haha
+898| turns{home}|away.{home}
+899|i'm the hangman
+1000|d{home}|i guard the{home}|castle and{home}
+1001|the king. want{home}|an audience?
+1002|it's better not{home}|to disturb{home}
+1003|the king{home}|anyway.%{home}
+1004|the king will{home}|see you in the{home}
+1005|throne room.%{home}
+1010|sure{home}|i guard the{home}|king's gold.{home}
+1011|are you here to{home}|steal, maybe?
+1012|i wouldn't{home}|advise it{home}|either!%{home}
+1013|watch out!{home}|for folks like{home}
+1014|you, the man{home}|behind you is{home}
+1015|in charge.%{home}
+1016|yes, i'd like{home}|some gold too!%{home}
+1020|st{home}|i am a{home}|man of god.{home}
+1022|do you believe{home}|in god?
+1023|then kneel down{home}|and pray!{home}
+1024|neither do i,{home}|but a man has{home}
+1025|to make a{home}|living.%{home}
+1030|{home}|i can cure your{home}|poison or{home}
+1031|restore you.{home}|which would{home}|you like?%{home}
+1032|on{home}
+1037|now you are{home}|cured.%{home}
+1038|ore{home}
+1041|like to buy a{home}|lunch box with{home}
+1042|25 portions?
+1043|as you wish.%{home}
+1045|{lgrn}another one?
+1050|raphy{home}|i draw{home}|maps.%{home}
+1051|{home}|would you like{home}|to buy exact{home}
+1052|maps of this{home}|land and plans{home}|of buildings,{home}
+1053|towns, mazes{home}|etc.?
+1054|oh well, if you{home}|can find your{home}
+1055|way anyway.%{home}
+1056|sadly i have{home}|none ready{home}
+1057|at the moment.{home}|would you still{home}
+1058|like to buy{home}|some?
+1060|then just send{home}|20 dm (cash{home}|or cheque){home}
+1061|to the author:{home}|{wht}german design{home}
+1062|    group{home}|r. rinscheidt{home}
+1063|reference:{home}|d.d.d. - maps{home}|buchholzstr. 17{home}
+1064|4755 holzwickede{home}|west-germany{home}
+1065|you will get{home}|very nice{home}
+1066|maps and{home}|solution hints.{home}
+1070|dmaster?{home}|i can train{home}|you in combat
+1071|.%{home}
+1072|ning{home}
+1073|for that you{home}|must first gain{home}
+1074|more{home}|experience.%{home}
+1075|good. do you{home}|want to improve{home}
+1076|your attack{home}|or your{home}|defense?%{home}
+1078|there is{home}|nothing more{home}|i can teach.%{home}
+1079|okay, let's{home}|fight!%{home}
+1084|ck{home}
+1086|nse{home}
+1090|utioner{home}|i am the king's{home}|executioner and{home}
+1091|torturer.{home}|have you ever{home}
+1092|been at an{home}|execution{home}|before?
+1093|fun, isn't it?{home}|beheading is{home}
+1094|my favourite.%{home}
+1095|then stay here{home}|a little while.{home}|the guy here in{home}
+1096|the cell will{home}|soon lose his{home}|head.%{home}
+1100|ard{home}|i manage{home}|the castle.{home}
+1101|these are{home}|the royal{home}
+1102|chambers. no one{home}|may enter here.{home}
+1103|you had better{home}|leave now,{home}
+1104|before the{home}|guards see you.%{home}
+1110|{home}|i rule{home}|this land.%{home}
+1111|my land is|threatened{home}
+1112|by a dark|power.%{home}
+1113|hter{home}|oh, that{home}|accursed{home}
+1114|pact!%{home}
+1115|{home}|twice a year,{home}|always at the{home}
+1116|solstice, the{home}|dragon grows{home}
+1117|hungry for{home}|human flesh.{home}
+1118|therefore we{home}|made a pact{home}
+1119|with it: in{home}|return for{home}
+1120|sparing our{home}|towns, we must{home}
+1121|then offer it{home}|a young{home}
+1122|maiden as a{home}|sacrifice{home}|each time.{home}
+1123|which maiden is{home}|chosen by lot.{home}
+1124|this time the{home}|lot fell on my{home}
+1125|only{home}|daughter.{home}
+1126|i beg you,{home}|slay the wyrm{home}
+1127|if you can. but{home}|do not fail,{home}
+1128|or else the{home}|beast will take{home}
+1129|a terrible{home}|revenge{home}
+1130|on us all.%{home}
+1131|iff{home}|i hunt{home}|criminals.%{home}
+1132|inals{home}|for example,{home}|the king has{home}
+1133|long sought the{home}|thieves' gang of{home}
+1134|mubrak.%{home}
+1135|ak{home}|have you ever{home}|been to{home}|mubrak?
+1137|pity, the king{home}|would like to{home}|know where it{home}
+1138|lies.%{home}
+1139|ask the king{home}|about mubrak{home}|and give him{home}
+1140|the coordinates.{home}|he will reward{home}
+1141|you richly.%{home}
+1142|air{home}|our daughter{home}|will soon{home}
+1143|die.%{home}
+1144|hter{home}|princess{home}|sheila. her lot{home}
+1145|was drawn{home}|in the{home}|lottery.%{home}
+1146|ery{home}|you're not{home}|from here?
+1147|then you should{home}|know what that{home}
+1148|means!%{home}
+1150|in the mountains{home}|of the desert{home}|'öd' in the{home}
+1151|east dwells a{home}|terrible wyrm.%{home}
+1152|{home}|we had to make{home}|a terrible{home}
+1153|pact with{home}|it.%{home}
+1154|{home}|i...% {yel}(cries){home}|{lgrn}%...cannot.{home}
+1155|ask my husband{home}|about our{home}
+1156|daughter.%{home}
+1160|cellor{home}|i do...{home}|...well, what{home}
+1161|do i do, really?{home}|i never quite{home}|know{home}
+1162|what it is{home}|i do...%{home}
+1163|yes, that's{home}|my name.%{home}
+1200|welcome,{home}|my
+1201| lady knight.{home}
+1202| knight.{home}
+1203|i have heard{home}|word of your{home}
+1204|deeds.{home}
+1208|i raise you{home}|to level|{home}
+1209|and grant you{home}|the rank of{home}
+1210|in my army.%{home}
+1220|go now and{home}|destroy the evil{home}
+1221|that threatens{home}|us.%{home}
+1222|try to become{home}|more experi-{home}
+1223|enced and{home}|better.%{home}
+1230|yes, psst!{home}|can't you see{home}
+1231|that i am{home}|playing?%{home}
+1240|i serve{home}|my king.{home}
+1242|have you come{home}|to save{home}|our{home}
+1243|world?|help us!%{home}
+1244|dakteon may{home}|be able to give{home}|you a hint.{home}
+1245|ask him for{home}|help.%{home}
+1251|one may speak{home}|without burning,{home}
+1252|is important if{home}|you want to{home}
+1253|destroy{home}|the evil{home}|one.{home}
+1255|the wizards{home}|of the two
+1256|circles know{home}|something of it.{home}
+1257|ask them about{home}|evil.%{home}
+2000|ak{home}|mubrak will be{home}|destroyed!%{home}
+2001|mubrak? do you{home}|know where{home}
+2002|that rats' nest{home}|lies? 
+2004|too bad. i'd{home}|love to have{home}
+2006|wiped it out.%{home}
+2008|tell me the{home}|coordinates,{home}|then i will{home}
+2010|reward you{home}|richly:{home}
+2016|biej|impossible, my{home}|men have already{home}
+2018|biej|searched there.%{home}
+2020|very good, i{home}|will send a{home}|troop at once{home}
+2022|to destroy{home}|this den of{home}
+2024|iniquity{home}|for good.{home}|in gratitude i{home}
+2026|grant you{home}|2000 gold pieces{home}
+2028|as a reward.%{home}
+2100|er{home}|i am the one who{home}|tells jokes.%{home}
+2112|between the{home}|queen and a{home}
+2114|hippo?|oh...%{home}
+2116|the hippo{home}|bathes more{home}|often, hahaha!%{home}
+3000|the isle of uyrp{home}|lies at the{home}
+3002|south cape, at{home}|coordinates{home}
+3300|{yel}do you want to{home}|leave the castle{home}
+3301|now?
+6000|{lred}you leave{home}|the castle.{home}
+7010|you have slain{home}|the giant wyrm{home}
+7012|and rescued{home}|my daughter{home}
+7014|sheila.{home}|in gratitude{home}
+7015|i give you{home}|1ooo gold pieces{home}
+9000|but that costs{home}|you|gold{home}|pieces. do you{home}
+9001|want to pay?
+9002|well, then not.%{home}
+9003|you don't have{home}|enough gold!%{home}
+50000|private|lance corporal|corporal|sergeant|officer cadet
+50001|staff sergeant|master sergeant|ensign|first sergeant|sergeant major
+50002|senior ensign|warrant officer|lieutenant|first lieutenant|captain
+50003|major|lt. colonel|colonel|general|field marshal

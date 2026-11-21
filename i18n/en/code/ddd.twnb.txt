@@ -1,0 +1,6 @@
+417 ifn$="help"thenprint"{home}":goto465
+456 print"?{home}":gosub950:print"i am a{home}":sys5681:print"druid.%{home}":goto442
+467 print"{home}":gosub950:print"i see how evil{home}":sys5681:print"is conquering{home}
+470 print"{home}":gosub950:print"to speak the{home}":sys5681:print"name of evil{home}
+474 print"d{home}":gosub950:print"evil has{home}":sys5681:print"destroyed the{home}
+419 ifn$="see"orn$="seei"goto467

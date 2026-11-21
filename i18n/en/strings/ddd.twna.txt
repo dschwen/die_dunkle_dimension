@@ -1,0 +1,167 @@
+# overworld (and the combat/spell/inventory code shared with all other areas)
+15|north{home}
+16|south{home}
+17|west{home}
+18|east{home}
+33|what..?{home}
+34|waiting...{home}
+39|{lred}blocked!{home}
+41|%giddy-up!%{home}
+42|%whoa!%{home}
+44|%up and away!%{home}
+46|north{home}
+47|south{home}
+48|west{home}
+49|east{home}
+55|%landing!%{home}
+56|{lred}not here!{home}
+57|attacks!{home}
+69|{wht}--- combat! ---{home}|{yel}you are using{home}|small{rvof}{rvof}large{rvof}{rvof}| shield
+72|{pur}you are stunned.{home}
+74|waiting...{home}
+86|what..?{home}
+87|north{home}
+91|{lred}blocked!{home}
+92|south{home}
+95|west{home}
+98|east{home}
+102|attack{home}|{yel}-direction? {wht}G{left}
+103|none{home}
+105|north{home}
+106|south{home}
+107|west{home}
+108|east{home}
+121|{lred}off target!{home}
+126|evades you!{home}
+127|is,{home}|with a{home}
+128|good hit,{home}
+129|lucky hit,{home}
+131|parried.{home}
+132|is{home}
+138|just scratched.{home}
+139|lightly wounded.{home}
+140|wounded.{home}
+141|badly wounded.{home}
+142|fleeing.{home}
+146| has{home}|poison level|now.{home}
+150|-- you flee! --{home}|bandit
+151|{yel}for your{home}|cowardice you{home}|lose | points{home}|of experience!{home}
+152|reloading...{home}
+157|{wht}--- victory! ---{home}|bandit
+161|was, by poison,{home}
+186|{pur}you parry.{home}
+197|and 
+198|stuns you!{home}
+199|poisons you!{home}
+216| has{home}|fled.{home}
+221|{lblu}magic spell{home}|repelled!{home}
+232|ready weapon{home}|{yel}-which? (a-s) {wht}G{left}
+235|you don't own it{home}
+236|you are not{home}|skilled enough{home}
+237|to wield such{home}|a weapon.{home}
+238|is ready.{home}
+240|{yel}-shield? (y/n) {wht}G{left}
+244|{lred}you use the{home}|large shield.{home}
+245|{lred}you use the{home}|small shield.{home}
+247|wear armour{home}|{yel}-which? (a-g) {wht}G{left}
+250|you don't own it{home}
+252|you are too{home}|weak to wear{home}
+253|such heavy{home}|armour.{home}
+254|put on.{home}
+256|{yel}your loot:{home}| gold pieces!{home}
+259|{lgrn}the poison works!
+263|{cyn}you are starving!
+265|{lgrn}swamp gas!{home}
+266|{lgrn}poisoned!{home}
+272|{lgrn}swamp gas!{home}
+273|{lgrn}poisoned!{home}
+285|{lred}the lava burns{home}|you!{home}
+291|cast a spell{home}|{yel}-which? {wht}G{left}
+294|{yel}none{home}
+296|{lred}you can't!{home}
+298|{lred}not enough{home}|ingredients!{home}
+299|{orng}you concentrate{home}|...{home}
+302|{lred}what for?{home}
+303|{lred}not enough{home}|astral energy!{home}
+304|{lred}it fails!{home}
+306|{cyn}it works!{home}
+314|{yel}-how much? 
+334|stone troll{home}
+335| points.{home}
+350|{yel}-direction? {wht}G{left}
+391|entering 
+401|cottage{home}
+402|ddd.konj
+403|castle{home}
+404|temple{home}
+405|tower{home}
+406|cave{home}
+407|fortress{home}
+408|dragon's hoard{home}
+409|skull keep{home}
+410|town{yel}{home}|*** trisdic ***{home}
+411|*** worthal ***{home}
+412|****  gaht  ****{home}
+413|***  ackbah  ***{home}
+414|***  mubrak  ***{home}
+415|** damraskan **{home}
+416|***  muspel  ***{home}
+419|aboard{home}
+420|mount{home}|horse{home}
+425|position{home}|bearing{home}|{cyn}  long.: |{cyn}   lat.: 
+426|search|{yel}you find{home}
+430|the treasure of{home}|uyrp. it is{home}
+431|1000 gold pieces{home}
+433|sicaria draconem{home}
+434|the famous{home}
+435|a rare{home}
+436|mandrake root.{home}
+437|you now have|of them.{home}
+438|nothing.{home}
+441|catapult{home}|{yel}-direction? {wht}G{left}
+456|driven off!{home}
+460|save game{home}|{lgrn}so far
+463|%return%. {wht}G{left}
+475|{lgrn}health:   (   )|{up}{cyn}astral:   (   )|{lred}att.:   {grn}def.:|{up}{pur}str.:   {yel}dex.:|{gry3}int.:   {lblu}cha.:|{up}{lgrn}exp.:      (  )|{yel}gold pcs.:|{up}{orng}food supply:
+490|{left}{lred}bridge trolls{home}
+491|ambush you!{home}
+492|{left}{lred}woodwoses{home}
+493|{left}{lred}bog wights{home}
+506|pirate
+530|you are dead{home}|{yel}you played|moves.{home}|{wht}cause of death:{home}|{lgrn}poison{home}
+531|{cyn}starvation{home}
+532|{home}|killed you.{home}
+533|{cyn}burned{home}
+535|killed!{home}|you receive{home}| points.
+540|inventory{home}|{wht}1-hand weapons:
+541|{wht}2-hand weapons:
+542|{wht}ranged weapons:
+543|{wht}magic weapons
+544|{wht}armour:
+545|{wht}shields:
+546|{wht}white magic:
+547|{wht}black magic:
+548|{wht}ingredients:|{wht}other items:
+549|shard
+551|dragon claw
+553|glass flute
+555|fire ring
+557|oak dagger
+559|compass
+561|sextant
+563|lamp
+565| torches
+592|sea horse|merman|pirate ship|sea serpent|giant squid|dragonling|demon|fire lizard|balrog|dragon|wild horse|aurochs|unicorn|sand viper
+593|rock python|spit cobra|wood spider|cave spider|giant ape|goblin|orc|ogre|troll|ettin|cyclops|giant|woodwose|cavewose|zombie|skeleton|vampire|ghoul|mummy|werewolf|bandit|hydra|sorcerer|nettle tree
+594|hands|knife|dagger|short sword|hand axe|sword|morning star|quarterstaff|bastard sword|battle axe|greatsword|sling|short bow|blowpipe|long bow|crossbow|magic axe|elven bow|spellwing|clothes
+595|gambeson|leather armour|chain mail|scale mail|plate armour|magic armour|small shield|large shield|magic light|cure poison|shield|miracle cure|break curse|light shield|agility|turn undead|thunderbolt|poison & gall|fireball
+596|flame trail|fear curse|time freeze|death bolt|magic bomb|sulphur|garlic|ginseng|blood moss|pinewort|deathbloom|nightshade|mandrake
+607|{up}no points, as|it was an animal{home}
+610|moves played.{home}|{wht}{rvon}yz{yel}{rvof}please insert{home}
+611|{wht}{rvon}äö{rvof}{yel}a save disk{home}|and{home}
+612|choose a slot {rvon}{wht}yz{home}|{yel}from 0 to 9   {wht}{rvon}äö{home}
+614|   saving{home}|  game no. 
+615|ddd.sav
+617|{yel}now please put{home}|the game disk{home}
+618|back in the{home}|drive and press{home}
+621| points.

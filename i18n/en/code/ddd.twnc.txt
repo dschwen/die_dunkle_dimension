@@ -1,0 +1,7 @@
+800 gosub999:print"{yel}the ";
+897 print".%{home}":sys5681:sys5681:print"{yel}he";:ifh>13andh<16thenprint"{left}{left}she";
+1040 print"{home}":gosub800:print"i cook very{home}";:sys5681:print"well. would you{home}
+1250 print"{home}":gosub800:print"the name of{home}":sys5681:print"evil, which no{home}
+2110 print"{home}":gosub800:print"do you know the{home}":sys5681:print"difference{home}
+405 ifh=3and(n$="god"orn$="gods")goto1022
+411 ifh=6and(n$="map"orn$="maps")goto1051

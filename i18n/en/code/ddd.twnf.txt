@@ -1,0 +1,6 @@
+437 ifh=16andn$="sing"thenprint"{home}":goto2210
+1001 print"{home}":gosub800:print"this is gaht,{home}":sys5681:print"the town of the{home}
+1040 print"{home}":gosub800:print"i prepare the{home}";:sys5681:print"delicious elven{home}
+1100 print"f{home}":gosub800:print"yes, we elves{home}":sys5681:print"are famous for{home}
+3030 print"et{home}":gosub800:print"hm, i am{home}":sys5681:print"new here and{home}
+3120 print"et{home}":gosub800:print"go to{home}":sys5681:print"worthal. there{home}

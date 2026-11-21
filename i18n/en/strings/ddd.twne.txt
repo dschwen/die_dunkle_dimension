@@ -1,0 +1,117 @@
+# worthal, town of the seafarers
+284|a cook.{home}
+285|an old{home}|sea dog.
+286|an innkeeper.{home}
+287|a muscle-{home}|man.
+288|a carpen-{home}|ter.
+290|a sorceress.{home}
+401|guar
+402|town
+404|armo
+405|weap
+406|heal
+407|pois
+408|rest
+409|food
+411|sail
+416|schw
+417|body
+418|trai
+419|yard
+422|ship
+423|wiza
+424|adep
+425|tabl
+426|drui
+427|crys|shar|bala|evil
+428|tabl
+429|thun
+439|help
+806|sailor{home}
+807|innkeeper{home}
+808|muscleman{home}
+809|carpenter{home}
+810|druid{home}
+811|sorceress{home}
+821|olof
+822|erik
+823|appendicus
+824|kulinarus
+825|cap'n hook
+826|dolph
+827|arnold
+829|ragnar
+830|riclan
+831|tecca
+845|i'm a bit{home}|tipsy
+847|i feel{home}|very strong
+848|i've been{home}|working hard
+864|guess - surely{home}|you can see
+865|i am the{home}|healer of this|town
+866|i am a{home}|sailor
+867|i am the{home}|innkeeper here
+868|i am a{home}|bodybuilder
+870|that i do the{home}|cooking here
+872|i am the master{home}|of the shipyard
+874|i am a{home}|sorceress
+883|eat hearty
+886|go buy yourself{home}|some dumbbells
+889|fair winds
+1002|town of the{home}|seafarers.{home}|do you want to{home}
+1003|buy a{home}|ship? |then what do you{home}
+1004|want here?{home}
+1005|then you've{home}|come to the{home}|right place.{home}
+1032|on{home}
+1038|ore{home}
+1041|would you like{home}|a pack of{home}
+1042|15 rations?
+1045|another one?
+1100|or{home}|i used to be{home}|a famous{home}
+1110|seafarer, but{home}|i have{home}
+1111|retired{home}|now.{home}
+1112|do you want{home}|to go to sea{home}
+1113|too?
+1114|a ship is the{home}|best{home}
+1115|home.{home}
+1117|can you find{home}|your way at{home}
+1118|sea? |then that's{home}|fine.%{home}
+1120|well, as a{home}|beginner...{home}
+1121|will you buy{home}|me a beer?
+1123|{lgrn}thanks, that{home}|hits the spot.
+1125| i{home}|might have{home}
+1126|something for{home}|you. i still{home}
+1127|have my old{home}|sextant for{home}
+1128|navigation. i'd{home}|gladly sell{home}
+1129|it to you. are{home}|you{home}
+1130|interested? |then not.%{home}
+1131|thank you.{home}|here it{home}
+1132|is.%
+1140|yes, sit down{home}|at a table,{home}
+1142|i'll be right{home}|with you.%{home}
+1144|arzenegger{home}|no, the{home}|shared name is{home}
+1145|a coincidence.%
+1150|builder{home}|i specialize{home}|in strength.{home}
+1151|i could train{home}|you, too.
+1154|ning{home}|do you want to{home}|get stronger? 
+1155|but strength is{home}|important for{home}
+1156|combat and for{home}|wearing{home}
+1157|armour.%{home}
+1158|you are already{home}|as strong as i.%{home}
+1159|for that you{home}|must first gain{home}
+1160|experience.%{home}
+1161|good, let's{home}|train.%{home}
+1170|{home}|i build the{home}|ships here.%{home}
+1172|{home}|yes, would you{home}|perhaps be{home}
+1173|interested in{home}|a one-man{home}
+1174|sailboat? 
+1176|{lgrn}welcome{home}|aboard, your{home}|ship lies at{home}
+1178|anchor outside{home}|the town.%{home}
+2040|ons{home}
+3001|an adept.%{home}
+3010|t{home}|i'm practising{home}|the thunderbolt{home}
+3020|derbolt{home}|a useful{home}|combat spell.{home}
+3024|go to the{home}|black{home}|circle.%{home}
+3034|at his place.{home}|have a look{home}
+3035|there.%{home}
+3121|you'll find the{home}|fifth tablet.%{home}
+3300|{yel}do you want to{home}|leave worthal{home}

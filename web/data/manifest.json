@@ -1,0 +1,89 @@
+{
+ "disks": {
+  "1": [
+   "ddd.asmb",
+   "ddd.chra",
+   "ddd.chrb",
+   "ddd.chrc",
+   "ddd.chrk",
+   "ddd.chrl",
+   "ddd.code",
+   "ddd.dchr",
+   "ddd.dcod",
+   "ddd.dsnd",
+   "ddd.dspr",
+   "ddd.dttl",
+   "ddd.dtun",
+   "ddd.dtxt",
+   "ddd.mapa",
+   "ddd.mapb",
+   "ddd.mapc",
+   "ddd.mapk",
+   "ddd.mapl",
+   "ddd.titl"
+  ],
+  "2": [
+   "ddd.chrd",
+   "ddd.chre",
+   "ddd.chrf",
+   "ddd.chrg",
+   "ddd.chrh",
+   "ddd.chri",
+   "ddd.chrj",
+   "ddd.code",
+   "ddd.mapd",
+   "ddd.mape",
+   "ddd.mapf",
+   "ddd.mapg",
+   "ddd.maph",
+   "ddd.mapi",
+   "ddd.mapj"
+  ],
+  "3": [
+   "ddd.assm",
+   "ddd.chrm",
+   "ddd.chrn",
+   "ddd.chro",
+   "ddd.chrq",
+   "ddd.code",
+   "ddd.mapm",
+   "ddd.mapn",
+   "ddd.mapo",
+   "ddd.mapp",
+   "ddd.mapq",
+   "ddd.scrl"
+  ]
+ },
+ "basic": {
+  "1": [
+   "ddd.boot",
+   "ddd.dbas",
+   "ddd.konj",
+   "ddd.prep",
+   "ddd.twna",
+   "ddd.twnb",
+   "ddd.twnc",
+   "ddd.twnk",
+   "ddd.twnl",
+   "ddd.twnr"
+  ],
+  "2": [
+   "ddd.konj",
+   "ddd.twnd",
+   "ddd.twne",
+   "ddd.twnf",
+   "ddd.twng",
+   "ddd.twnh",
+   "ddd.twni",
+   "ddd.twnj"
+  ],
+  "3": [
+   "ddd.konj",
+   "ddd.twnm",
+   "ddd.twnn",
+   "ddd.twno",
+   "ddd.twnp",
+   "ddd.twnq"
+  ]
+ }
+}

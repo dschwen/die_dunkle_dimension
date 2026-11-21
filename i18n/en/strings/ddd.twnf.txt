@@ -1,0 +1,134 @@
+# gaht, the elven town
+285|a young{home}|elf.
+288|a stable{home}|boy.
+295|an elf maiden.{home}
+401|guar
+402|town
+404|armo
+405|weap
+406|heal
+407|pois
+408|rest
+409|food
+410|thie
+411|prin
+412|elve
+416|elve
+417|thyr
+422|unic
+423|wiza
+424|adep
+425|cure
+426|tabl
+427|ghor
+428|cama
+429|ackb
+430|drui
+431|help
+432|tabl
+434|bard
+436|song|s{home}
+438|herb
+806|elf{home}
+809|stable boy{home}
+815|elf maiden{home}
+821|garwin
+822|elrik
+823|apothekus
+824|elrond
+825|questor
+826|thelom
+827|bennt
+829|anatol
+832|chreola
+836|thyra
+837|ijale
+844|i am quite{home}|content
+845|i get{home}|by
+848|i have a lot{home}|to do
+852|i am blind{home}|but i see{home}|everything
+855|i have had{home}|a little{home}|wine
+865|i am a{home}|nimble thief
+868|i breed{home}|unicorns
+870|i am a{home}|bard
+875|i am the{home}|princess of the|elves
+884|good luck
+885|act wisely
+895|i want the sun{home}|to shine{home}
+896|again. save{home}|our world
+1002|elves. are you{home}|an elf too? 
+1003|we don't like{home}|strangers{home}
+1004|here.%{home}
+1005|i don't believe{home}|you. you are{home}
+1006|clearly a{home}|human.%{home}
+1041|specialities.{home}|how about{home}
+1042|ten{home}|rations?
+1102|our{home}|dexterity.{home}
+1104|shall i show{home}|you how to{home}
+1106|become more{home}|dexterous?
+1108|but you will{home}|need it!%{home}
+1110|you are already{home}|as dexterous{home}|as i am.%{home}
+1114|all right, let's{home}|practise...{home}
+1117|there, now you{home}|are defter.%{home}
+1120|cess{home}|i am the{home}|daughter of the{home}
+1121|elf queen{home}|mithra. do you{home}|know her?
+1122|she is a{home}|great queen.
+1123|she made{home}|the elven{home}|bow.%{home}
+1130|n bow{home}|it is a magic{home}|bow, whose{home}
+1131|arrows go{home}|straight through{home}
+1132|any{home}|obstacle. elrik{home}|keeps it.%{home}
+1140|n bow{home}|who sent you{home}|to me?%{home}
+1144|hm, i am{home}|supposed to{home}
+1145|keep the elven{home}|bow, but{home}
+1146|i hear you{home}|are trying to{home}
+1147|save the{home}|world?
+1148|you are not{home}|worthy of this{home}
+1149|weapon.%{home}
+1150|well, i think i{home}|could give you{home}
+1151|the bow. do you{home}|want to{home}
+1152|buy it?|then not.%{home}
+1153|it is yours!{home}
+1200|orns{home}|yes, we elves{home}|use them as{home}
+1202|mounts. i sell{home}|them too.{home}|would you like{home}
+1204|to buy one of{home}|these splendid{home}
+1206|beasts?|pity.%{home}
+1208|but you are too{home}|clumsy to{home}
+1210|ride them.%{home}
+1220|{lgrn}pick one{home}|out
+2040|ons{home}
+2104|c ginseng{home}|d deathbloom{home}
+2200|{home}|i sing{home}|songs.%{home}
+2210|shall i sing{home}|something{home}|for you?
+2212|as you like.%{home}
+2214|i once had{home}|a flute{home}
+2216|oh what a{home}|beaut!{home}
+2218|it was made{home}|of glass{home}
+2220|which gave it{home}|magic and class{home}
+2222|whenever i{home}|would play{home}
+2224|the crystal'd{home}|ring and sway{home}
+2226|and the holy{home}|crystal's call{home}
+2228|sent my song{home}|to one and all{home}
+2230|when the crystal{home}|broke apart{home}
+2232|its ringing{home}|lost its heart{home}
+2234|only the shard{home}|still rang so{home}
+2236|as if it still{home}|had hope to show{home}
+2238|but that was{home}|long ago, i fear{home}
+2240|and the flute's{home}|no longer here{home}
+2242|if you had it,|you'd bring{home}
+2243|the shard here|with its ring{home}
+2244|did you like{home}|my little{home}|song?
+2246|it's all true.{home}|but the flute{home}
+2247|was stolen{home}|from me{home}
+2248|once when i{home}|was in mubrak.%{home}
+3010|i'm practising{home}|the cure poison{home}
+3020| poison{home}|a spell{home}|against poison.{home}
+3031|don't know{home}|you. i don't{home}
+3032|think i am{home}|allowed to{home}
+3033|tell you.%{home}
+3034|who sent{home}|you?%{home}
+3035|ch{home}|where is he{home}|now?%{home}
+3036|ah{home}|good, i think{home}|i can tell you{home}
+3037|that the tablet{home}|lies in the{home}
+3038|north-eastern{home}|corner of the{home}|town.%{home}
+3121|you'll find the{home}|third tablet.%{home}
+3300|{yel}do you want to{home}|leave gaht{home}

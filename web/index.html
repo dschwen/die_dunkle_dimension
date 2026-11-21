@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Die Dunkle Dimension</title>
+<style>
+  html, body { margin: 0; height: 100%; overflow: hidden; }
+  body {
+    background: rgb(108, 94, 181);
+    display: flex; align-items: center; justify-content: center;
+    font-family: "Courier New", monospace; color: #fff;
+    transition: background-color 0.05s;
+  }
+  #screen { image-rendering: pixelated; image-rendering: crisp-edges; display: block; background: #000; }
+  .panel {
+    position: fixed; inset: 0; display: flex; align-items: center; justify-content: center;
+    background: rgba(0, 0, 0, 0.82); z-index: 10;
+  }
+  .panel.hidden { display: none; }
+  .box {
+    max-width: 640px; padding: 28px 32px; background: #352879; border: 4px solid #6c5eb5;
+    line-height: 1.5; box-shadow: 0 0 40px #000;
+  }
+  .box h1 { margin: 0 0 12px; font-size: 26px; letter-spacing: 3px; color: #b8c76f; }
+  .box button {
+    font: inherit; font-size: 18px; padding: 8px 24px; margin-top: 14px; cursor: pointer;
+    background: #6c5eb5; color: #fff; border: 2px solid #fff;
+  }
+  .box button:disabled { opacity: 0.5; cursor: wait; }
+  .box table { border-collapse: collapse; margin: 8px 0; }
+  .box td { padding: 2px 14px 2px 0; vertical-align: top; }
+  .box kbd { background: #000; border: 1px solid #959595; padding: 0 6px; }
+  #status { color: #9ad284; }
+  html[lang=de] [data-lang=en], html[lang=en] [data-lang=de] { display: none; }
+  .langs { margin-left: 18px; }
+  .langs a { color: #b8c76f; }
+  #toast {
+    position: fixed; bottom: 2vh; left: 50%; transform: translateX(-50%);
+    background: #000; border: 2px solid #6c5eb5; padding: 6px 16px; opacity: 0; transition: opacity 0.3s; z-index: 20;
+  }
+  #toast.show { opacity: 1; }
+  @media (max-width: 560px) { .box { margin: 0 16px; padding: 18px; font-size: 14px; } }
+</style>
+</head>
+<body>
+<canvas id="screen" width="320" height="200"></canvas>
+
+<div id="overlay" class="panel">
+  <div class="box">
+    <h1>DIE DUNKLE DIMENSION</h1>
+    <div data-lang="de">Ein Fantasy-Rollenspiel · © 1990 German Design Group</div>
+    <div data-lang="en">A fantasy role-playing game · © 1990 German Design Group · English translation</div>
+    <p id="status">…</p>
+    <table data-lang="de">
+      <tr><td><kbd>↑ ↓ ← →</kbd></td><td>Bewegen</td></tr>
+      <tr><td><kbd>A</kbd>–<kbd>Z</kbd>, <kbd>Leertaste</kbd>, <kbd>Return</kbd></td><td>Befehle wie am C64</td></tr>
+      <tr><td><kbd>^</kbd> / <kbd>`</kbd></td><td>C64-Taste „←“</td></tr>
+      <tr><td><kbd>F1</kbd></td><td>Hilfe · <kbd>F8</kbd> Turbo · <kbd>F9</kbd> Ton · <kbd>F10</kbd> Vollbild</td></tr>
+    </table>
+    <table data-lang="en">
+      <tr><td><kbd>↑ ↓ ← →</kbd></td><td>Move</td></tr>
+      <tr><td><kbd>A</kbd>–<kbd>Z</kbd>, <kbd>Space</kbd>, <kbd>Return</kbd></td><td>Commands as on the C64</td></tr>
+      <tr><td><kbd>`</kbd> / <kbd>^</kbd></td><td>C64 key “←”</td></tr>
+      <tr><td><kbd>F1</kbd></td><td>Help · <kbd>F8</kbd> turbo · <kbd>F9</kbd> sound · <kbd>F10</kbd> full screen</td></tr>
+    </table>
+    <button id="start" disabled>Start</button>
+    <span class="langs"><a href="?lang=de">Deutsch</a> · <a href="?lang=en">English</a></span>
+  </div>
+</div>
+
+<div id="help" class="panel hidden">
+  <div class="box">
+    <h1 data-lang="de">HILFE</h1>
+    <h1 data-lang="en">HELP</h1>
+    <table data-lang="de">
+      <tr><td><kbd>↑ ↓ ← →</kbd></td><td>Gehen / Angreifen in die Richtung</td></tr>
+      <tr><td><kbd>Leertaste</kbd></td><td>Warten</td></tr>
+      <tr><td><kbd>W</kbd> / <kbd>R</kbd></td><td>Waffe benutzen / Rüstung anlegen</td></tr>
+      <tr><td><kbd>Z</kbd> / <kbd>I</kbd></td><td>Zauberspruch / Inventur</td></tr>
+      <tr><td><kbd>S</kbd> / <kbd>B</kbd></td><td>Suchen / Besteigen, von Bord, absteigen</td></tr>
+      <tr><td><kbd>H</kbd> / <kbd>L</kbd> / <kbd>K</kbd> / <kbd>P</kbd></td><td>Reittier antreiben / Fliegen / Katapult (Schiff) / Position (Sextant)</td></tr>
+      <tr><td><kbd>Q</kbd></td><td>Spielstand abspeichern (Oberwelt)</td></tr>
+      <tr><td><kbd>K</kbd></td><td>In Städten: kommunizieren, dann Stichwort eingeben (z.&nbsp;B. <i>name</i>, <i>beruf</i>)</td></tr>
+      <tr><td><kbd>E</kbd> / <kbd>B</kbd> / <kbd>K</kbd></td><td>Im Gewölbe: Licht entzünden / benutzen / klettern</td></tr>
+      <tr><td><kbd>J</kbd> / <kbd>N</kbd></td><td>Ja / Nein</td></tr>
+      <tr><td><kbd>^</kbd> / <kbd>`</kbd></td><td>C64-Taste „←“: Pause</td></tr>
+      <tr><td><kbd>F8</kbd> · <kbd>F9</kbd> · <kbd>F10</kbd></td><td>Turbo · Ton · Vollbild (auch Doppelklick)</td></tr>
+    </table>
+    <table data-lang="en">
+      <tr><td><kbd>↑ ↓ ← →</kbd></td><td>Walk / attack in that direction</td></tr>
+      <tr><td><kbd>Space</kbd></td><td>Wait</td></tr>
+      <tr><td><kbd>R</kbd> / <kbd>W</kbd></td><td>Ready weapon / wear armour</td></tr>
+      <tr><td><kbd>C</kbd> / <kbd>I</kbd></td><td>Cast a spell / inventory</td></tr>
+      <tr><td><kbd>S</kbd> / <kbd>B</kbd></td><td>Search / board, disembark, dismount</td></tr>
+      <tr><td><kbd>H</kbd> / <kbd>L</kbd> / <kbd>F</kbd> / <kbd>P</kbd></td><td>Spur your mount / lift off &amp; land / fire catapult (ship) / position (sextant)</td></tr>
+      <tr><td><kbd>Q</kbd></td><td>Save the game (overworld)</td></tr>
+      <tr><td><kbd>T</kbd></td><td>In towns: talk, then type a keyword (<i>name</i>, <i>job</i>, <i>bye</i> …); Return ends short words</td></tr>
+      <tr><td><kbd>B</kbd> / <kbd>S</kbd></td><td>In shops: buy / sell</td></tr>
+      <tr><td><kbd>L</kbd> / <kbd>U</kbd> / <kbd>K</kbd></td><td>In dungeons: light / use / klimb a ladder</td></tr>
+      <tr><td><kbd>Y</kbd> / <kbd>N</kbd></td><td>Yes / no</td></tr>
+      <tr><td><kbd>`</kbd> / <kbd>^</kbd></td><td>C64 key “←”: pause</td></tr>
+      <tr><td><kbd>F8</kbd> · <kbd>F9</kbd> · <kbd>F10</kbd></td><td>Turbo · sound · full screen (or double click)</td></tr>
+    </table>
+    <p data-lang="de">Spielstände (Speichernummer 0–9) werden im Browser (IndexedDB) abgelegt.
+       Diskettenwechsel erfolgen automatisch – Aufforderungen zum Einlegen einer Diskette einfach mit einer Taste bestätigen.</p>
+    <p data-lang="en">Saved games (slots 0–9) are stored in the browser (IndexedDB). Disk swaps happen automatically –
+       just press a key when the game asks you to insert a disk.</p>
+    <button id="help-close">OK</button>
+  </div>
+</div>
+<div id="toast"></div>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>

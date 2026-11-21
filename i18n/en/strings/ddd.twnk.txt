@@ -1,0 +1,203 @@
+# white wizard tower (garthim)
+280|{cyn}you talk to{home}
+281|the white{home}|archmage{home}
+282|a white{home}|wizard.
+401|whit|e circle{home}
+402|circ|le{home}
+403|wiza|rd{home}
+405|ligh
+407|shie
+408|mira
+409|brea
+410|ligh
+411|agil
+412|turn
+430|mast
+431|stud
+802|arch-{home}|mage{home}
+803|mage{home}
+820|i am |garthim
+840|excellent,{home}|thank you
+841|quite well
+862|i am the|master
+863|i am a{home}|wizard
+864| of|the white{home}|circle
+880|i must meditate{home}|now. go
+881|in peace.%{home}
+882|{yel}he turns{home}|away.{home}
+980|do you want to{home}|buy or{home}|sell? {wht}G{left}
+1000|the wizards{home}|of our brother-{home}
+1001|hood master{home}|white magic.%{home}
+1010|i teach it{home}|to my{home}
+1011|students.%{home}
+1020|i have mastered{home}|the mighty{home}
+2000|this is a{home}|fairly simple{home}
+2001|spell that one{home}|learns as a{home}
+2002|beginner. it{home}|replaces a{home}
+2003|torch when it{home}|is dark.{home}
+2004|would you like{home}|to learn it? 
+2005|every good{home}|wizard should{home}
+2006|master{home}|it.%{home}
+2010|sadly you are{home}|not clever{home}
+2011|enough to grasp{home}|the very{home}
+2012|complicated{home}|ritual of{home}
+2013|invocation.%{home}
+2020|give me|gold pieces and{home}
+2021|i'll teach it{home}|to you, ok? 
+2030|thanks. so, the{home}|spell goes thus:{home}
+2032|you need only{home}|sulphur and{home}
+2033|pinewort. toss{home}|them into the{home}
+2034|air, focus on{home}|brightness and{home}
+2035|speak the{home}|magic{home}
+2036|words.{home}|if it works,{home}
+2037|a ball of cold{home}|light appears{home}
+2038|above your head,{home}|as bright as{home}
+2039|a torch, but{home}|without smoke{home}
+2040|or{home}|heat.{home}
+2050|the invocation{home}|costs you
+2052|astral points
+2060|plus 2 more{home}|for each degree{home}
+2061|of{home}|poisoning
+2070|plus the amount{home}|converted
+2100|there are many{home}|kinds of poison{home}
+2101|and many ways{home}|to be{home}
+2102|poisoned.{home}|fortunately{home}
+2103|this spell{home}|removes all{home}
+2104|substances that{home}|do not belong{home}
+2105|in the body.{home}
+2111|this spell{home}|requires a{home}
+2112|mixture of{home}|ginseng and{home}
+2113|blood moss,{home}|which is{home}
+2114|rubbed onto{home}|the skin{home}
+2115|while speaking{home}|the magic{home}
+2116|formula.{home}
+2117|if it succeeds,{home}|the skin glows{home}
+2118|briefly, and{home}|the poisoning{home}
+2119|is{home}|cured.{home}
+2200|against the{home}|blows of strong{home}
+2201|foes, shield and{home}|armour are often{home}
+2202|not enough. this{home}|spell doubles{home}
+2203|your protection{home}|- though not{home}
+2204|against magic -{home}|for twelve{home}
+2205|combat turns.{home}
+2211|simply mix{home}|sulphur,{home}
+2212|ginseng and{home}|blood moss,{home}
+2213|sprinkle it on{home}|your armour and{home}
+2214|call out the{home}|formula.{home}
+2217|if it works, an{home}|'s' lights up{home}
+2218|for as long as{home}|the spell lasts.{home}
+2219|sadly it cannot{home}|be used together{home}
+2220|with the light{home}|shield{home}
+2221|spell.{home}
+2300|if you are badly{home}|wounded and{home}
+2301|want to escape{home}|death, and have{home}
+2302|enough astral{home}|energy, this{home}
+2303|spell can turn{home}|astral energy{home}
+2304|into life{home}|energy and{home}
+2305|heal wounds.{home}
+2311|the healing{home}|essences of{home}
+2312|garlic,{home}|ginseng and{home}
+2313|blood moss,{home}|together with{home}
+2314|the magic words,{home}|heal all{home}
+2315|wounds.{home}
+2400|many a mighty{home}|mage can create{home}
+2401|impenetrable{home}|energy{home}
+2402|fields, like{home}|our master,{home}
+2403|for example.{home}|this spell can{home}
+2404|shatter such{home}|barriers{home}
+2405|and dispel them.{home}
+2411|the spell is{home}|difficult. you{home}
+2412|need blood moss,{home}|deathbloom and{home}
+2413|the rare{home}|mandrake{home}
+2414|root. speak the{home}|formula and{home}
+2415|throw it all{home}|into the field.{home}
+2416|if the powers{home}|are gracious,{home}
+2417|the field will{home}|slowly{home}
+2418|dissolve.{home}
+2500|when facing{home}|hostile{home}
+2501|magic, this{home}|spell can{home}
+2502|protect you{home}|against any{home}
+2503|magic very{home}|effectively{home}
+2504|for twelve{home}|combat{home}
+2505|turns.{home}
+2511|the combination{home}|of sulphur,{home}
+2512|pinewort and{home}|blood moss,{home}
+2513|sprinkled over{home}|you with the{home}
+2514|formula, gives{home}|you protection.{home}
+2517|if it works, an{home}|'l' lights up{home}
+2520|with the shield{home}|spell{home}
+2600|this difficult{home}|spell raises{home}
+2601|your natural{home}|speed of{home}
+2602|movement, and{home}|in combat you{home}
+2603|can move for{home}|12 turns at{home}
+2604|twice your{home}|normal{home}
+2605|speed.{home}
+2611|mix garlic,{home}|blood moss{home}
+2612|and{home}|deathbloom,{home}
+2613|rub it on your{home}|arms and legs{home}
+2614|and call out{home}|the formula.{home}
+2617|if all goes well{home}|a 'g' lights up{home}
+2700|the undead are{home}|dangerous foes{home}
+2701|in all their{home}|forms. but{home}
+2702|the light of{home}|the sun{home}
+2703|destroys them.{home}|since the sun{home}
+2704|never shines{home}|here, magic{home}
+2705|must help.{home}
+2710|a mixture of{home}|garlic,{home}
+2712|deathbloom and{home}|rare mandrake{home}
+2713|root, thrown{home}|into the air{home}
+2714|with the magic{home}|words,{home}
+2715|is needed for{home}|this spell.{home}
+2716|if the good{home}|powers hear you,{home}
+2717|the clouds above{home}|you will part{home}
+2718|for a moment,{home}|and the sun{home}
+2719|will destroy{home}|all undead{home}
+2720|and stone{home}|trolls.{home}
+2800|er{home}|of white{home}|magic.{home}
+821|ralph
+822|jaanth
+823|schmendrik
+824|harcon
+825|disdychus
+826|chrolon
+827|vulpa
+829|aspensor
+2810|ents{home}|they can teach{home}|them to you.%{home}
+2820|the name of{home}|evil, which is{home}
+2821|so terrible{home}|that it burns{home}
+2822|anyone who{home}|speaks or{home}
+2823|writes it, is at{home}|the same time{home}
+2824|the mightiest{home}|weapon against{home}
+2826|evil itself.{home}|i do not know{home}
+2828|it, and my{home}|colleague of{home}
+2830|the black circle{home}|was killed{home}
+2832|by it.{home}|but you can{home}
+2834|find it out.{home}|you must{home}
+2836|call it out{home}|in the face{home}
+2838|of evil while{home}|you heal{home}
+2840|the crystal.{home}|but call it{home}
+2842|{wht}backwards{lgrn}!{home}
+2844|this will heal{home}|the crystal{home}
+2846|for good. the{home}|crystal will{home}
+2850|restore our{home}|world.{home}
+2852|then evil will{home}|be destroyed,{home}
+2854|and the sun{home}|will rise for us{home}
+2856|again.{home}|and for you{home}
+2858|there will be no{home}|more room in the{home}
+2860|balance, and you{home}|will probably{home}
+2862|be hurled back{home}|home.%{home}
+3000|spell{home}|{cyn}the only{home}
+3001|spell that can{home}|be cast{home}
+3002|here is{home}|break curse.{home}
+3004|{yel}would you like{home}|that?
+3006|{lred}you don't know{home}|that spell!{home}
+3008|{lred}not enough{home}|astral energy!{home}
+3010|not enough herbs{home}
+3300|{yel}do you want to{home}|leave the temple{home}
+6000|{lred}you leave{home}|the temple.{home}
+50000|magic light|cure poison|shield
+50001|miracle cure|break curse|light shield
+50002|agility|turn undead
+432|evil
+433|evil
+406|cure

@@ -1,0 +1,5 @@
+1001 print"{home}":gosub800:print"this is{home}":sys5681:print"worthal, the{home}":sys5681
+1040 print"{home}":gosub800:print"we serve tasty{home}";:sys5681:print"fish dishes.{home}
+3030 print"et{home}":gosub800:print"the healer has{home}":sys5681:print"a free spot{home}
+3120 print"et{home}":gosub800:print"i was in{home}":sys5681:print"ackbah. there{home}
+412 ifh=7and(n$="inn"orn$="innk")goto1140

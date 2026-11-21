@@ -1,0 +1,155 @@
+# vampire count dungeon (castle of count kroloc)
+122|turn around{home}
+124|turn right{home}
+126|turn left{home}
+210|forward{home}
+212|{lred}bump!{home}
+214|{lred}the door{home}|won't{home}
+216|open.{home}
+220|{lblu}the light has{home}|gone out!{home}
+300|north east  south west  
+302|{gry1}  it is dark!
+368=
+370=
+371=
+372=
+374=
+375=
+381=
+382=
+385=
+387=
+800|light |lamp{home}
+801|torch{home}|{lred}what for?{home}
+802|{lred}you have none!{home}
+810|{yel}it burns!{home}
+900|climb{home}|{lred}not here!{home}
+910|{yel}you climb{home}
+920|the ladder down|{left}{left}{left}{left}up  {home}
+930|to level
+950|{up}{yel}outside.       {home}
+1010|attacks!{home}
+1070|{wht}--- combat! ---{home}|{yel}you are using{home}
+1075|small{rvof}{rvof}large{rvof}{rvof}| shield
+1200|move...?{home}|{yel}fight first!{home}
+1301|attack with{home}
+1512|evades you!{home}
+1520|is, by a{home}
+1521|good hit,{home}
+1522|lucky hit,{home}
+1600|is 
+1620|just{home}|scratched.{home}
+1622|lightly{home}|wounded.{home}
+1624|wounded.{home}
+1626|badly{home}|wounded.{home}
+1628|on the{home}|run.{home}
+1650|poison level
+1660|is poisoned.{home}
+1800|retreat{home}
+1802|-- you flee! --{home}
+1820|{yel}for your{home}|cowardice you{home}
+1822|lose |points{home}|of experience!{home}
+1900|reloading...{home}
+2344|hits you{home}
+2345|very 
+2346|weakly!{home}
+2347|lightly!{home}
+2349|hard!{home}
+2400|and 
+2410|stuns you!{home}
+2420|poisons you!{home}
+2810|has fled.{home}
+2942|{orng}a kobold steals{home}|your food!{home}
+3050|is ready.{home}
+3150|put on.{home}
+3200|{wht}--- victory! ---{home}
+3404|{lgrn}poisoned!{home}
+4030|{yel}none{home}
+4060|{lred}what for?{home}
+4202|{yel}-how much? 
+5202|{yel}you find{home}|a
+5204| pouch   chest  | with{home}
+5206| gold pieces!{home}
+5210|{yel}you walked{home}|into a trap:{home}
+5212|{gry3}dodged it{home}|just in time.{home}
+5221|{gry3}rockfall!{home}
+5222| damage pts.{home}
+5232|{lblu}a magic wind{home}|blows out light!{home}
+5241|{gry3}acid drips{home}|down!{home}
+5251|{lgrn}gas escapes;{home}|you are{home}
+5261|{pur}a magic field{home}|drains
+5262|astral points!{home}
+5271|{gry3}an arrow from{home}|the dark!{home}
+5281|{lgrn}a needle trap{home}|leaves you{home}
+5282|two levels more{home}
+5290|{orng}explosion!{home}
+5300|use{home}|{yel}-what? {wht}
+5360|{lred}not now{home}
+5370|{lred}you lack it!{home}
+6000|search|{yel}you find
+6020| a{home}|secret passage!{home}
+11003|level    1 {lblu}$
+13002|you are dead{home}
+13010|{yel}you played
+13020|moves.{home}|{wht}cause of death:{home}
+13022|{lgrn}poison{home}
+13024|{cyn}starvation{home}
+13028|{cyn}walked into{home}|a trap{home}
+13100|killed!{home}|{lred}you receive{home}
+13101|no points, as{home}|it was an{home}
+13102|animal.
+13110| points.
+14040|{wht}ranged weapons:
+14072|{wht}armour:
+14076|{wht}shields:
+14120|{wht}ingredients:
+14140|{wht}other items:
+14152|shard
+14156|glass flute
+14160|fire ring
+14164|oak dagger
+14168|compass
+14172|sextant
+14176|lamp
+14180| torches
+60000|bat|goblin|zombie|slime|sand viper|orc|bandit|cavewose
+60001|giant rat|torso|skeleton|sorcerer|rock python|ogre|ghoul|golem
+60002|cave spider|cave troll|vampire|kobold|spit cobra|ettin|werewolf
+60003|demon|cyclops|mummy|polyp plant|creeping eye|minotaur|balrog
+60004|living statue|phantom
+60100|hands|knife|dagger|short sword|hand axe|sword|morning star|quarterstaff
+60101|bastard sword|battle axe|greatsword|sling|short bow|blowpipe
+60102|long bow|crossbow|magic axe|elven bow|spellwing|clothes
+60103|gambeson|leather armour|chain mail|scale mail|plate armour
+60104|magic armour|small shield|large shield
+60200|magic light|cure poison|shield|miracle cure|break curse
+60201|light shield|agility|turn undead|thunderbolt|poison & gall|fireball
+60202|flame trail|fear curse|time freeze|death bolt|magic bomb
+60300|sulphur|garlic|ginseng|blood moss|pinewort|deathbloom
+60301|nightshade|mandrake
+5340|dagg|oakd
+5380|{yel}you drive the{home}|oak dagger{home}
+5381|right into{home}|count kroloc's{home}
+5382|undead heart!{home}
+5384|{cyn}count kroloc{home}|is dead!
+5610|{cyn}you enter{home}|a larger{home}|room - the{home}
+5611|crypt of count{home}|kroloc!{home}
+5616|{cyn}the count{home}|attacks at once!{home}
+5630|what...?{home}
+5631|{cyn}the count{home}|attacks you!{home}
+5632|{lred}he misses.{home}
+5634|{lred}he hits you!{home}
+5640|attack{home}|count kroloc{home}
+5641|{lred}you miss.{home}
+5642|{pur}the vampire{home}|count parries.{home}
+5644|spell{home}|{lblu}the vampire{home}
+5645|count absorbs{home}|all magic...{home}
+5700|you leave{home}|the crypt.{home}
+6030| a{home}|heavy oak door!{home}
+6207|{cyn}could it be{home}
+6208|locked?{home}
+6211|{cyn}no, a push{home}|on the handle,{home}
+6212|{cyn}and the door{home}|swings open...{home}
+13029|{cyn}count kroloc{home}|killed you.{home}
+15000|{yel}you are in the{home}|dark, damp{home}
+15001|passages of{home}|the castle.{home}

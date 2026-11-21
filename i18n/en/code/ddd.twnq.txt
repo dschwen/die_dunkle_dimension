@@ -1,0 +1,1 @@
+5255 sys5681:print"{lgrn}{home}{down}{down}{down}{down}{down}{down}{down}{down}{down}{down}{down}{rght}  - t h e  e n d -{home}

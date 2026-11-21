@@ -1,0 +1,5 @@
+1001 print"{home}":gosub800:print"you are in{home}":sys5681:print"trisdic. are you{home}":sys5681
+1040 print"{home}":gosub800:print"we serve good{home}";:sys5681:print"home cooking.{home}
+1100 print"y{home}":gosub800:print"yes, at my{home}":sys5681:print"husband.{home}":goto400
+3030 print"et{home}":gosub800:print"in the middle{home}":sys5681:print"of the water{home}
+3120 print"et{home}":gosub800:print"go to{home}":sys5681:print"muspel. that's{home}

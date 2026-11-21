@@ -1,0 +1,151 @@
+# skull keep (finale)
+240|talk|{lred}that makes no{home}
+241|sense here!{home}
+291|die, fool
+292|thou art doomed
+293|begone
+294|i'll kill you
+295|burn, worm
+300|{lgrn}the archdemon{home}|cries angrily:{home}
+400|{yel}you are{home}|attacked!{home}
+404|{wht}--- combat! ---{home}
+412|{yel}you are{home}|surrounded by{home}
+413|{yel}invisible{home}|phantoms!{home}
+414|{yel}the archdemon's{home}|magic makes{home}
+415|stone golems{home}|grow out of{home}
+416|the ground!{home}
+521|spell{home}|{yel}the archdemon{home}
+522|absorbs all{home}|magic!{home}
+570|{lred}with this weapon{home}|you can do{home}
+571|no damage{home}|here!{home}
+600|attack{home}
+623|{lred}missed!{home}
+627|{pur}parried!{home}
+632|{cyn}lucky hit!{home}
+633|{cyn}good hit!{home}
+644|phantomgolem| is{home}
+646|killed!{home}
+650|just scratched{home}
+652|lightly wounded{home}
+653|wounded{home}
+654|badly wounded{home}
+655|almost dead{home}
+1010|{wht}--- victory! ---{home}
+1214|{pur}you parry!{home}
+1222|phantomgolem
+1224| hits you{home}
+1226|lightly.{home}
+1228|hard.{home}
+1230|{home}
+2000|use {yel}- what?{home}{wht}
+2040|crys|tal shard{home}
+2050|shar|d{home}
+2060|{lred}that makes no{home}|sense here!{home}
+2102|{pur}you don't have{home}|the shard!{home}
+2112|{lred}you are too far{home}|from the{home}
+2114|crystal!{home}
+2122|{lblu}you are not{home}|standing by the{home}
+2123|notch in the{home}|crystal where{home}
+2124|the shard is!{home}
+2130|{cyn}you raise the{home}|shard high{home}
+2132|above the scar{home}|in the crystal.{home}
+2134|the shard glows.{home}|in a moment{home}
+2136|your destiny{home}|will be{home}
+2138|fulfilled.{home}|what do you cry{home}
+2140|out as you heal{home}|the crystal?{home}
+2300|{cyn}the shard{home}|pulses warm in{home}
+2302|your hand. the{home}|crystal begins{home}
+2304|to vibrate and{home}|to hum.{home}
+2306|you stare the{home}|horrible{home}
+2308|archdemon right{home}|in his{home}
+2310|indescribable{home}|eyes and{home}
+2312|roar with all{home}|your might:{home}
+2314|{cyn}then you bring{home}
+2316|the shard{home}|crashing down...{home}
+2320=
+2321=
+2322|{lgrn}with a singing{home}|tone the shard{home}
+2324|strikes a spark{home}
+2326|on the surface{home}|of the crystal,{home}
+2328|but nothing{home}|else{home}
+2330|happens.{home}|{home}
+2332|the shard{home}|does not fuse{home}
+2334|with the{home}|crystal; on the{home}
+2336|contrary, a wave{home}|of evil{home}
+2337|surges against{home}|you and{home}
+2338|mingles with{home}|the laughter{home}
+2339|of the archdemon{home}
+2428|{yel}what have you{home}|done?{home}
+2430|the name of evil{home}|has unleashed{home}
+2432|the full power{home}|of the{home}
+2434|archdemon. the{home}|crystal has{home}
+2436|literally{home}|exploded.{home}
+2438|with it all hope{home}|for this{home}
+2440|world{home}|is lost!{home}|but you have{home}
+2442|no chance{home}|left{home}
+2444|to regret{home}|your mistake.{home}
+2446|the last thing{home}|you feel is{home}
+2448|the name of evil{home}|burning your{home}
+2450|body and soul,{home}|while the{home}
+2452|crystal's shards{home}|tear your{home}
+2453|body to{home}|pieces...{home}
+3300|{yel}do you want to{home}|leave the keep{home}
+3560|{yel}you flee...{home}
+5010|done it! the{home}|crystal flares{home}
+5011|up and fuses{home}|with the shard{home}
+5012|into one{home}|whole again.{home}
+5013|at the same{home}|time you sense{home}
+5014|an unimaginably{home}|strong power{home}
+5015|gathering{home}|within it.{home}
+5016|the archdemon{home}|lets out a{home}
+5018|desperate{home}
+5024|{cyn}then the crystal{home}|virtually{home}
+5026|explodes in{home}|a pure{home}
+5028|white light...{home}
+5050|the power of the{home}|crystal has{home}
+5052|hurled the demon{home}|back into the{home}
+5054|dark abysses{home}|of hell{home}
+5056|from which{home}|it came.{home}
+5058|with the demon{home}|vanishes all{home}|the evil that{home}
+5060|disturbed the{home}|balance of the{home}
+5062|world...{home}
+5114|{lgrn}you too are{home}
+5116|seized by the{home}|power of the{home}
+5118|crystal and{home}|flung{home}
+5120|upwards.{home}|from a great{home}|height you{home}
+5121|watch the{home}|skull keep{home}
+5122|the demon built{home}|around the{home}
+5123|crystal being{home}|destroyed{home}
+5124|...{home}
+5136|{lgrn}the clouds{home}|part,
+5138|and bright{home}|sunlight{home}|floods the
+5140|land. the{home}|balance{home}|is restored{home}
+5142|and this{home}|dimension{home}
+5144|is no longer{home}|dark.{home}
+5146|your task{home}|here is thus{home}
+5148|fulfilled.{home}|you have won,{home}
+5149|but what will{home}|become of you..?{home}
+5200|{yel}you no longer{home}
+5202|fit into the{home}|balance of{home}
+5204|this world. the{home}|crystal's power{home}
+5206|also takes from{home}|you all the{home}
+5208|things and{home}|abilities you{home}
+5210|gained here.{home}|you are hurled{home}
+5212|back out of{home}|this world{home}
+5214|into the endless{home}|whirling{home}
+5216|void of time{home}|and space...{home}
+5240|where will you{home}|land?{home}
+5242|back home?{home}
+5244|perhaps...{home}
+5246|...or perhaps{home}
+5248|already in{home}|part two{home}
+5250|{wht}  the black
+5252|    fortress{home}|{yel}  -coming soon{home}
+5254|   to this{home}|   screen
+6000|{lred}you leave{home}|the fortress.{home}
+13010|{yel}you played
+13022|{lgrn}a phantom
+13024|{cyn}a golem
+13025|{cyn}the demon
+13100|you receive{home}
+13110| points.{home}

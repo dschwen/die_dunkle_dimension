@@ -1,0 +1,200 @@
+# dragon lair (fight with the giant wyrm)
+342|wounded.{home}
+1802|-- you flee! --{home}
+1820|{yel}for your{home}|cowardice you{home}
+13000|you are dead{home}
+13010|{yel}you played
+13020|moves.{home}|{wht}cause of death:{home}
+60100|hands|knife|dagger|short sword|hand axe|sword|morning star|quarterstaff
+60101|bastard sword|battle axe|greatsword|sling|short bow|blowpipe
+60102|long bow|crossbow|magic axe|elven bow|spellwing|clothes
+60103|gambeson|leather armour|chain mail|scale mail|plate armour
+60104|magic armour|small shield|large shield
+199|what..?{home}
+200|waiting...{home}
+210|north{home}
+212|south{home}
+214|west{home}
+216|east{home}
+220|{lred}blocked!{home}
+341|lightly wounded.{home}
+343|badly wounded.{home}
+5102|ddd.konj
+6200|ddd.konj
+211=
+213=
+215=
+217=
+312=
+328=
+5000=
+5001=
+5002=
+5003=
+5004=
+5005=
+5006=
+5007=
+5008=
+5009=
+5010=
+5011=
+5012=
+5013=
+5014=
+5015=
+5016=
+5017=
+5018=
+5019=
+5020=
+5021=
+6024=
+6026=
+6028=
+6030=
+6034=
+6036=
+6038=
+6042=
+6140=
+6141=
+6142=
+6143=
+300|attack{home}
+301|{lred}with this weapon{home}|you cannot{home}
+302|wound the{home}|giant wyrm!{home}
+315|{up}{yel}missed!{home}
+316|{up}{yel}off target!{home}
+322|{up}{yel}missed
+326|{up}dragon parries{home}
+330|{lred}{rvon}uv{down}{left}{left}wx|{lgrn}{up}a hit!
+331|{cyn}{up}good hit!
+332|{cyn}{up}lucky hit!
+336|{lgrn}the dragon head{home}
+340|{grn}{rvon}ef{down}{left}{left}gh{lgrn}|is scratched.{home}
+344|is barely alive.{home}
+350|{red}{rvon}uv{down}{left}{left}wx{up}{left}{left}|{lred}is cut off!{red}{home}
+1822|lose 200 points{home}|of experience!{home}
+2010|{cyn}the dragon takes{home}|a deep breath...{home}
+2026|{lred}the dragon{home}|breathes fire!{home}
+2044|{lgrn}you suffer
+2046|damage points!{home}
+3000|ready weapon{home}
+3042|{yel}spellwing{home}|ready!{home}
+3050|{lred}the only{home}|weapon that{home}|could help you{home}
+3052|now, you don't{home}|have yet!{home}
+4000|spell{home}|{lred}the magic of{home}
+4010|the giant wyrm{home}|absorbs every{home}
+4020|spell!{home}
+5100|{yel}you leave the{home}|dragon's cave.{home}
+5200|{lgrn}there is nothing{home}|more for you to{home}
+5210|do here. also,{home}|the carcass of{home}
+5220|the giant wyrm{home}|stinks{home}
+5221|horribly.{home}|you hurry{home}
+5222|back outside.{home}
+5300|{lgrn}you enter the{home}|lair of the{home}
+5302|terrible{home}|giant wyrm.{home}
+5320|the dreadful{home}|monster guards{home}
+5321|the princess,{home}|who is chained{home}
+5322|between two{home}|posts.{home}
+5323|{home}|she looks at you{home}
+5324|rattles her{home}|chains and{home}
+5325|cries out{home}|pleading:{home}
+5326|%please help me.{home}|slay the dragon{home}
+5327|and save me!%{home}|the giant wyrm{home}
+5328|raises its{home}|three heads and{home}
+5329|hisses at you{home}|angrily...{home}
+5331|the dragon's{home}|fiery breath{home}
+5332|hits you with{home}|tremendous heat{home}
+5333|that scorches{home}|your clothes,{home}
+5334|your skin and{home}|your hair.{home}
+5335|{home}|the armour you{home}
+5336|are wearing{home}|cannot protect{home}
+5337|you from it. you{home}|are driven{home}
+5338|back.{home}
+5340|the dragon uses{home}|only its flames{home}
+5341|in combat. your{home}|magic armour{home}
+5342|protects you{home}|only{home}
+5347|tolerably.
+5348| you grip{home}|the hilt of{home}
+5349|your spellwing{home}|tightly with{home}
+5350|both hands...{home}
+6000|{wht}--- victory! ---{home}|{yel}the dragon is{home}
+6001|slain!{home}
+6020|{lgrn}you can now
+6021|free the{home}|princess!{home}
+6050|{lgrn}the princess{home}|throws her arms{home}
+6051|round your neck,{home}|beaming, and{home}
+6052|says: %thank{home}|you! you have{home}
+6053|saved me.{home}|how did you{home}
+6054|ever manage{home}|to slay{home}
+6055|the terrible{home}|dragon? my{home}
+6056|father's best{home}|soldiers{home}
+6057|all{home}|failed.%{home}
+6058|you tell her{home}|your story{home}
+6059|and what you{home}|know so far{home}
+6060|and what you{home}|plan. she looks{home}
+6061|at you in wonder{home}|and then says:{home}
+6062|%perhaps i can{home}|help you.{home}
+6063|the wyrm often{home}|spoke to me{home}
+6064|through its{home}|thoughts, partly{home}
+6065|to feast on{home}|my fear,{home}
+6066|partly out of{home}|sheer boredom.{home}
+6067|once it told me{home}|that it had{home}
+6068|found a{home}|wonderfully{home}
+6069|sparkling{home}|crystal shard{home}
+6070|lying in the{home}|grass. dragons{home}
+6071|collect anything{home}|that glitters{home}
+6072|and sparkles, so{home}|it took it along{home}
+6073|it brought it{home}|to its treasure{home}
+6074|cave.{home}|you see, it does{home}
+6075|not keep its{home}|treasures here,{home}
+6076|but hides{home}|them in{home}
+6077|a cave.{home}|the cave lies{home}
+6078|in a deep{home}|gorge at the{home}
+6079|southern tip of{home}|the continent.{home}
+6080|it is said to{home}|be a deep maze{home}
+6081|teeming with{home}|monsters.{home}
+6082|at its deepest{home}|point a secret{home}
+6083|door is hidden.{home}|this door{home}
+6084|has magical{home}|properties.{home}
+6085|only the dragon{home}|could open it.{home}
+6086|when it came{home}|near the door,{home}
+6087|a keyhole{home}|appeared.{home}
+6088|perhaps it will{home}|also react to{home}
+6089|your magic{home}|armour of{home}
+6090|dragon{home}|scales.{home}
+6091|anyway, the door{home}|would open as{home}
+6092|soon as the{home}|beast pushed one{home}
+6093|of its claws{home}|into the{home}
+6094|keyhole.{home}|wait a{home}
+6095|moment, i have{home}|an{home}
+6096|idea...%{home}
+6103|{lgrn}the princess{home}|sets to work on{home}
+6104|the dragon's{home}|paw and{home}
+6105|cuts off one{home}|of its{home}
+6106|claws{home}|...
+6110|{lgrn}the princess{home}|hands you the{home}
+6111|dragon claw{home}|and says:{home}
+6112|%here, use{home}|this as the key{home}
+6113|for the{home}|magic door.{home}
+6114|i will now{home}|return to the{home}
+6115|castle. for that{home}|i'll borrow{home}
+6116|the fire lizard.{home}|don't{home}
+6117|worry, i'll{home}|send it back{home}
+6118|here to{home}|you.{home}
+6119|do come to the{home}|castle sometime.{home}
+6120|my father, the{home}|king, will{home}
+6121|surely reward{home}|you richly for{home}
+6122|saving me.{home}|and then go{home}
+6123|and fetch the{home}|shard and save{home}
+6124|our world.{home}|good luck!%{home}
+6134|{lgrn}the princess{home}
+6135|is gone. the{home}|wingbeats of the{home}
+6136|fire lizard{home}|fade away...{home}
+6137|minutes later{home}|the beast is{home}
+6138|back again{home}|and waits for{home}|you...{home}
+13022|{lred}dragon fire{home}
+13100|you receive{home}
+13110|300 points.{home}

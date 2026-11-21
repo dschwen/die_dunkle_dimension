@@ -14,6 +14,10 @@ all:
 	@echo    "palette - generates C64 palette data from the colodore.com image"
 	@echo    "basic   - convert all basic programs to source"
 	@echo    "dungeons - generates first-person dungeon map dumps"
+	@echo    "web     - extracts game data for the web app into web/data"
+	@echo    "serve   - serves the web app on http://localhost:8642/"
+	@echo    "test    - headless smoke test of all game areas"
+	@echo    "i18n    - rebuild and check the English translation (i18n/en -> web/data/basic/en)"
 
 .PHONY: images
 images: c64/Dddc1.d64 c64/Dddc2.d64 c64/Dddc3.d64
@@ -104,3 +108,24 @@ chars: $(CHR_IMAGES)
 .PHONY: gather
 gather: chars maps sprites
 	@mv c64/*/*.png res
+
+.PHONY: web
+web:
+	@node tools/build-data.mjs
+	@node tools/i18n.mjs build en | tail -1
+
+.PHONY: i18n
+i18n:
+	@node tools/i18n.mjs build en
+	@node tools/i18n-lint.mjs en
+
+.PHONY: serve
+serve: web
+	@echo "Open http://localhost:8642/"
+	@cd web && python3 -m http.server 8642
+
+.PHONY: test
+test: web
+	@node tools/fuzz-areas.mjs 1500 2>&1 | grep '^area'
+	@DDD_LANG=en node tools/fuzz-areas.mjs 1500 2>&1 | grep '^area'
+	@node tools/i18n-lint.mjs en | tail -1

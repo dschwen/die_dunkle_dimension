@@ -1,0 +1,187 @@
+# black wizard tower
+260|{yel}no answer!{home}
+282|a black{home}|wizard.
+401|blac|k circle{home}
+405|thun
+406|pois
+407|fire
+408|flam
+409|fear
+410|time
+411|deat
+412|bomb
+820|i am{home}|ortwin
+822|diabolus
+823|fuchar
+824|fulminictus
+825|borallus
+826|horax
+827|necronomos
+829|archaror
+840|quite well,{home}|thanks
+863|i am a{home}|wizard of the{home}
+864|black{home}|circle
+1001|hood master{home}|black{home}
+1002|magic.%{home}
+2000|this is a{home}|beginner spell.{home}
+2001|it fires a{home}|magic missile{home}
+2002|with an{home}|impressive{home}
+2003|blue flash at{home}|your opponent.{home}
+2033|ginseng. focus{home}|for a moment,{home}
+2034|call out the{home}|magic words{home}
+2035|and hurl it{home}|at your{home}
+2036|opponent.{home}|if it works,{home}
+2037|a blue lightning{home}|bolt howls into{home}
+2038|the body of{home}|the one it hits{home}
+2039|and wounds him.{home}
+2052|astral points.{home}
+2100|before i explain{home}|it, i must{home}
+2101|point out that{home}|the king has{home}
+2102|forbidden the{home}|use of this{home}
+2103|spell. this{home}|curse{home}
+2104|poisons{home}|whoever{home}
+2105|it strikes.{home}
+2112|mixture of{home}|sulphur, pine-{home}
+2113|wort and the{home}|forbidden{home}
+2114|nightshade is{home}|required. hurl{home}
+2115|it at your foe{home}|while speaking{home}
+2116|the formula.{home}
+2117|if it succeeds,{home}|your opponent is{home}
+2118|poisoned and{home}|suffers a slow{home}
+2119|and agonizing{home}|death.{home}
+2200|surely you{home}|already know{home}
+2201|the thunderbolt.{home}|a fireball is{home}
+2202|even more{home}|impressive and,{home}
+2203|above all, a{home}|more effective{home}
+2204|combat spell{home}|whose power no{home}
+2205|weapon matches.{home}
+2211|simply mix{home}|sulphur and{home}
+2212|blood moss,{home}|call out the{home}
+2213|magic words and{home}|hurl it at{home}
+2214|your{home}|opponent.{home}
+2217|if it works, a{home}|mighty fireball{home}
+2218|hisses towards{home}|your opponent,{home}
+2219|and the magic{home}|flames{home}
+2220|burn him{home}|to ashes.{home}
+2300|this is a{home}|combat spell.{home}
+2301|its force is{home}|only that of{home}
+2302|the thunderbolt,{home}|but it can be{home}
+2303|more useful{home}|than a fire-{home}
+2304|ball. the flames{home}|pass through{home}
+2305|everything.{home}
+2311|mixing the fire-{home}|ball recipe with{home}
+2312|some garlic,{home}|calling out the{home}
+2313|formula and{home}|hurling it at{home}
+2314|your foe creates{home}|a torrent{home}
+2315|of flames that{home}|passes through{home}
+2316|everything.{home}
+2400|sometimes the{home}|attacks of{home}
+2401|animals can be a{home}|real nuisance.{home}
+2402|this curse{home}|awakens the{home}
+2403|natural instinct{home}|to flee and{home}
+2404|makes all higher{home}|animals{home}
+2405|flee in panic.{home}
+2412|you need ginseng{home}|blood moss and{home}
+2413|deathbloom.{home}|speak the{home}
+2414|formula and toss{home}|it all in the{home}
+2415|air. if the{home}|powers are kind,{home}
+2416|all higher{home}|animals{home}
+2417|will flee. do{home}|not keep{home}
+2418|attacking them,{home}|it would be{home}
+2419|their death.{home}|sadly it does{home}
+2420|not work on{home}|primitive beasts{home}
+2421|such as snakes,{home}|spiders, squids.{home}
+2500|this spell{home}|is very hard.{home}
+2501|sometimes you{home}|want not only to{home}
+2502|be faster than{home}|your opponent,{home}
+2503|but to take away{home}|his every chance{home}
+2504|to act without{home}|paralysing{home}
+2505|each one.{home}
+2511|the combination{home}|of pinewort,{home}
+2512|blood moss and{home}|deathbloom with{home}
+2513|the formula,{home}|sprinkled over{home}
+2514|you, can make{home}|time stand still{home}
+2517|if it works, a{home}|'z' lights up.{home}
+2519|for twelve{home}|combat turns{home}
+2520|only you can{home}|act.{home}
+2601|creates a{home}|terrible{home}
+2602|lightning bolt{home}|that strikes{home}
+2603|at your feet. if{home}|an enemy stands{home}
+2604|there, it hits{home}|him with{home}
+2605|uncanny force.{home}
+2611|mix sulphur,{home}|deathbloom and{home}
+2612|the rare{home}|mandrake root.{home}
+2613|hurl it out{home}|in front of you{home}
+2617|if all goes well{home}|a destructive{home}
+2618|force arises{home}|which has only{home}
+2619|a short reach{home}|but is almost{home}
+2620|twice as strong{home}|as a{home}
+2621|fireball.{home}
+2700|before i explain{home}|it, i must{home}
+2701|point out that{home}|the king has{home}
+2702|forbidden the{home}|use of this{home}
+2703|spell. this{home}|spell causes{home}
+2704|a powerful{home}|detonation.{home}
+2705|the force of{home}|the blast costs{home}
+2706|everyone present{home}|20 points of{home}
+2707|life{home}|energy.{home}
+2708|including you!{home}
+2713|of garlic,{home}|nightshade{home}
+2714|and the rare{home}|mandrake root{home}
+2716|if the evil{home}|powers hear you,{home}
+2717|a firestorm{home}|destroys the{home}
+2718|weak and{home}|weakens the{home}
+2719|strong - but{home}|you as well.{home}
+2800|er{home}|the name of evil{home}|killed him{home}
+2801|.%{home}
+2811|world was in{home}|balance.{home}
+2812|then our master{home}|tried to{home}
+2813|summon evil{home}|itself, to{home}
+2814|learn its{home}|magical{home}
+2815|secrets.{home}|he did not know{home}
+2816|how strong evil{home}|really{home}
+2817|was. so he wrote{home}|the name of{home}
+2818|evil, which he{home}|had somehow{home}
+2819|found, on{home}
+2820|a clay tablet{home}|and with it he{home}
+2821|summoned evil.{home}|then disaster{home}
+2822|struck.{home}|evil had{home}
+2823|so much{home}|power that{home}
+2824|through this{home}|summoning it{home}
+2825|could break into{home}|our world.{home}
+2826|the energy it{home}|released{home}
+2827|burned our{home}|master and{home}
+2828|blasted a{home}|shard off the{home}
+2829|crystal,{home}|whereupon{home}
+2830|it went dark.{home}|the balance of{home}
+2831|our world{home}|was{home}
+2832|destroyed. now{home}|darkness{home}
+2833|reigns.{home}|the tablet with{home}
+2834|the name of{home}|evil broke{home}
+2835|into seven parts{home}|each of these{home}
+2836|seven tablets{home}|holds one{home}
+2837|letter of the{home}|dreadful name.{home}
+2838|we gave the{home}|tablets to seven{home}
+2839|druids, who{home}|took them to{home}
+2840|all seven towns.|there a wizard{home}
+2841|received{home}|each{home}
+2842|of them.{home}|{home}
+2843|the wizards{home}|then hid their{home}
+2844|tablets as they{home}|saw fit some-{home}
+2845|where in town.{home}|in this way{home}
+2846|no one knows{home}|the name of{home}
+2847|evil anymore.{home}|but you need{home}
+2848|it, don't{home}|you?
+2849|lucky you.%{home}
+2850|ask the wizards{home}|in the towns{home}
+2851|about the{home}|tablets. but{home}
+2852|they don't know{home}|the order of{home}
+2853|the letters.%{home}
+3300|{yel}do you want to{home}|leave the tower{home}
+6000|{lred}you leave{home}|the tower.{home}
+50000|thunderbolt|poison & gall|fireball
+50001|flame trail|fear curse|time freeze
+50002|death bolt|magic bomb
+427|mast
+428|evil
+2013|invocation.%{home}

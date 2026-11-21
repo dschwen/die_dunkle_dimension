@@ -1,0 +1,174 @@
+# trisdic (also defines the shop/healer/inn code shared by all towns)
+281|the{home}|armourer.
+282|the{home}|weaponsmith.
+284|the innkeeper.{home}
+285|a wizard.{home}
+286|a druid.{home}
+291|an old woman.{home}
+295|a woman.
+401|guar
+402|town
+403|gold
+404|armo
+405|weap
+406|heal
+407|pois
+408|rest
+409|food
+410|angr
+411|husb
+412|forg
+416|wife
+417|trea
+418|uyrp
+422|wiza
+423|adep
+424|shie
+425|tabl
+426|tabl
+427|drui
+428|help
+429|crys|shar|evil|bala
+430|herb
+802|armour-{home}|smith{home}
+803|weapon-{home}|smith{home}
+805|innkeeper{home}
+806|wizard{home}
+807|druid{home}
+812|old woman{home}
+815|woman{home}
+821|gundolf
+822|casparius
+823|simulantus
+824|quorus
+825|zaister
+826|esik
+829|zacharion
+832|aughra
+836|helena
+844|i'm a little{home}|tipsy
+845|i can't{home}|complain
+848|i'm totally{home}|shloshed
+852|i am old{home}|and weak
+855|i am angry
+862|i make|armour
+863|i make and{home}|trade in|weapons
+864|i serve and{home}|do the cooking
+866|i am a{home}|druid
+868|i drink to{home}|forgetsh.{home}|hic
+869|i am a{home}|healer
+871|i am a{home}|herb woman
+875|i'm looking{home}|for my husband
+881|do come{home}|again soon
+883|have a beer
+889|i think i'm|gonna be shick,{home}|buuuurrrrp
+892|may the magic{home}|be with you
+1000|d{home}|i guard the{home}|town.%{home}
+1002|here to make{home}|trouble? 
+1003|i wouldn't{home}|advise it{home}
+1004|either.%{home}
+1005|careful, i'll be{home}|keeping{home}
+1006|an eye{home}|on you.%{home}
+1032|on{home}
+1038|ore{home}
+1041|would you like{home}|a pack of 20{home}
+1042|rations?
+1043|then don't.%{home}
+1045|{lgrn}another one?
+1110|the old geezer{home}|is surely{home}
+1111|sitting in the{home}|tavern again,{home}
+1112|getting drunk{home}|as a skunk. he's{home}
+1113|in for{home}|it!{home}
+1114|his name is{home}|zacharion. have{home}
+1115|you seen him{home}|by chance?
+1116|pity.%{home}
+1117|then he surely{home}|talked your{home}
+1118|ears off with{home}|his drunken{home}
+1119|drivel. did he{home}|also tell you{home}
+1120|about that{home}|strange{home}
+1121|treasure{home}|of his?
+1122|ask him about{home}|it. it's the{home}
+1123|stupidest{home}|story you've{home}
+1124|ever{home}|heard.%{home}
+1125|don't believe a{home}|word of it, the{home}|guy isn't quite{home}
+1126|right in the{home}|head. that's{home}
+1127|from all the{home}|boozing.%{home}
+1130|et{home}|my wife.%{home}
+1140|the old bag just{home}|nags, hic!%{home}
+1150|sure{home}|yes, hic, the{home}|treashure really{home}
+1151|exishts, hic.{home}|when i wash{home}
+1152|a shailor, i{home}|shurvived an{home}
+1154|attack - burp -{home}|by the pirates{home}
+1155|of mubrak and{home}|shaw where{home}
+1156|they buried{home}|their gold.{home}
+1157|wanna know{home}|where?
+1158|then not, oops!%{home}
+1200|gimme ten{home}|gold piesh{home}|for wine?
+1202|you ain't{home}|got any!%{home}
+1203|{lgrn}thanksh, pal!{home}
+1204|the treashure{home}|ish on the{home}|ishle of uyrp.%{home}
+1210|i don't remem-{home}|ber, hic, where{home}
+1211|uyrp ish, or{home}|elshe i'd{home}
+1212|have got the{home}|treashure{home}
+1213|myshelf.{home}
+1214|ashk a{home}|geographer.%{home}
+2000|ur{home}
+2001|what? (b-i) {wht}G{left}
+2004|sorry, but{home}|i don't buy{home}
+2005|that.%{home}
+2007|you don't own it{home}
+2008|hm - used, i'll{home}|give you{home}
+2009|- let's{home}|say -
+2010|gold{home}
+2011|pieces, ok?
+2012|it's a deal!{home}
+2020|i offer:{home}
+2021|what would you{home}
+2022|buy? (b-i) {wht}G{left}
+2025|sorry, but i{home}|don't have{home}
+2027|you have one.{home}
+2028|a fine|piece. and for{home}
+2029|only|gold{home}
+2030|pieces it's{home}|yours, ok?
+2033|it's a deal!{home}
+2040|ons{home}
+2041|what? (b-p) {wht}G{left}
+2050|i offer:{home}
+2052|what would you{home}
+2053|buy? (b-p) {wht}G{left}
+2100|s{home}|ah, are you{home}|a magic user?
+2101|then why do{home}|you need{home}|ingredients?{home}
+2103|i have:{home}|a sulphur{home}|b garlic{home}
+2104|c ginseng{home}|d blood moss{home}
+2105|what'll it be? {wht}G{left}
+2109|in packs of|{left}{home}|for{home}
+2110|1 gold piece|each, ok?
+2122|here you are!{home}
+2123|you now have
+2124| unit.|{left}s.{home}
+2125|another one?
+3000|rd{home}|well, actually{home}|i'm still{home}
+3001|an adept.%{home}
+3010|i'm practising{home}|the shield{home}
+3011|spell.%{home}
+3020|ld{home}|a useful{home}|combat spell.{home}
+3021|do you know{home}|it?
+3022|good for you.%{home}
+3024|go to the{home}|white{home}|circle.%{home}
+3037|lies your goal.%{home}
+3100|d{home}|we druids{home}|want to{home}
+3101|help you.%{home}
+3110|{home}|ask what you{home}|want to know.%{home}
+3121|where the 7th{home}|tablet is.%{home}
+3130|cerfax can tell{home}|you more about{home}
+3131|that than i.%{home}
+3200|search
+3201|{yel}you find{home}
+3202|nothing.{home}
+3204|a clay tablet:{home}
+3300|{yel}do you want to{home}|leave trisdic{home}
+6000|{lred}you leave{home}|the town.{home}
+50000|knife|dagger|short sword|hand axe|sword|morning star|quarterstaff
+50001|bastard sword|battle axe|greatsword|sling|short bow|long bow
+50002|crossbow|clothes|gambeson|leather armour|chain mail|scale mail
+50003|plate armour|small shield|large shield

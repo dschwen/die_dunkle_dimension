@@ -1,0 +1,112 @@
+# ackbah, city in the desert moghwa
+285|a wise{home}|old man.
+286|a man.{home}
+401|guar
+402|town
+404|armo
+405|weap
+406|heal
+407|pois
+408|rest
+409|food
+410|guru
+411|char
+412|opec
+416|prop
+422|hors
+423|wiza
+424|adep
+425|agil
+426|tabl
+427|drui
+428|help
+429|tabl
+430|crys|shar|evil|balan
+431|herb
+821|abdullah
+822|mustafa
+823|infarktus
+824|ali
+825|üselgür
+826|mohammed
+829|rachim
+830|ahank
+831|camach
+832|fatma
+844|me going good
+845|i am old{home}|and wise
+846|i live in{home}|humility
+849|all fine
+850|good so far
+864|me cook good{home}|food
+865|i am a{home}|wise guru
+866|i am a{home}|prophet{home}|of mahalah
+868|i breed{home}|horses
+895|opec's blessing|be upon you
+1002|town in the{home}|heart of the{home}|moghwa desert.{home}
+1003|are you a{home}|believer?
+1004|we keep a{home}|special eye{home}
+1005|on{home}|unbelievers.%{home}
+1006|opec be{home}|with you.%{home}
+1041|with garlic.{home}|you want buy{home}
+1042|10 rations?
+1043|me insulted.%{home}
+1045|{lgrn}more?
+1100|yes, a guru{home}|needs much{home}
+1102|charm for{home}|his disciples.%{home}
+1104|isma{home}|shall i teach{home}|you how to be{home}
+1106|more charming?
+1108|without it you{home}|won't get far!%{home}
+1110|you have as{home}|much charm{home}
+1111|as i do.%{home}
+1114|good, i'll show{home}|you...{home}
+1117|now you have{home}|learned it.%{home}
+1120|praised be{home}|opec, the{home}
+1121|almighty god{home}|of the desert.%{home}
+1122|het{home}|opec appeared{home}|to me in a{home}
+1123|dream and told{home}|me to proclaim{home}
+1124|his word.|i used to be{home}
+1126|a great|warrior, but{home}
+1127|i gave up that|life. and{home}
+1128|i gave up  h e r|...{home}
+1129|s h e  was the|most beautiful,{home}
+1130|noblest, truest,{home}|best and{home}|sharpest...{home}
+1131|...blade there{home}|ever was.{home}
+1132|do you want to{home}|hear more{home}|about her?
+1134|her name is{home}|sicaria draconem{home}|which means{home}
+1135|dragon slayer.{home}|she is a{home}
+1136|winged blade of{home}|pure gold,{home}
+1137|forged in lava{home}|by a blind{home}
+1138|cyclops and{home}|tempered in{home}
+1139|dragon's blood.{home}|nothing can{home}
+1140|withstand her. i{home}|wielded her, but{home}
+1141|now i must walk{home}|the path of{home}
+1142|peace, so{home}|i buried her.{home}
+1149|weapon.%{home}
+1150|well, i think{home}|this weapon{home}|could be of{home}
+1151|great use. do{home}|you want to know{home}
+1152|where she is?|then not.%{home}
+1153|{lgrn}thank you, the{home}|children of{home}
+1154|mahalah will{home}|appreciate this{home}
+1155|donation. the{home}|spellwing{home}
+1156|is buried at{home}|the eastern tip{home}
+1157|of the moghwa.{home}|you'll find it{home}
+1158|at the position{home}
+1160|only with her{home}|can you slay{home}
+1162|the giant{home}|wyrm.%{home}
+1200|es{home}|yes, we sons of{home}|the desert know{home}
+1202|a thing or two.{home}|i sell them{home}|too. would you{home}
+2040|ons{home}
+3010|i'm practising{home}|the agility{home}
+3020|ity{home}|a useful{home}|combat spell.{home}
+3022|good for you.{home}
+3024|go to the{home}|white{home}|circle.{home}
+3026|by the way, if{home}|you ever go to{home}
+3027|gaht, give my{home}|regards to my{home}
+3028|colleague{home}|thelom and{home}
+3029|tell him the{home}|word 'ghor'.%{home}
+3031|the four{home}|things that are{home}
+3032|most precious{home}|in the{home}
+3033|desert.{home}
+3121|you'll find the{home}|sixth tablet.%{home}
+3300|{yel}do you want to{home}|leave ackbah{home}

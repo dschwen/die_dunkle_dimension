@@ -1,0 +1,56 @@
+# Literal rewrites applied to every line (after the string table). Used for shared code
+# whose sentence structure has to change in English, and for the English key mapping.
+#
+# --- monster hits you: "<m> hits / you [very] / weakly!" -------------------------------
+" hat{home}":sys5681:print"dich ";:ifk=1ork>12thenprint"sehr{home}" => " hits{home}":sys5681:print"you ";:ifk=1ork>12thenprint"very{home}"
+print"schwach ";:sys5681:goto194 => print"weakly";:goto194
+print"leicht ";:sys5681:goto194 => print"lightly";:goto194
+print"schwer ";:sys5681 => print"hard";
+sys5681:print"getroffen!{left}";:poke53281,0 => print"{left}";:poke53281,0
+print"getroffen!{left}"; => print"!{left}";
+# --- magic of the monster stuns you (dungeons use m$(m))
+print"{pur}die magie des{home}":sys5681:printm$(m)"s{home}":sys5681:print"hat dich{home} => print"{pur}the magic of{home}":sys5681:print"the "m$(m)"{home}":sys5681:print"{home}
+# --- magic of the monster stuns you ---------------------------------------------------------
+print"{pur}die magie des{home}":sys5681:printm$(m(i))"s{home}":sys5681:print"hat dich{home}" => print"{pur}the magic of{home}":sys5681:print"the "m$(m(i))"{home}":sys5681:print"{home}"
+#
+# --- English keys -------------------------------------------------------------------------
+# yes/no: j -> y
+u$="j" => u$="y"
+print"j{home}" => print"y{home}"
+# cast a spell: z -> c
+u$="z" => u$="c"
+# Ultima convention: R = ready weapon, W = wear armour (German: W = waffe, R = rüstung)
+ifu$="w"thengosub232 => ifu$="r"thengosub232
+ifu$="r"thengosub247 => ifu$="w"thengosub247
+ifu$="w"thenprint"waffe{home}" => ifu$="r"thenprint"waffe{home}"
+ifu$="r"thenprint"rüstung{home}" => ifu$="w"thenprint"rüstung{home}"
+ifu$="w"thengosub3000 => ifu$="r"thengosub3000
+ifu$="r"thengosub3100 => ifu$="w"thengosub3100
+ifu$="w"thengosub3500 => ifu$="r"thengosub3500
+# talk: k (kommunizieren) -> t
+ifu$="k"goto240 => ifu$="t"goto240
+# ship's catapult: k -> f (fire)
+ifu$="k"goto440 => ifu$="f"goto440
+# shops: kaufen/verkaufen -> buy/sell
+u$<>"k"andu$<>"v"goto981 => u$<>"b"andu$<>"s"goto981
+gosub980:ifu$="k"goto20 => gosub980:ifu$="b"goto20
+# dungeon: e (entzünden) -> l (light), b (benutzen) -> u (use); k (klettern) stays (Ultima "klimb")
+ifu$="e"goto800 => ifu$="l"goto800
+ifu$="b"goto5300 => ifu$="u"goto5300
+ifu$="b"goto2000 => ifu$="u"goto2000
+#
+# --- conversation input -------------------------------------------------------------------
+# Return submits words shorter than 4 letters ("job"); Return on an empty line means "bye".
+ifu$=chr$(13)andz=0thenn$="wied":printn$;:return => ifu$=chr$(13)thenn$=n$+mid$("bye",1,-3*(z=0)):printmid$("bye",1,-3*(z=0));:return
+ifn$="wied"thenprint"ersehen.{home}":goto880 => ifn$="bye"thenprint"!{home}":goto880
+ifn$="wied"goto450 => ifn$="bye"goto450
+# "beru" + "f?" = "beruf?"  ->  "job" + "?"
+print"f?{home}" => print"?{home}"
+#
+# --- grammatical gender: "der/die" and "er/sie" -> "the" and "he/she" ---------------------
+print"{yel}der ";:ifh>13thenprint"{left}{left}{left}ie "; => print"{yel}the ";
+print"{yel}der ";:ifh>12thenprint"{left}{left}{left}ie ";:ifh=13thenprint"{left}{left}{left}as "; => print"{yel}the ";
+print"{yel}der ";:ifh=16thenprint"{left}{left}{left}ie "; => print"{yel}the ";
+print"{left}{left}{left}ie "; => print"";
+print"{yel}er"; => print"{yel}he";
+print"{left}{left}sie"; => print"{left}{left}she";

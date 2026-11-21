@@ -1,0 +1,99 @@
+# druid cottage (cerfax)
+20|{lgrn}health:   (   )|{up}{cyn}astral:   (   )
+21|{lred}att.:   {grn}def.:|{up}{pur}str.:   {yel}dex.:
+22|{gry3}int.:   {lblu}cha.:|{up}{lgrn}exp.:      (  )
+23|{yel}gold pcs.:|{up}{orng}food supply:
+240|talk|{yel} -direction? {wht}G{left}
+258|no{home}
+270|{lred}no answer!{home}
+280|{cyn}you talk to|a cat.{home}
+290|{yel}the cat says:
+292|meow{rvof}{rvof}{rvof}mew{rvof}{rvof}{rvof}{rvof}hiss{rvof}{rvof}{rvof}purr
+400|{cyn}you talk to the|druid.{home}
+413|name
+414|job
+415|fuck|piss|ung|shit|porn
+416|drui
+418|aid
+421|heal
+422|cure|{home}
+423|evil
+424|worl
+425|bala
+426|crys
+427|shar
+440|i can't help{home}|you with{home}
+441|that.%{home}
+450|!{home}
+451|my prayers{home}
+452|go with you.%{home}
+454|i am{home}|cerfax.%{home}
+458|you are a{home}|dirty old pig!%{home}
+460|d{home}|we druids|are wise old{home}
+461|mages, but more{home}|bound to nature{home}
+462|than the{home}|sorcerers.{home}|we see, we{home}
+463|cure and{home}|we help.{home}
+464|{home}
+465|ask what you{home}|want to know.{home}
+466|i know a great{home}|deal.%{home}
+468|our world.%{home}
+472|aloud brings{home}|disaster.%{home}
+475|balance of our{home}|world.%{home}
+476|nce{home}|do you come from{home}|another{home}
+477|world?
+478|then you should{home}|know this!%{home}
+479|once our world{home}|was fair and{home}
+480|bright. people{home}|lived in peace{home}
+481|and were{home}|happy.{home}
+482|but evil{home}|brought eternal{home}
+483|darkness upon{home}|us, and the{home}
+484|creatures of{home}|the night{home}
+485|crawl out of{home}|their holes and{home}
+486|flood the{home}|land.{home}
+487|the sun will{home}|never rise{home}
+488|again, for the{home}|crystal is{home}
+489|broken.%{home}
+490|tal{home}|the crystal{home}|of light, which{home}
+491|kept the{home}|balance of our{home}
+492|world. borne by{home}|fire and air{home}
+493|it floats above{home}|the lava of{home}
+494|the great{home}|volcano.{home}
+495|but evil struck{home}|with all its{home}
+496|cruel might,{home}|and the{home}
+497|crystal burst.{home}|a shard{home}
+498|broke off. the{home}|crystal{home}
+499|turned black.{home}|with it died{home}
+500|th?{home}|i am exhausted.{home}|but are you{home}
+501|well?
+502|i am glad to{home}|hear it.%{home}
+504|let me heal{home}|you...%{home}
+520|the sun, too.{home}|but the shard{home}
+521|was hurled into{home}|another{home}
+522|dimension. when{home}|you touched it,{home}
+523|a spell{home}|broke, and the{home}
+524|shard and you{home}|were{home}
+525|teleported{home}|here.{home}
+526|do you have the{home}|shard?
+527|heal the{home}|black{home}|crystal!%{home}
+528|go and find it,{home}|or else our{home}
+529|world will be{home}|lost forever.{home}
+530|d|the crystal{home}|and the shard{home}
+531|must be united{home}|again!%{home}
+532|you had best go{home}|north-east.{home}
+533|there you will{home}|reach the{home}
+534|king's castle.{home}|they will help{home}|you there.%{home}
+600|{lred}you leave{home}|the house.{home}
+620|the shard broke{home}|off the upper{home}
+622|right corner{home}|of the{home}
+623|crystal.{home}|remember this{home}
+624|spot!{home}|evil built an{home}|impregnable{home}
+625|fortress in the{home}|shape of a huge{home}
+626|skull around{home}|the crystal.{home}
+627|there it lurks{home}|and sends out{home}
+628|ruin and{home}|destruction.{home}
+900|{yel}your business?
+950|{yel}the druid says:
+1000|oh, i see that{home}
+1001|you are now at{home}|level|{left}. so i{home}
+1002|will now raise{home}|your receptive-{home}
+1003|ness to{home}|magic.%{home}

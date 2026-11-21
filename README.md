@@ -1,4 +1,4 @@
-[Areas of the game](AREAS.md) | [Game files](DDDFILES.md) | [Game state area](FLAGS.md)
+[Areas of the game](AREAS.md) | [Game files](DDDFILES.md) | [Game state area](FLAGS.md) | [Web app](WEBAPP.md)
 
 
 # Maps

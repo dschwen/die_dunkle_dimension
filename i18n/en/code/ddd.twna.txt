@@ -1,0 +1,11 @@
+417 print"disembark";:ifj<>4thenprint"{left}{left}{left}{left}{left}{left}{left}{left}{left}dismount {home}
+432 ifh=2thenprint"the magical{home}":sys5681:printw$(18)"{home}
+569 gosub567:i=2:gosub568:print"you are wearing":printspc(24)"clothes";:j=peek(49247):ifj=0goto574
+570 print" and":printspc(24)"{up}over them your
+571 rem
+572 rem
+574 print".":printspc(24)"{up}as a weapon you":printspc(24)"now have your":goto577
+577 printspc(24)"{up}"w$(j):printspc(24)"ready.":j=peek(49167):printspc(24)"{up}you use ";:ifj=0thenprint"no":printspc(24)"";
+578 ifj=1thenprint"the":printspc(24)"small";
+579 ifj=2thenprint"the":printspc(24)"large";
+580 print" shield.":poke198,0:wait198,1:goto567

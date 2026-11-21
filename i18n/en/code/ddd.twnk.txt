@@ -1,0 +1,4 @@
+404 ifn$="magi"thenprint"c{home}":goto1010
+800 gosub999:print"{yel}the ";
+1021 sys5681:printz$(h-2)"{home}":sys5681:print"spell.%{home}":goto400
+2890 print"{home}":gosub800:print"ask our master{home}":sys5681:print"about it.%{home}":goto400

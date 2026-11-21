@@ -1,0 +1,169 @@
+# muspel, the dwarven town
+21|{lred}att.:   {grn}def.:|{up}{pur}str.:   {yel}dex.:
+284|a cook.{home}
+285|an{home}|employee.
+286|a smith.{home}
+287|an old{home}|man.
+288|a dwarf{home}|girl.
+292|a wizard.{home}
+401|guar
+402|town
+404|armo
+405|weap
+406|heal
+407|pois
+408|rest
+409|food
+410|herb
+411|mini
+412|ores
+416|tool
+417|torc
+419|thin
+422|smit
+423|ship|wind|wrec|sea
+424|wiza
+425|adep
+426|tabl
+427|ingr
+428|drui
+429|help
+430|tabl
+432|drin
+433|ship
+434|wind
+435|sulp|garl|gins|bloo
+436|pine
+437|deat
+438|nigh
+439|mand
+440|clev
+806|employee{home}
+807|smith{home}
+813|girl{home}
+821|gwendall
+822|thormin
+823|virus
+824|osmond
+825|gumbert
+826|a smith
+827|alfin
+828|rewan
+829|trenca
+830|jiovan
+832|heben
+844|mustn't grumble
+845|so-so
+849|i'm{home}|fine
+850|i am{home}|a bit tired
+854|so-so
+865|i work{home}|in the mines
+866|i am a{home}|smith
+872|i drink
+874|i am a{home}|thinker
+884|safe digging
+885|i must get{home}|back to work
+890|get lost
+896|cogito ergo{home}|sum
+1002|town of the{home}|dwarves. do you{home}
+1003|want to see{home}|our famous{home}|smithy?
+1004|i see, so you{home}|are just a{home}
+1005|tourist.%{home}
+1006|we dwarves are{home}|good smiths.%{home}
+1041|would you like{home}|16 rations?
+1045|{lgrn}more?
+1050|h{home}|we make{home}|armour and{home}
+1051|weapons of all{home}|kinds. we forge{home}
+1052|them in lava,{home}|which gives{home}
+1053|things a certain{home}|power.{home}
+1054|have you ever{home}|heard of our{home}
+1055|famous{home}|magic axe{home}
+1056|before?|great, isn't it?{home}
+1057|it was a{home}|weapon, a{home}
+1058|throwing axe{home}|that returns{home}
+1059|to its bearer's{home}|hand after{home}
+1060|the throw and{home}|can be used{home}
+1061|again at once.{home}|sadly it was{home}
+1062|on a sailing{home}|ship, the{home}
+1063|'windchaser',{home}|when it sank.{home}
+1064|now the axe{home}|rests on the{home}
+1065|sea floor.%{home}
+1070|trenca was on{home}|the ship. she{home}
+1071|survived the{home}|wreck. ask{home}
+1072|her about the{home}|ship.%{home}
+1100|ng{home}|yes, we dwarves{home}|mine our ores{home}
+1101|ourselves.%{home}
+1110|yes, and i sell{home}|the tools{home}
+1111|you need{home}|for it.%{home}
+1120|s{home}|for example{home}|torches or{home}
+1121|lamps, so that{home}|you can see{home}
+1122|in the dark.%{home}
+1130|hes{home}|they cost only{home}|two coins{home}
+1131|apiece. would{home}|you like to{home}|buy some?
+1132|what for.%{home}
+1133|how many? {blu}00{left}{left}{wht}
+1137|oh.%{home}
+1139|{lgrn}here you are!%{home}
+1141|pieces. i know{home}|that's{home}
+1142|expensive, but{home}|our magic lamps{home}
+1143|never run{home}|dry. do you{home}
+1144|want one?|oh well.%{home}
+1145|you have one!%{home}
+1146|{lgrn}here, take it.%{home}
+1180|king{home}|can't a person{home}|have a drink{home}
+1181|here without{home}|being pestered{home}
+1182|by some{home}|idiot?%{home}
+1185|{home}|which{home}|ship?%{home}
+1186|chaser{home}|yes, i was on{home}|the ship when{home}
+1187|it sank.{home}|do you want to{home}
+1188|know where?|then get lost.%{home}
+1189|you want to{home}|salvage the{home}
+1190|magic axe, eh?
+1191|then why do you{home}|want to know{home}
+1192|where the ship{home}|lies?{home}
+1193|{lgrn}all right, the{home}|ship lies{home}
+1194|exactly at the{home}|deepest spot{home}
+1195|between mubrak{home}|and the{home}
+1196|mainland.%{home}
+1300|ker{home}|a thinker must{home}|be very clever.%{home}
+1310|are you clever{home}|enough?
+1311|nobody is{home}|that.%{home}
+1312|shall i teach{home}|you{home}|wisdom?
+1313|very well.{home}
+1314|you are already{home}|as clever as{home}
+1315|i am.%{home}
+1320|{yel}you think...{home}
+1321|enlightenment!{home}
+1322|now you are{home}|cleverer.%{home}
+2040|ons{home}
+2101|then why do{home}|you need{home}|ingredients?%{home}
+2123|you now have{home}
+3010|i procure{home}|ingredients.%{home}
+3011|edients{home}|are you looking{home}|for some too?
+3012|but i am.%{home}
+3013|which ones are{home}|you looking for?{home}
+3031|heben's shop.{home}|you must search{home}
+3032|at the south-{home}|ernmost spot.%{home}
+3040|you can buy{home}|that almost{home}
+3041|anywhere.%{home}
+3044|tshade{home}|now now, that{home}|stuff is{home}
+3045|forbidden. but i{home}|have heard that{home}
+3046|in mubrak it{home}|might be{home}
+3047|available.{home}
+3050|rake{home}|psst!{home}
+3051|come a little{home}|closer...{home}
+3052|i know where{home}|it still grows,{home}
+3053|but i'm not{home}|allowed to{home}
+3054|tell you.{home}|but perhaps i{home}
+3056|would be more{home}|talkative with{home}
+3057|some gold.{home}|how many hundred{home}
+3058|coins will you{home}|offer me? {wht}G{left}
+3060|you're crazy.%{home}
+3062|accepted.{home}
+3063|{lgrn}thank you! it{home}|still grows on{home}|the smallest of{home}
+3064|the isles of the{home}|dead, west of{home}
+3065|the swamps{home}|of death.{home}
+3066|the exact{home}|position is:{home}
+3121|is where the{home}|2nd tablet is.%{home}
+3300|{yel}do you want to{home}|leave muspel{home}
+418|lamp

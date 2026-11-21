@@ -1,0 +1,5 @@
+# death
+40|{lgrn}  you are dead!{home}
+4001=
+4002=
+10019|{gry2}dead

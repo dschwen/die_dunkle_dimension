@@ -1,0 +1,74 @@
+100 poke5681,2:gosub9100:print"{down}{rvon}{rght}:;{rght}>?{rvof}{cyn} a fantasy role-playing game{wht}{rvon}>?{rght}:;{rght}";
+102 print"{rght}<={rght}{$c0}A{rvof}{down}{lgrn}{down}{left}(c) 1990 by {wht}german design group{left}{left}{up}{up}{rvon}{$c0}A{rght}<=
+110 printspc(93)"{down}{down}{down}{down}{lred}would you like to...
+112 print"   {wht}{down}{rvon}P{$a4}{$a5}Q{down}{left}{left}{left}{left}R{$a6}{$a7}S{rvof} start a new game?           {rvon}{up}BC{down}{left}{left}DE
+114 print"   {down}{wht}{rvon}P{$ac}{$ad}Q{down}{left}{left}{left}{left}R{$ae}{$af}S{rvof} load a saved game?          {rvon}{up}yz{down}{left}{left}äö
+116 printspc(90)"{yel}  your choice? {wht}G
+130 gosub9100:print"{down}{down}{down}{down}{down}{down}{down}{down}{rvon}yz{rvof} {yel}please insert your save disk       {wht}{rvon}yz
+132 print"{up}{rvon}äö{rvof} {yel}and choose a save slot 0 - 9       {wht}{rvon}äö
+136 printspc(90)"{lred}loading game "u$"{blk}":u$="ddd.sav"+u$:p=13:loadu$,8,1
+140 gosub9100:print"{down}{down}{down}{down}{down}{down}{down}{down}  {rvon}yz{rvof} {lgrn}please insert the game disk    {wht}{rvon}yz
+141 print"  {rvon}äö{rvof} {lgrn}again and press %return%.      {wht}{rvon}äö
+1000 gosub9100:printspc(48)"{rvon}BC{down}{left}{left}DE{rvof} {yel}  a new game!   {rvon}{wht}DE{up}{left}{left}BC{down}
+1020 print"{cyn}{down}{down}{rght}{rght}{rght}first of all, let us create a new
+1030 print"{rght}{rght}{rght}player character. please enter
+1040 printspc(11)"your hero's name:{down}":gosub4000
+1164 print:printspc(86)"{wht}"n$"? - i bet you
+1166 printspc(6)"are "mid$("a man{rvof}{rvof}a woman",k*7+1,7)", aren't you? (y/n)
+1168 getu$:ifu$="y"thenprint"{down}{down}{down}{rght}{rght}{rght}you see, i was right after all!":goto1200
+1180 print"{down}{down}oh, please forgive me, my "mid$("girl{rvof}{rvof}{rvof}boy",k*7+1,7)", it
+1182 print"seems i was mistaken...":k=1-k
+1201 print"{clr}{cyn}so, "n$", now let us determine
+1202 print"your attributes. each of the four
+1204 print"attributes starts with five points.
+1206 print"since you are "mid$("a man{rvof}{rvof}a woman",k*7+1,7)", you also get
+1208 print"an extra "mid$("strength charisma ",k*9+1,9)"point.
+1210 print
+1225 printspc(87)"{wht}  your attributes:
+1250 gosub9000:print"{down}{down}{yel}  please type the first letter of the
+1252 print"attribute that is especially strong in
+1254 l=5:print" your character.   ({wht}s{yel}/{wht}d{yel}/{wht}i{yel}/{wht}c{yel}) {wht}G
+1262 ifu$="d"thenl=1
+1264 ifu$="i"thenl=2
+1300 print"{up}{up}{rght}{up}{lred}you would surely make a fine";spc(11);
+1310 printmid$("warrior{rvof}{rvof}{rvof}thief{rvof}{rvof}{rvof}{rvof}{rvof}mage{rvof}{rvof}{rvof}{rvof}{rvof}{rvof}adventurer",l*10+1,10);
+1320 print", "n$".
+1330 print"{yel}{down} now i will randomly distribute a few  
+1332 print" more attribute points. their number   
+1334 print"  depends on the level of difficulty   
+1336 print" you choose. would you like our world  
+1338 print"   to be {wht}e{yel}asy, {wht}m{yel}edium or               
+1350 l=0:print"   {wht}h{yel}ard? {wht}G{left}";
+1360 getu$:ifu$="e"thenl=9:print"easy! (9";
+1362 ifu$="m"thenl=6:print"medium! (6";
+1364 ifu$="h"thenl=3:print"hard! (3";
+1370 print" points){up}{up}{up}{up}{up}{up}{up}{up}{up}{up}{up}{up}{up}{up}{up}":fori=1tol
+1380 print"{lgrn}  are you better at {wht}a{lgrn}ttacking or at    
+1382 print"  {wht}d{lgrn}efending yourself? {wht}G
+1386 ifu$="d"thena(5)=9:goto1390
+1392 printspc(7)"{up}{up}{up}{up}{pur}attack:"a(4)"     {orng}defense:"a(5)
+1393 print"{down}{grn} you can improve these attributes over 
+1394 print" time, but never beyond 18, as that is 
+1395 print" ninety percent of perfection...       
+1396 print"{down}{yel} are you happy with your "mid$("hero{rvof}{rvof}{rvof}heroine",k*7+1,7);
+1397 print"? {wht}G
+1400 getu$:ifu$="y"goto1410
+2000 gosub9100:print"{down}{yel}so, "n$", now we want to
+2002 print"see whether you are well prepared for
+2004 print"your adventure in the dark dimension
+2006 print"and bring along the right knowledge.
+3000 printspc(6)"{down}{down}{cyn}please enter the following word
+3008 printspc(6)"from the manual:
+3010 printspc(55)"{wht}page:"se(p)"{left},
+3012 printspc(14)mid$("1st{rvof}{rvof}2nd{rvof}{rvof}3rd{rvof}{rvof}4th{rvof}{rvof}5th{rvof}{rvof}6th{rvof}{rvof}7th{rvof}{rvof}8th{rvof}{rvof}9th{rvof}{rvof}",ze(p)*5-4,5);
+3014 print" line,
+3016 printspc(14)mid$("1st{rvof}{rvof}2nd{rvof}{rvof}3rd{rvof}{rvof}4th{rvof}{rvof}5th{rvof}{rvof}6th{rvof}{rvof}7th{rvof}{rvof}8th{rvof}{rvof}9th{rvof}{rvof}",wo(p)*5-4,5);
+3018 print" word:{down}{down}":gosub4000:j=0:fori=1tot:j=j+asc(mid$(n$,i))*i:next:k=jand255
+3024 print:printspc(55-len(n$)/2)"{yel}"n$" is wrong!
+3032 gosub9100:print"{down}{down}{down}{down}{down}{yel}"spc(87)"wrong three times! i'm
+3034 printspc(9)"afraid you are out of luck.
+3036 printspc(49)"reload the game and
+3038 printspc(9)"pay closer attention":printspc(11)"to what you type.
+3040 printspc(47)"{wht}- or buy the original!":poke182,2:sys182
+9000 printspc(7)"{down}{lred}strength:"a(0)" {yel}dexterity:"a(1)
+9010 print"{down}{lgrn}{rght}{rght}{rght}intelligence:"a(2)" {cyn} charisma:"a(3):return

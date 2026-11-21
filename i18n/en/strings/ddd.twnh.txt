@@ -1,0 +1,129 @@
+# damraskan, the island city
+284|a cook.{home}
+285|a man in{home}|lederhosen.
+287|a drunk{home}|.
+288|a waitress.{home}
+401|guar
+402|town
+404|armo
+405|weap
+406|heal
+407|pois
+408|rest
+409|food
+410|herb
+411|drun
+412|nons
+416|armo
+417|magi
+418|hero
+423|bava
+424|wiza
+425|adep
+426|tabl
+427|fire
+428|drui
+429|help
+430|tabl
+431|evil|shar|crys|bala|circ
+808|waitress{home}
+809|drunkard{home}
+821|temuchin
+822|grif
+823|exitus
+824|talenc
+825|der wastl
+826|selver
+827|shanin
+828|mikah
+830|edipon
+831|joyla
+832|orpha
+844|all fine
+845|fei guat
+849|i'm totally{home}|plashtered
+850|i am{home}|overworked
+852|i sense{home}|great doom
+853|as well as can{home}|be expected
+854|so-so
+864|i do the{home}|cooking
+865|i'm a{home}|bavarian
+872|i serve and{home}|throw out
+873|the{home}|drunks
+874|i'm{home}|unemployed{home}
+875|and drinking{home}|myshelf shilly
+883|bon appetit
+884|grüss gott
+885|go and have{home}|a drink
+886|may the light{home}|be with you
+890|take care
+896|drunk today,{home}|and tomorrow|drunk..
+1002|town on the{home}|island of the{home}|same name.{home}
+1004|that wouldn't{home}|do you any{home}
+1005|good either.%{home}
+1006|try that{home}|elsewhere.%{home}
+1041|would you like{home}|12 rations?
+1045|{lgrn}more?
+1100|ks{home}|yes, the guy{home}|over there in{home}
+1101|the corner just{home}|babbles{home}|nonsense.%{home}
+1110|ense{home}|oh, something|about some{home}
+1111|armour.%{home}
+1120|ur{home}|yesh, right,{home}|i shaw the{home}
+1121|famoush magic{home}|armour by{home}
+1122|chance, under{home}|the counter in{home}
+1123|temuchin'sh{home}|shop.{home}
+1124|ashk him{home}|about it, hic.%{home}
+1130|c armour{home}|indeed i keep{home}|the magic armour{home}
+1131|made from{home}|the scales of a{home}
+1132|giant wyrm,{home}|the ma-{home}
+1133|to give it to{home}
+1134|a hero.%{home}
+1135|do you mean to{home}|say that you are{home}
+1136|the hero who{home}|will free{home}
+1137|our world?|then go!%{home}
+1138|anyone can say{home}|that. let me{home}
+1139|test if you are{home}|an experienced{home}
+1140|fighter.{home}
+1142|{lgrn}how many{home}|experience pts{home}
+1144|do you get for{home}|killing a{home}
+1146|troll{rvof}{rvof}balrog{rvof}dragon
+1162|wrong! you are{home}|not worthy{home}
+1164|of the armour
+1170|that was all{home}|correct. i{home}
+1172|give you the{home}
+1174|it can withstand{home}
+1176|the fire of a{home}|giant wyrm{home}
+1178|reasonably{home}|well.%{home}
+1200|you know what{home}|they say: if you{home}
+1201|can't do any-{home}|thing, run a pub{home}|but joking{home}
+1202|aside, i own{home}|this joint.{home}
+1203|we have a{home}|bar, a grill{home}
+1204|room, a{home}|swimming pool, a{home}
+1206|sauna and even{home}|a solarium.{home}
+1208|the solarium is{home}|outside the{home}
+1209|door - but only{home}|when the sun{home}
+1210|shines, haha.%{home}
+1301|holiday. but{home}|with these daft{home}
+1302|damraskan{home}|saupreissen{home}
+1304|you can't even{home}|get a decent{home}|schweinshaxn.{home}
+1305|now i sit{home}|here and{home}|sweat, they say{home}
+1306|it's healthy.{home}|in the pub that{home}
+1307|drunkard's{home}|drivel{home}
+1308|gets on my{home}|nerves. ask{home}
+1309|the waitress{home}|what nonsense{home}
+1310|he's spouting.{home}|%{home}
+2040|ons{home}
+2101|then why do{home}|you need{home}|ingredients?%{home}
+2104|c ginseng{home}|d pinewort{home}
+3010|i'm practising{home}|the fireball{home}
+3020|ball{home}|a useful{home}|combat spell.{home}
+3031|out from a{home}|different{home}
+3032|letter.{home}|find the only{home}
+3033|big 'k' in{home}|the town and{home}
+3034|stand right{home}|in front of it.{home}
+3035|then go five{home}|steps east,{home}
+3036|six north{home}|and{home}
+3037|four east.{home}|search there.%{home}
+3121|you'll find the{home}|fourth tablet.%{home}
+3300|{yel}do you want to{home}|leave damraskan{home}
+50003|plate armour|magic armour|small shield|large shield

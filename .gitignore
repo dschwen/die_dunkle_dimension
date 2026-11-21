@@ -18,3 +18,6 @@
 !/c64/DDD3
 !/c64/DDD3/*.asm
 !/c64/DDD3/*.txt
+
+# web app: binary game data is generated from the disk images (make web)
+/web/data/bin/

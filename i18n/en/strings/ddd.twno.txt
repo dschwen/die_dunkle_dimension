@@ -1,0 +1,171 @@
+# fire castle of fulgar
+287|the fire demon{home}|fulgar.
+401|guar
+402|fort
+404|fort
+405|liza
+406|stab
+407|demo|fulg
+408|moun
+802|fire devil{home}
+810|fire demon{home}
+821|f'gor
+822|n'lar
+862|i am the|steward
+863|i am the{home}|stable hand
+881|may fire light{home}|your way
+1000|d{home}|i guard the{home}|fortress.%{home}
+1001|this is the{home}|fortress of the{home}
+1002|mighty{home}|fire demon{home}
+1003|fulgar.{home}|are you in{home}|his service?
+1004|report to{home}|the steward.%{home}
+1005|then hurry to{home}|him and make{home}
+1006|your report.%{home}
+1020|this is the{home}|fortress of the{home}
+1022|fire demon{home}|fulgar.%{home}
+1030|fulgar may{home}|well have a bad{home}
+1032|reputation{home}|among humans,{home}
+1034|mostly because{home}|of the fire{home}
+1036|lizards that{home}|have lately{home}
+1038|been marauding.{home}|but let me{home}
+1040|explain the{home}|following.{home}
+1042|fulgar is called{home}|a fire demon,{home}
+1043|but that is{home}|not quite{home}
+1044|correct. he is{home}|an elemental{home}
+1045|being, namely{home}|that of{home}
+1046|fire. we, his{home}|servants, the{home}
+1047|fire devils, are{home}|in truth also{home}
+1048|elemental{home}|spirits, but of{home}
+1049|a lower{home}|order.{home}
+1050|towards humans{home}|fulgar has a{home}
+1051|rather neutral{home}|attitude, that{home}
+1052|is, he doesn't{home}|bother with them{home}
+1053|but pursues his{home}|own interests,{home}
+1054|which do not{home}|harm{home}
+1055|humans.{home}|the fire lizards{home}
+1056|are being set{home}|against humans{home}
+1057|by the arch-{home}|demon who{home}
+1058|destroyed the{home}|crystal.{home}
+1059|this annoys{home}|fulgar, as we{home}
+1060|lose many{home}|lizards.{home}
+1061|but otherwise{home}|evil does not{home}
+1062|bother fulgar{home}|much, and he{home}
+1063|takes no action{home}|against it. he{home}
+1064|has other{home}|problems. that{home}
+1065|is why he{home}|sent for you.{home}
+1066|you are the{home}|first human{home}
+1067|he has allowed{home}|to enter his{home}
+1068|fortress.{home}|he has a{home}|task for{home}
+1069|you, and for{home}|doing it he{home}
+1070|will surely{home}|reward you with{home}
+1071|something that{home}|will help you{home}
+1072|fight evil.{home}|fulgar is very{home}
+1074|generous.{home}|now go to{home}
+1075|him. he is{home}|expecting you.%{home}
+1100|le hand{home}|i look{home}|after the{home}
+1102|fire lizards.%{home}
+1110|rds{home}|we breed them{home}|as mounts.%{home}
+1120|ts{home}|yes, normally{home}|they are{home}
+1122|very tame and{home}|obedient. fulgar{home}
+1124|always rides the{home}|albino in the{home}
+1126|middle stall.{home}|excuse me,{home}
+1128|i have a lot|to do
+2000|welcome,{home}
+2010|i have heard{home}|much about you{home}|and have{home}
+2012|been expecting{home}|you.{home}
+2014|and not only{home}|expected you,{home}
+2016|i even sent{home}|for you. have{home}
+2018|you met my{home}|servant t'kul{home}
+2020|in mubrak?
+2022|hm, no matter,{home}|but you must{home}|still look him{home}
+2024|up, if you{home}|accept my{home}
+2026|task. he{home}|has an{home}
+2028|oak dagger|you will need.{home}
+2030|have him give|it to you.%{home}
+2040|good, then you{home}|know that i{home}
+2042|have a task{home}|for you.{home}
+2043|but for that{home}
+2044|you need the{home}|oak dagger.{home}
+2045|did t'kul give{home}|it to you?
+2046|good.{home}
+2050|that stupid{home}|idiot. i told{home}
+2052|him{home}|specifically to{home}|give it to you,{home}
+2054|but the fool{home}|apparently{home}
+2056|only had the{home}
+2058|casino on his{home}|mind. go to him{home}
+2060|once more and{home}|demand the{home}
+2062|oak dagger.{home}
+2100|my task for{home}|you is this:{home}
+2102|go to the castle{home}|of the vampire{home}
+2104|count kroloc,{home}|which lies in{home}
+2106|the swamps of|death, and slay{home}
+2108|count kroloc.|i am at deadly{home}
+2110|enmity with this|vampire prince.{home}
+2112|{home}|if you kill him,{home}
+2114|it would be{home}|a boon for{home}
+2116|humankind{home}|too.{home}
+2120|i could kill him{home}|myself with{home}|some effort,{home}
+2122|but as a{home}|being of fire{home}
+2124|i find those{home}|disgusting{home}
+2126|swamps{home}|simply{home}
+2128|too wet.{home}|the count's{home}
+2130|castle is a{home}|three-storey,{home}
+2132|half-ruined{home}|tangle of{home}
+2134|passages,{home}|teeming with{home}
+2136|traps and the{home}|count's minions.{home}
+2140|the count dwells{home}|in a kind of{home}
+2142|crypt above the{home}|third floor.{home}
+2144|he masters{home}|the black{home}
+2146|arts and can{home}|only be{home}
+2148|destroyed{home}|with the{home}
+2150|oak dagger.{home}|the dagger is{home}
+2151|made from the{home}|wood of his{home}
+2152|coffin and works{home}
+2153|only on kroloc.{home}|do you accept{home}
+2154|the task?
+2156|you miserable{home}|coward
+2158|my blessing{home}|goes with you
+2202|hearty{home}|congratulations,{home}|you have{home}
+2204|destroyed him!{home}|as thanks i{home}
+2206|want to give you{home}|something very{home}
+2208|special.%{home}|{yel}he pulls a{home}|ring from{home}
+2210|his finger{home}|and hands it{home}
+2212|to you.{home}|this is a{home}|fire ring. it{home}
+2214|lets its{home}|wearer safely{home}
+2216|cross liquid{home}|lava.{home}
+2218|you are the{home}|first human{home}
+2220|to receive such{home}|a ring. sadly{home}
+2222|it only protects{home}|against lava,{home}
+2224|not against{home}|other fire.{home}
+2226|is that reward{home}|enough?
+2228|use it well
+2230|you are bold,{home}|but i am{home}|generous.{home}
+2232|you shall also{home}|be rewarded{home}
+2234|in coin.{home}|will 500 gold{home}
+2236|pieces do?
+2238|{lgrn}there you are
+2240|that's enough!{home}|you are far too{home}|impudent!{home}
+2242|now you get{home}|no gold at all
+2300|make yourself{home}|at home in{home}|my fortress
+2400|i'm a bit{home}|cross with you,{home}
+2410|because you took{home}|my fire lizard{home}
+2412|without{home}|asking.{home}
+2414|but fine, i'll{home}|lend her to you{home}
+2416|for as long as{home}|you fight evil,{home}
+2418|since i bear{home}|a grudge{home}
+2420|against evil{home}|for its hold{home}
+2422|over my{home}|lizards.{home}
+2426|i'll get my{home}|mount back{home}
+2428|in any case.{home}
+2430|{home}|once evil{home}
+2432|has crushed{home}|you,{home}
+2434|she'll find her{home}|way back
+2502|{yel}you swing{home}|yourself onto{home}
+2504|{yel}the back of the{home}|fire lizard!{home}
+3300|{yel}do you want to{home}|leave the fort{home}
+6000|{lred}you leave{home}|the fortress.{home}
+6200|{lred}hot lava{home}|burns you!{home}
+6302|# {yel}you are dead!{wht}#{home}
+6310|{yel}or are you?{home}
+6312|you feel a{home}|strong magic...{home}
+6322|{lred}the magic of the{home}|fire demon{home}|saves you.{home}

@@ -1,0 +1,4 @@
+404 ifn$="magi"thenprint"c{home}":gosub800:goto1020
+800 gosub999:print"{yel}the mage{home}
+1021 sys5681:printz$(h-2)"{home}":sys5681:print"spell.%{home}":goto400
+2810 print"{home}":gosub800:print"all was well,{home}":sys5681:print"the{home}

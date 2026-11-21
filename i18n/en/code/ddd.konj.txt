@@ -1,0 +1,3 @@
+200 print"{clr}{down}{down}{down}{down}{down}{down}{down}{down}{lgrn}   please insert disk {wht}no."s"{lgrn}
+210 print"{down}   front side up and
+220 print"{down}   press any key...{gry3}{down}{down}{left}{left}{left}{left}{left}{left}{left}{left}{left}{left}/{down}{left}{left}{wht}{rvon}yz{down}{left}{left}äö

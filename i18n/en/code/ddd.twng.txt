@@ -1,0 +1,4 @@
+1001 print"{home}":gosub800:print"you are in{home}":sys5681:print"ackbah, the{home}
+1040 print"{home}":gosub800:print"me make tasty{home}";:sys5681:print"couscous{home}
+3030 print"et{home}":gosub800:print"i hid it in{home}":sys5681:print"the midst of{home}
+3120 print"et{home}":gosub800:print"i was in{home}":sys5681:print"damraskan. there{home}

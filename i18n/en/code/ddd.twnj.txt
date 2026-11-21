@@ -1,0 +1,6 @@
+1001 print"{home}":gosub800:print"this is{home}":sys5681:print"mubrak, the{home}
+1040 print"{home}":gosub800:print"the chip shop{home}":sys5681:print"badly needs an{home}
+1187 print"y{home}":gosub800:print"you won't tell{home}":sys5681:print"anyone{home}":sys5681:print"else?";
+3030 print"et{home}":gosub800:print"go to the{home}":sys5681:print"peep show. if{home}
+3120 print"et{home}":gosub800:print"you'll find the{home}":sys5681:print"first tablet{home}
+4010 print"{home}":gosub800:print"we play the{home}":sys5681:print"game 'devil'.{home}
