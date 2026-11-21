@@ -16,7 +16,7 @@ all:
 	@echo    "dungeons - generates first-person dungeon map dumps"
 	@echo    "web     - extracts game data for the web app into web/data"
 	@echo    "serve   - serves the web app on http://localhost:8642/"
-	@echo    "test    - headless smoke test of all game areas"
+	@echo    "test    - headless smoke test of all game areas (both languages and editions)"
 	@echo    "art     - regenerate the edited title pictures in art/ (needs numpy, scipy, Pillow)"
 	@echo    "i18n    - rebuild and check the English translation (i18n/en -> web/data/basic/en)"
 
@@ -133,4 +133,6 @@ serve: web
 test: web
 	@node tools/fuzz-areas.mjs 1500 2>&1 | grep '^area'
 	@DDD_LANG=en node tools/fuzz-areas.mjs 1500 2>&1 | grep '^area'
+	@DDD_EDITION=enhanced node tools/fuzz-areas.mjs 1500 2>&1 | grep '^area'
+	@DDD_LANG=en DDD_EDITION=enhanced node tools/fuzz-areas.mjs 1500 2>&1 | grep '^area'
 	@node tools/i18n-lint.mjs en | tail -1

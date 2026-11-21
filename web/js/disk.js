@@ -3,6 +3,7 @@
 // from the area number the loader stores in zero page address 2.
 
 import { textToLines } from './basictext.js';
+import { patchBasicText, patchBinary } from './enhanced.js';
 
 // BASIC patches applied on top of the original (or translated) sources.
 // Keyed by file name -> { lineNumber: 'replacement text' }.
@@ -40,7 +41,8 @@ export class Disk {
   }
 
   // load everything: fetchFn(path) -> Promise<ArrayBuffer|string>
-  // options.edition: 'regular' (original graphics; only texts translated) or 'enhanced' (new graphics)
+  // options.edition: 'regular' (the original game; only texts translated) or 'enhanced'
+  // (new graphics and the gameplay changes in enhanced.js)
   async init(base, lang = 'de', fetchBin, fetchText, options = {}) {
     const manifest = JSON.parse(await fetchText(base + 'manifest.json'));
     const jobs = [];
@@ -52,11 +54,14 @@ export class Disk {
     for (const d of [1, 2, 3]) {
       for (const name of manifest.disks[d]) {
         jobs.push(fetchBin(`${base}bin/disk${d}/${name}.prg`).then((buf) => {
-          this.disks[d].set(name, { name, data: new Uint8Array(buf) });
+          let data = new Uint8Array(buf);
+          if (edition === 'enhanced') data = patchBinary(name, data);
+          this.disks[d].set(name, { name, data });
         }));
       }
       for (const name of manifest.basic[d]) {
         jobs.push(this.fetchBasic(base, lang, d, name, fetchText).then((text) => {
+          if (edition === 'enhanced') text = patchBasicText(name, text);
           const patches = PATCHES[name];
           let lines = null;
           const entry = {
