@@ -1,55 +1,17 @@
-[Areas of the game](AREAS.md) | [Game files](DDDFILES.md) | [Game state area](FLAGS.md) | [Web app](WEBAPP.md)
+[Areas of the game](AREAS.md) | [Game files](DDDFILES.md) | [Game state area](FLAGS.md) | [Maps (spoilers!)](MAPS.md) | [Web app](WEBAPP.md)
 
+# Die Dunkle Dimension
 
-# Maps
+### ▶ [Play it in your browser](https://dschwen.github.io/die_dunkle_dimension/)
 
-All map images are built by running
+[![The Dark Dimension title picture](art/enhanced/en/ddd.titl.png)](https://dschwen.github.io/die_dunkle_dimension/)
 
-```
-make gather
-```
+**[dschwen.github.io/die_dunkle_dimension](https://dschwen.github.io/die_dunkle_dimension/)** – the complete 1990 C64
+fantasy role-playing game by German Design Group, running in the browser on the original game code: full story,
+combat and first-person dungeons, original music and sound, save games in the browser. In German or English, as the
+regular (original) or the enhanced edition. See [WEBAPP.md](WEBAPP.md) for how it works.
 
-and can be found in the `res` directory.
-
-## World map
-
-The world map is shown to consist of `(39*4) * (39*4)` tiles (as can be seen in the pencil drawing of the map available on the web).
-The data is stored in `DDD1/ddd.mapa` (and `DDD1/ddd.code`) and can be plotted with
-
-```
-./src/worldmap2png.py
-```
-
-The map file contains a `52 x (52*3)` data set (`52*3` == `39*4`).
-Each entry represents a strip of `3*1` actual tiles (the subtiles).
-
-![](res/ddd.mapa.png)
-
-## Submaps
-
-Most submaps of towns and castles are 35 tiles wide.
-
-```
-./src/map2png.py c64/DDD1/ddd.mapc 35
-```
-
-![](res/ddd.mapc.png)
-![](res/ddd.mapd.png)
-![](res/ddd.mape.png)
-![](res/ddd.mapf.png)
-![](res/ddd.mapg.png)
-![](res/ddd.maph.png)
-![](res/ddd.mapi.png)
-![](res/ddd.mapj.png)
-![](res/ddd.mapk.png)
-![](res/ddd.mapl.png)
-![](res/ddd.mapo.png)
-![](res/ddd.mapq.png)
-
-
-The druid cottage is 11 tiles wide.
-
-![](res/ddd.mapb.png)
+This repository also documents the reverse engineering of the game's files, graphics and data.
 
 # Graphics
 
