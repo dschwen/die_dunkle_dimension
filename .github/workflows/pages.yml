@@ -1,0 +1,70 @@
+# Builds the web app from the original disk images and deploys it to GitHub Pages.
+# The game files are not stored in the repository; they are downloaded and extracted here.
+name: Deploy web app to GitHub Pages
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install c1541 (VICE)
+        run: sudo apt-get update && sudo apt-get install -y vice
+
+      - name: Cache disk image archive
+        uses: actions/cache@v4
+        with:
+          path: c64/die_dunkle_dimension.zip
+          key: ddd-zip-v1
+
+      - name: Download and extract game files
+        run: make data
+
+      - name: Build web app data (German + English)
+        run: make web
+
+      - name: Check generated data
+        run: |
+          node -e '
+            const m = require("./web/data/manifest.json");
+            const n = (o) => Object.values(o).reduce((a, l) => a + l.length, 0);
+            console.log("binary files:", n(m.disks), "BASIC programs:", n(m.basic));
+            if (n(m.disks) !== 47 || n(m.basic) !== 24) { console.error("incomplete game data"); process.exit(1); }
+          '
+
+      - name: Smoke test (all areas, both languages)
+        run: make test
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: web
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

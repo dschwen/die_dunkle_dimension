@@ -12,6 +12,10 @@ make serve    # http://localhost:8642/
 make test     # headless smoke test: enters all 18 areas and presses random keys
 ```
 
+`.github/workflows/pages.yml` does the same on every push to `master`: it downloads the disk images, extracts
+them with `c1541`, builds `web/data`, runs the smoke test and deploys `web/` to GitHub Pages (repository
+settings → Pages → Source: *GitHub Actions*). The game files themselves are never committed.
+
 The page shows the 320×200 C64 picture scaled to the window with a 10% margin on every side; the margin takes the
 current C64 border colour. `F1` help, `F8` turbo, `F9` sound on/off, `F10` (or double click) full screen.
 Save games (`Q` in the overworld, slots 0–9) go to IndexedDB (database `die-dunkle-dimension`, store `saves`,
